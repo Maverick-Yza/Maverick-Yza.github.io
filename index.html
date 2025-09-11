@@ -138,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmff36t3u00028gvp37z575ph" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmff6uh7v0000zgvp97sh0ig3" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -172,12 +172,74 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>今天通过跟随视频搭建自己的博客我学到了：</p>
+        <h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h1><p>今天跟随视频一步步搭建了属于自己的博客，我把整个过程以及所学记录下来</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ol>
+<li>安装nodejs</li>
+<li>打开终端并切换到root用户（输入了 sudo su）<ul>
+<li>该过程中打开 设置 -&gt; 系统 -&gt; 开发者选项 -&gt; 开启“启用Sudo” -&gt; 选择运行模式“内联”</li>
+<li>之后重启终端 -&gt; 输入sudo whoami -&gt; 显示 laptop-lv27uskg\admin【表示当前以管理员权限执行了命令（laptop-lv27uskg 是我的计算机名，admin 是我的用户名），这说明 sudo 配置生效了。】</li>
+</ul>
+</li>
+<li>终端输入 node -v 和 npm -v（查看版本）<ul>
+<li>输入npm -v后显示:</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> https:/go.microsoft.com/fwlink/?LinkID=<span class="number">135170</span> 中的 about_Execution_Policies。</span><br><span class="line">所在位置 行:<span class="number">1</span> 字符: <span class="number">1</span></span><br><span class="line">+ npm <span class="literal">-v</span></span><br><span class="line">+ ~~~</span><br><span class="line">    + CategoryInfo          : SecurityError: (:) []，PSSecurityException</span><br><span class="line">    + FullyQualifiedErrorId : UnauthorizedAccess</span><br></pre></td></tr></table></figure>
+<pre><code>- 终端输入：Get-ExecutionPolicy，显示：Restricted
+- 终端输入：Set-ExecutionPolicy RemoteSigned
+- 再次执行 Get-ExecutionPolicy，确认显示为 RemoteSigned
+- 上面的步骤设置允许运行本地创建的脚本，同时对从网络下载的脚本进行安全检查，是比较平衡的安全策略。
+</code></pre>
+<ol start="4">
+<li>终端输入：npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npmmirror.com/">https://registry.npmmirror.com</a><ul>
+<li>安装成功，接下来就可以使用 cnpm 命令来替代 npm 进行包管理了</li>
+</ul>
+</li>
+<li>终端输入：cnpm install -g hexo-cli<ul>
+<li>安装好hexo了</li>
+</ul>
+</li>
+<li>在E盘创建blog文件夹，并通过终端cd操作将路径改到创建好的blog文件夹</li>
+<li>终端输入：sudo hexo init, 报错：</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INFO  Cloning hexo<span class="literal">-starter</span> https://github.com/hexojs/hexo<span class="literal">-starter</span>.git</span><br><span class="line"><span class="string">&#x27;git&#x27;</span> 不是内部或外部命令，也不是可运行的程序</span><br><span class="line">或批处理文件。</span><br><span class="line">WARN  git clone failed. Copying <span class="keyword">data</span> instead</span><br><span class="line">FATAL Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: EPERM: operation not permitted, mkdir &#x27;</span>E:\<span class="string">&#x27;</span></span><br><span class="line"><span class="string">    at async Object.mkdir (node:internal/fs/promises:860:10)</span></span><br></pre></td></tr></table></figure>
+<pre><code>- 报错原因是缺少 Git 环境
+- 通过Git 官网 下载 Windows 版本
+</code></pre>
+<ol start="8">
+<li>再次输入：sudo hexo init<ul>
+<li>此时Hexo 已经成功初始化完成，现在博客项目基础框架已经搭建好了</li>
+<li>输入：ls （查看当前目录下的文件）</li>
+</ul>
+</li>
+</ol>
+<h3 id="将博客部署到远端的GitHub上公开使用"><a href="#将博客部署到远端的GitHub上公开使用" class="headerlink" title="将博客部署到远端的GitHub上公开使用"></a>将博客部署到远端的GitHub上公开使用</h3><ol>
+<li>创建并登录GitHub账号</li>
+<li>创建一个仓库(repository)<ul>
+<li>注意：创建仓库时起的名字必须符合格式：名字.github.io</li>
+</ul>
+</li>
+<li>终端在blog文件路径下输入：cnmp install –save hexo-deployer-git</li>
+<li>终端输入：notepad _config.yml, 打开文件后修改最下面的Deployment部分：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/Maverick-Yza/Maverick-Yza-github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>终端输入：hexo d （部署到远端）</li>
+</ol>
+<h3 id="过程所学"><a href="#过程所学" class="headerlink" title="过程所学"></a>过程所学</h3><ol>
+<li>打开终端输入的左边显示的是你当前操作所在的路径<ol start="2">
+<li>cd 后跟你想更改的路径</li>
+<li>pwd —— 查看当前路径</li>
+</ol>
+</li>
+<li>每次更新完博客后需要在终端输入：hexo clean、hexo g、hexo d。使其保存并部署到远端</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/2025-9-10/" data-id="cmff36t3p00008gvpe4rk0uzv" data-title="2025.9.10" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/10/2025-9-10/" data-id="cmff6uh7y0001zgvpc0cwf4xu" data-title="2025.9.10" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -218,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/Game-On/" data-id="cmff36t3t00018gvp6p5m1oq0" data-title="Game_On" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/10/Game-On/" data-id="cmff6uh7z0002zgvp7v598zqz" data-title="Game_On" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -269,7 +331,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/hello-world/" data-id="cmff36t3u00038gvpf0mv51vq" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/10/hello-world/" data-id="cmff6uh7z0003zgvp0kqffv5a" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
