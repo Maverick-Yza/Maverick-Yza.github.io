@@ -71,6 +71,135 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2025-10-17" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/17/2025-10-17/" class="article-date">
+  <time class="dt-published" datetime="2025-10-17T00:47:31.000Z" itemprop="datePublished">2025-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/17/2025-10-17/">2025.10.17</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>今日学习笔记</li>
+<li>句子摘录</li>
+<li>昨天和今天的总结</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<li>随机变量（Random Variables）<ol>
+<li>Definition：设样本空间为 Ω，随机变量 X 是定义在 Ω 上、取值于实数集ℝ的函数，即 X: Ω→ℝ，X (ω) 表示对样本点 ω 的赋值</li>
+<li>Example：掷骰子（Ω&#x3D;{1,2,3,4,5,6}），X(1-3)&#x3D;1（赢1元），X(4-6)&#x3D;-1（输1元），刻画玩家收益</li>
+<li>概率表示：事件 “X 取 x 值” 即 {ω∈Ω | X(ω)&#x3D;x}，概率简化记为P(X&#x3D;x)，且所有可能取值概率和为 1（∑P (X&#x3D;x)&#x3D;1）</li>
+</ol>
+</li>
+<li>离散型随机变量及其分布（Discrete Random Variables and Distributions）<ol>
+<li>Definition：取值为有限个或可列个，且每个取值有其概率，不可能的取值的概率为0.</li>
+<li>概率质量函数（probability mass function (pmf)）：f(x)满足：<ol>
+<li>f(x)≥0</li>
+<li>∑f (x)&#x3D;1（所有可能 x 求和）</li>
+</ol>
+</li>
+<li>分布函数（distribution function）：F(x)&#x3D;P(X≤x)&#x3D;∑(x_j≤x) f(x_j)，其具有性质：<ol>
+<li>lim(x→-∞)F(x)&#x3D;0</li>
+<li>lim(x→+∞)F(x)&#x3D;1</li>
+<li>非递减</li>
+<li>0≤F(x)≤1</li>
+</ol>
+</li>
+<li>离散型随机变量的平均数或期望（mean or expectation or expected value）：μ &#x3D; E[X] &#x3D; ∑_j x_j f(x_j), j &#x3D; 1,2,…,n（f是X的pmf，x_j是X的可能取值）<ol>
+<li>进一步推导出：E[g(X)] &#x3D; ∑_j g(x_j) f(x_j), j &#x3D; 1,2,…,n</li>
+</ol>
+</li>
+<li>离散型随机变量的方差（variance）：σ^2 &#x3D; Var(X) &#x3D; E[(X - E(X))^2] &#x3D; ∑_j (x_j - E(X))^2 f(j_x)<ol>
+<li>方差提供𝑋围绕其均值E𝑋的离散程度的度量，其总是非负的</li>
+<li>标准差（standard deviation）：σ &#x3D; √Var(X)</li>
+</ol>
+</li>
+<li>均值和方差的性质：<ol>
+<li>设𝑋为随机变量，我们考虑𝑋的线性函数：𝑌 &#x3D; 𝑎𝑋 + b，a,b ∈ R 其具有性质：<ol>
+<li>E(Y) &#x3D; aE(X) + b</li>
+<li>Var(Y) &#x3D; a^2Var(X)</li>
+</ol>
+</li>
+<li>可以用以下公式表示随机变量𝑋的方差:<code> Var(X) = E(X^2) - E(X)^2</code></li>
+</ol>
+</li>
+<li>伯努利分布（Bernoulli Distribution）：<ol>
+<li>Definition：随机变量X只能取值1或0，其概率分别为 p ∈ (0,1)，q(:&#x3D; 1-p)</li>
+<li>可能取值：1,2</li>
+<li>pmf：P(X&#x3D;1) &#x3D; p，P(X&#x3D;0) &#x3D; 1-p</li>
+<li>E (X)：p</li>
+<li>Var (X)：p(1-p)</li>
+</ol>
+</li>
+<li>二项分布（Binomial Distribution）：𝑋 ∼ Bin(n,p)，n∈ℕ, p∈(0,1))<ol>
+<li>Definition：n次独立试验中成功次数的离散概率分布，每个试验的成功概率为𝑝</li>
+<li>可能取值：0,1,…,n</li>
+<li>pmf：P(X&#x3D;k) &#x3D; C(n,k) p^k (1-p)^(n-k)     （<code>C(n,k) = n! / k! (n-k)!</code>）</li>
+<li>E (X)：np</li>
+<li>Var (X)：np(1-p)</li>
+</ol>
+</li>
+<li>泊松分布（Poisson Distribution）：𝑋 ∼ Poi(λ)，λ&gt;0<ol>
+<li>Definition：泊松分布是一种离散概率分布，用于计算在固定时间或空间间隔内，以<strong>已知平均发生率</strong>且独立于上次事件发生时间的事件发生次数的概率。</li>
+<li>可能取值：0,1,2,…</li>
+<li>pmf：P(X&#x3D;k) &#x3D; e^(-λ) λ^k &#x2F; k!</li>
+<li>E (X)：λ</li>
+<li>Var (X)：λ</li>
+<li>注意：问题中给出的速率可能不是所需区间内的𝜆值！我们需要对其进行放大或缩小，以获得正确的𝜆值。（如给了一周的速率为𝜆，要计算两周的间隔则速率为2𝜆）</li>
+</ol>
+</li>
+<li>几何分布（Geometric Distribution）：𝑋 ∼ Geo(p)，p∈(0,1)<ol>
+<li>Definition：经过X次试验才得到成功的结果</li>
+<li>可能取值：1,2,3,…（不能为0）</li>
+<li>pmf：P(X&#x3D;k) &#x3D; p (1-p)^(k-1)</li>
+<li>E (X)：1&#x2F;p</li>
+<li>Var (X)：(1-p)&#x2F;p²</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>连续型随机变量及其分布（Continuous Random Variables and Distributions）</li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>我们一步一步走下去，踏踏实实地去走，永不抗拒生命交给我们的重负，才是一个勇者。到了蓦然回首的那一瞬间，生命必然给我们公平的答案和又一次乍喜的心情，那时的山和水，又恢复成最初单纯的样子，而人生走过的是多么美好的一个秋天。 – 三毛</li>
+</ol>
+<h2 id="昨日总结"><a href="#昨日总结" class="headerlink" title="昨日总结"></a>昨日总结</h2><p>昨天参加了本学期第一次飞盘活动，感觉是开学以来参与感最强的一次活动了，既能够充分运动，也可以认识很多朋友（争取吧）</p>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天完成了概率课程的提交作业，整体写下来还是比较容易的，就是中途发现还是有些地方想得过于复杂了</li>
+<li>读书一章</li>
+<li>复习完全部单词</li>
+<li>本周第二次网球活动</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmguma7p50001lovp0stgh3fb" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2025-10-15" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/15/2025-10-15/" class="article-date">
@@ -102,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmgs1jrok0002mgvp75au94ws" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmguma7p60002lovp03j86cfh" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -340,7 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmgs1jrog0000mgvpbeor74ck" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmguma7p20000lovpefnf6gov" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -383,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmgs1jrom0006mgvpf84u3grx" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmguma7p90009lovpcpj34uro" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -427,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmgs1jrok0003mgvpdan6hw73" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmguma7p80007lovp3sp4a797" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -558,7 +687,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmgs1jron000amgvp8tkt3d74" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmguma7p70003lovp192o5ndc" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -601,7 +730,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmgs1jrom0008mgvpfrx59tbv" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmguma7p80006lovp80se6wmv" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -699,7 +828,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/15/2025-9-15/" data-id="cmgs1jrol0005mgvpey9f2gny" data-title="2025.9.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/15/2025-9-15/" data-id="cmguma7p90008lovpb6xcal7s" data-title="2025.9.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -778,7 +907,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmgs1jroj0001mgvpbqm850ek" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmguma7p80005lovp38rzbzy0" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -879,45 +1008,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/2025-9-10/" data-id="cmgs1jrol0004mgvpeykq2ola" data-title="2025.9.10" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Game-On" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/10/Game-On/" class="article-date">
-  <time class="dt-published" datetime="2025-09-10T07:59:34.000Z" itemprop="datePublished">2025-09-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/10/Game-On/">Game_On</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="这既是结束亦是开始"><a href="#这既是结束亦是开始" class="headerlink" title="这既是结束亦是开始"></a>这既是结束亦是开始</h1><h3 id="今天通过跟随一个视频一步步搭建了属于我的博客，虽然过程中只是盲目的跟随人家的脚步，都不知道自己做的这些每一步都有什么用，但是过程中我也收获了很多，在此之前没有怎么用过电脑的终端，每次打开电脑终端总觉得自己不可能看得懂这一行行的代码，但是今天通过搭建博客我渐渐能看懂一些了，就像：pwd-查看当前路径；cd-进入某个盘和文件中···。我开始对这些代码感兴趣了。"><a href="#今天通过跟随一个视频一步步搭建了属于我的博客，虽然过程中只是盲目的跟随人家的脚步，都不知道自己做的这些每一步都有什么用，但是过程中我也收获了很多，在此之前没有怎么用过电脑的终端，每次打开电脑终端总觉得自己不可能看得懂这一行行的代码，但是今天通过搭建博客我渐渐能看懂一些了，就像：pwd-查看当前路径；cd-进入某个盘和文件中···。我开始对这些代码感兴趣了。" class="headerlink" title="今天通过跟随一个视频一步步搭建了属于我的博客，虽然过程中只是盲目的跟随人家的脚步，都不知道自己做的这些每一步都有什么用，但是过程中我也收获了很多，在此之前没有怎么用过电脑的终端，每次打开电脑终端总觉得自己不可能看得懂这一行行的代码，但是今天通过搭建博客我渐渐能看懂一些了，就像：pwd-查看当前路径；cd-进入某个盘和文件中···。我开始对这些代码感兴趣了。"></a>今天通过跟随一个视频一步步搭建了属于我的博客，虽然过程中只是盲目的跟随人家的脚步，都不知道自己做的这些每一步都有什么用，但是过程中我也收获了很多，在此之前没有怎么用过电脑的终端，每次打开电脑终端总觉得自己不可能看得懂这一行行的代码，但是今天通过搭建博客我渐渐能看懂一些了，就像：pwd-查看当前路径；cd-进入某个盘和文件中···。我开始对这些代码感兴趣了。</h3><h3 id="我计划将此博客作为我蜕变的见证，我将会在学习、生活、社交等每一个方面提升自己，只为不辜负那些支持与信任。所以我会在此博客中发布一系列有关我提升种子，相信总有一天会收获相应的花朵。"><a href="#我计划将此博客作为我蜕变的见证，我将会在学习、生活、社交等每一个方面提升自己，只为不辜负那些支持与信任。所以我会在此博客中发布一系列有关我提升种子，相信总有一天会收获相应的花朵。" class="headerlink" title="我计划将此博客作为我蜕变的见证，我将会在学习、生活、社交等每一个方面提升自己，只为不辜负那些支持与信任。所以我会在此博客中发布一系列有关我提升种子，相信总有一天会收获相应的花朵。"></a>我计划将此博客作为我蜕变的见证，我将会在学习、生活、社交等每一个方面提升自己，只为不辜负那些支持与信任。所以我会在此博客中发布一系列有关我提升种子，相信总有一天会收获相应的花朵。</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/Game-On/" data-id="cmgs1jrom0007mgvpaxw87y3y" data-title="Game_On" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/10/2025-9-10/" data-id="cmguma7p70004lovp3fy3brv7" data-title="2025.9.10" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -965,6 +1056,10 @@
       <ul>
         
           <li>
+            <a href="/2025/10/17/2025-10-17/">2025.10.17</a>
+          </li>
+        
+          <li>
             <a href="/2025/10/15/2025-10-15/">2025.10.15</a>
           </li>
         
@@ -978,10 +1073,6 @@
         
           <li>
             <a href="/2025/09/23/2025-9-23/">2025.9.23</a>
-          </li>
-        
-          <li>
-            <a href="/2025/09/22/2025-9-22/">2025.9.22</a>
           </li>
         
       </ul>
