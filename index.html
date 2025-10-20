@@ -71,6 +71,170 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2025-10-20" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/20/2025-10-20/" class="article-date">
+  <time class="dt-published" datetime="2025-10-20T00:41:01.000Z" itemprop="datePublished">2025-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/20/2025-10-20/">2025.10.20</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>周末总结</li>
+<li>今日学习笔记</li>
+<li>今日总结</li>
+</ol>
+<h2 id="周末总结"><a href="#周末总结" class="headerlink" title="周末总结"></a>周末总结</h2><p>这周末暂时放松了一下，不过还是弹了琴，新曲子虽然有点难以掌握节奏，但以及整体过了一遍了，感觉再练几次就能弹下来了；原本打算带摩羯出去逛逛，结果起床完了，不过还是决定周末下午出去，结果刚骑到公园走了几步就开始下雨了，无奈之下只能提前回家了，没事以后有的是机会</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><ol>
+<li>机器学习核心范式<ol>
+<li>机器学习的核心逻辑： “观察训练数据→推断数据生成过程→预测测试数据”</li>
+<li>监督学习：给定特征 &#x2F; 标签对，学习预测未知输入标签的规则</li>
+<li>无监督学习：仅给定特征向量（无标签），将样本分组为 “自然聚类”，聚类是无监督学习的核心任务之一</li>
+</ol>
+</li>
+<li>聚类（Clustering）的本质：优化问题，目标是找到聚类划分 C 以最小化聚类内差异（dissimilarity (C)），但需满足约束条件：<ol>
+<li>若不设约束，会导致每个样本单独成簇（无意义），因此需添加约束，如 “聚类间最小距离” 或 “指定聚类数量（k）”</li>
+<li>核心逻辑：“大而差” 的聚类比 “小而差” 的聚类更差，需平衡聚类大小与内部一致性</li>
+</ol>
+</li>
+<li>层次聚类（Hierarchical Clustering）<ol>
+<li>核心步骤：<ol>
+<li>初始状态：每个样本单独成簇，N 个样本对应 N 个簇</li>
+<li>迭代合并：找到最相似（距离最近）的一对簇，合并为 1 个簇，簇数减少 1</li>
+<li>终止条件：所有样本合并为 1 个簇（大小为 N）</li>
+</ol>
+</li>
+<li>簇间距离（链接度量）（Linkage Metrics）<ol>
+<li>单链接（Single-linkage）：簇间距离 &#x3D; 两簇中任意样本的最短距离</li>
+<li>全链接（Complete-linkage）：簇间距离 &#x3D; 两簇中任意样本的最长距离  （<code>注意：比较的是谁的最长距离最小，而不是最大</code>）</li>
+<li>平均链接（Average-linkage）：簇间距离 &#x3D; 两簇中所有样本的平均距离</li>
+</ol>
+</li>
+<li>方法特点：<ol>
+<li>优势：可通过树状图选择聚类数量；结果具有确定性；链接准则灵活</li>
+<li>劣势：速度慢，朴素算法时间复杂度为n^3，仅部分链接准则存在n^2优化算法</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>K-means 聚类<ol>
+<li>算法流程：<ol>
+<li>随机选k个样本作为初始值</li>
+<li>将每个样本分配至最近的质心，形成k个簇</li>
+<li>计算每个簇的新质心（簇内所有样本特征的平均值）</li>
+<li>质心是否变化？</li>
+<li>质心变化则返回第二步；质心不变则输出聚类结果</li>
+</ol>
+</li>
+<li>时间复杂度：knd （n：样本总数；d：计算单个样本与质心距离的耗时）</li>
+<li>关键问题与解决办法：<ol>
+<li>问题1：k 值选择不当    </li>
+<li>解决办法：<ol>
+<li>利用领域先验知识（如已知 5 种细菌，设 k&#x3D;5）；</li>
+<li>测试不同 k 值，评估聚类质量；</li>
+<li>对部分数据运行层次聚类辅助选 k</li>
+</ol>
+</li>
+<li>问题2：依赖初始质心</li>
+<li>解决办法：尝试多组随机初始质心，计算每组结果的差异，选择差异最小的结果作为最终聚类</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>聚类评估方法<ol>
+<li>核心评估指标：总差异（dissimilarity）<ol>
+<li>聚类质量通过 “总差异” 衡量，计算公式为：dissimilarity(clusters) &#x3D; ∑ c∈clusters variability(c)</li>
+<li>其中variability(c)（簇内差异）&#x3D; 簇内所有样本到该簇质心的距离平方和。总差异越小，聚类质量越好（簇内样本越集中）</li>
+</ol>
+</li>
+<li>代码实现核心函数<ol>
+<li>dissimilarity(clusters)：计算所有簇的总差异</li>
+<li>trykmeans(examples, numClusters, numTrials)：运行 numTrials 次 K-means，返回总差异最小的结果</li>
+<li>printClustering(clustering)：输出各簇样本数与阳性率，辅助业务评估</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>关键问题<ol>
+<li>层次聚类与 K-means 聚类在适用场景和性能上有何核心差异？如何根据数据特点选择这两种方法？<ol>
+<li>适用场景：<ol>
+<li>层次聚类适用于<strong>无需提前确定聚类数量的场景</strong>（可通过树状图灵活选 k），或对聚类结果确定性要求高的场景（如小样本数据的精细分组）</li>
+<li>K-means 适用于<strong>已知聚类数量范围</strong>（如通过领域知识确定 k）、追求高效聚类的场景（如大样本数据）</li>
+</ol>
+</li>
+<li>性能：<ol>
+<li>层次聚类速度慢（朴素算法n^3），仅小样本适用</li>
+<li>K-means 速度快（单次迭代 knd），可处理大样本，但结果依赖初始质心（需多组测试）</li>
+</ol>
+</li>
+<li><strong>选择依据：</strong><ol>
+<li>选择层次聚类：若数据量小、需灵活选 k；；若需确定簇间关系（如层级结构）</li>
+<li>选择K-means：若数据量大、已知 k 范围或可通过测试选 k；若需避免局部最优</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>在 K-means 聚类中，特征归一化（如 Z-Scaling）为何对聚类结果影响显著？<ol>
+<li>特征归一化的核心作用是消除特征量纲差异导致的权重失衡，避免数值范围大的特征主导距离计算（K-means 依赖样本与质心的距离）</li>
+<li>未归一化的问题：患者数据中，“年龄”（如 20-80 岁）与 “ST 段抬高”（0&#x2F;1 二元变量）数值范围差异极大，未归一化时，“年龄” 对距离的贡献远大于 “ST 段抬高”，导致聚类仅依赖年龄，无法捕捉 ST 段抬高（与心脏病风险直接相关）的特征，因此 k&#x3D;2 时两簇阳性率接近（33.05% vs 33.33%），无实际意义</li>
+<li>归一化的作用：Z-Scaling 后，所有特征均值为 0、标准差为 1，各特征对距离的贡献权重一致，聚类可同时考虑心率、既往病史、年龄、ST 段抬高的综合影响，k&#x3D;2 时出现高风险簇（26 人，阳性率 69.23%）与低风险簇（224 人，阳性率 29.02%），聚类结果符合业务逻辑（高风险患者被有效区分），证明归一化能让 K-means 捕捉关键特征关联，提升聚类实用性</li>
+</ol>
+</li>
+<li>在聚类分析中，如何科学选择 K 值（聚类数量）？<ol>
+<li>k 值选择方法：<ol>
+<li>利用领域先验知识（如已知 5 种细菌类型，直接设 k&#x3D;5）</li>
+<li>测试多组 k 值，通过 “总差异（dissimilarity）” 评估（总差异越小，聚类内一致性越高），同时结合业务指标（如患者聚类的阳性率）</li>
+<li>对部分数据运行层次聚类，通过树状图的 “距离断点” 辅助确定 k 值范围</li>
+</ol>
+</li>
+<li>k 值选择与业务目标的关系（以患者数据为例）：<ol>
+<li>若业务目标是<code>快速区分高 / 低风险患者</code>：选 k&#x3D;2，此时高风险簇（26 人，69.23% 阳性率）与低风险簇（224 人，29.02% 阳性率）界限清晰，可快速筛选高风险人群</li>
+<li>若业务目标是<code>细分高风险患者（如制定个性化干预方案）</code>：选 k&#x3D;4 或 k&#x3D;6，k&#x3D;4 时出现两个高风险簇（69.23%、71.05%），k&#x3D;6 时高风险簇进一步细分（最高 77.78% 阳性率），可针对不同高风险 subgroup 分析特征（如是否有多次既往心脏病发作），制定精准方案</li>
+<li>若 k 值过大（如 k&#x3D;10）：可能导致簇样本量过小（如部分簇仅 5-10 人），阳性率波动大（无统计意义），不符合 “稳定分组” 的业务需求，因此 k 值需在 “细分程度” 与 “簇稳定性” 间平衡</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>编程学习（进程）</li>
+<li>看书一章</li>
+<li>参加每周城市之旅活动，今天主要认识了一下小组成员以及了解了之后的安排，加了一个成员的微信，感觉通过介绍会是个不错的伙伴</li>
+<li>把之前没学完的ppt学完了</li>
+<li>英语学习</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmgz3u76l00040ovpbpn523ai" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2025-10-17" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/17/2025-10-17/" class="article-date">
@@ -100,7 +264,7 @@
 </ol>
 <h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
 <li>随机变量（Random Variables）<ol>
-<li>Definition：设样本空间为 Ω，随机变量 X 是定义在 Ω 上、取值于实数集ℝ的函数，即 X: Ω→ℝ，X (ω) 表示对样本点 ω 的赋值</li>
+<li>Definition：设样本空间为 Ω，随机变量 X 是定义在 Ω 上、取值于实数集ℝ的函数，即X: Ω→R，X(ω) 表示对样本点 ω 的赋值</li>
 <li>Example：掷骰子（Ω&#x3D;{1,2,3,4,5,6}），X(1-3)&#x3D;1（赢1元），X(4-6)&#x3D;-1（输1元），刻画玩家收益</li>
 <li>概率表示：事件 “X 取 x 值” 即 {ω∈Ω | X(ω)&#x3D;x}，概率简化记为P(X&#x3D;x)，且所有可能取值概率和为 1（∑P (X&#x3D;x)&#x3D;1）</li>
 </ol>
@@ -172,7 +336,127 @@
 </li>
 </ol>
 </li>
-<li>连续型随机变量及其分布（Continuous Random Variables and Distributions）</li>
+<li>连续型随机变量及其分布（Continuous Random Variables and Distributions）<ol>
+<li>Definition：取值能充满某个区间（或多个区间），且其取任何单个特定值的概率均为 0 的随机变量</li>
+<li>概率密度函数（probability density function（pdf））：f(x)满足：<ol>
+<li>f(x)≥0</li>
+<li>∫(-∞到+∞) f(x) dx &#x3D; 1</li>
+</ol>
+</li>
+<li>分布函数（Distribution Function）：F(x) &#x3D; P(X≤x) &#x3D; ∫(-∞到 x) f(t) dt，具有性质：<ol>
+<li>lim(x→-∞)F(x)&#x3D;0</li>
+<li>lim(x→+∞)F(x)&#x3D;1</li>
+<li>𝐹可微（因此连续），是非递减函数</li>
+<li>0 ≤ 𝐹(x)≤ 1</li>
+<li>f(x) &#x3D; F’(x)</li>
+</ol>
+</li>
+<li>连续随机变量的均值(Mean of Continuous Random Variable)：μ &#x3D; E[x] &#x3D; ∫(-∞到+∞) xf(x) dx ，（f(x)是pdf）<ol>
+<li>进一步推导出：E[g(X)] &#x3D; ∫(-∞到+∞) g(x)f(x) dx</li>
+</ol>
+</li>
+<li>连续随机变量的方差(Variance of Continuous Random Variable)：σ^2 &#x3D; Var(X) &#x3D; E[(X - E(X))^2] &#x3D; ∫(-∞到+∞) (x - E(X))^2 f(x) dx</li>
+<li>均值和方差的性质：<ol>
+<li>设𝑋为随机变量，我们考虑𝑋的线性函数：𝑌 &#x3D; 𝑎𝑋 + b，a,b ∈ R 其具有性质：<ol>
+<li>E(Y) &#x3D; aE(X) + b</li>
+<li>Var(Y) &#x3D; a^2Var(X)</li>
+</ol>
+</li>
+<li>我们可以用以下公式表示随机变量𝑋的方差：<code> Var(X) = E(X^2) - E(X)^2</code></li>
+</ol>
+</li>
+<li>均匀分布(Uniform Distribution)：X ~ U(a,b)， a&lt;b<ol>
+<li>pdf：f(x) &#x3D; 1&#x2F;(b-a)（a&lt;x&lt;b），否则 0</li>
+<li>E(X)：(a+b)&#x2F;2</li>
+<li>Var(X)：(b-a)²&#x2F;12</li>
+</ol>
+</li>
+<li>指数分布(Exponential Distribution)：X ~ Exp(λ)，λ&gt;0<ol>
+<li>pdf：f(x) &#x3D; λe^(-λx)（x≥0），否则 0</li>
+<li>E(X)：1&#x2F;λ</li>
+<li>Var(X)：1&#x2F;λ²</li>
+<li>注意：指数分布常被用作描述特定事件发生前时间长度的分布（eg：从现在开始到发生地震的时间长度）</li>
+</ol>
+</li>
+<li>正态分布(Normal Distribution)：X ~ N(μ,σ²)，μ∈R， σ&gt;0<ol>
+<li>pdf：f(x)&#x3D;1&#x2F;(√(2π)σ)e^(-(x-μ)²&#x2F;(2σ²))</li>
+<li>E(X)：μ</li>
+<li>Var(X)：σ²</li>
+<li><strong>正态分布关键特性：</strong><ol>
+<li>标准化：若 X<del>N (μ,σ²)，则Z&#x3D;(X-μ)&#x2F;σ</del>N(0,1)（标准正态分布），通过标准正态表查概率</li>
+<li>3σ 原则：P(μ-σ&lt;X&lt;μ+σ)≈68.27%，P(μ-2σ&lt;X&lt;μ+2σ)≈95.45%，P(μ-3σ&lt;X&lt;μ+3σ)≈99.73%</li>
+</ol>
+</li>
+<li>解题步骤：<ol>
+<li><code>将X转换成Z的范围</code></li>
+<li>用上限减去下限</li>
+<li>查找对应值带入计算</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>二维分布（2D Distributions）<ol>
+<li>二维离散分布（Discrete 2D Distributions）<ol>
+<li>联合 pmf：f (x_i,y_j)&#x3D;P (X&#x3D;x_i,Y&#x3D;y_j)，满足∑∑f (x_i,y_j)&#x3D;1</li>
+<li>边际 pmf：f_X (x_i)&#x3D;∑(j) f (x_i,y_j)（对 Y 求和），f_Y (y_j)&#x3D;∑(i) f (x_i,y_j)（对 X 求和）</li>
+<li>分布函数：F(x,y) &#x3D; ∑(x_i&lt;&#x3D;x)∑(y_i&lt;&#x3D;y) f(x_i,y_j)</li>
+<li>∑i∑j f(x_i,y_j) &#x3D; 1</li>
+<li>X的边际分布：f(x) &#x3D; ∑j f(x,y_j)</li>
+<li>Y的边际分布：f(y) &#x3D; ∑i f(x_i,y)</li>
+<li>如果X和Y相互独立：f(x_i|y_j) &#x3D; f(x_i) or f(x_i,y_j) &#x3D; f(x_i)f(y_j)</li>
+<li>期望值：E(g(X,Y)) &#x3D; ∑i∑j g(x_i,y_j) f(x_i,y_j)</li>
+</ol>
+</li>
+<li>二维连续分布（Continuous 2D Distributions）<ol>
+<li>联合 pdf：f (x,y)≥0，∫(-∞到 +∞)∫(-∞到 +∞) f (x,y)dxdy &#x3D; 1</li>
+<li>边际 pdf：f_X (x)&#x3D;∫(-∞到 +∞) f (x,y) dy，f_Y (y)&#x3D;∫(-∞到 +∞) f (x,y) dx</li>
+<li>分布函数：F(x,y) &#x3D; ∫(Y&lt;&#x3D;y)∫(X&lt;&#x3D;x) f(X,Y)dXdY</li>
+<li>X的边际分布：f(x) &#x3D; ∫(-∞到 +∞) f(x,y)dy</li>
+<li>Y的边际分布：f(y) &#x3D; ∫(-∞到 +∞) f(x,y)dx</li>
+<li>如果X和Y相互独立：f(x|y) &#x3D; f(x) or f(x,y) &#x3D; f(x)f(y)</li>
+<li>期望值：E(g(X,Y)) &#x3D; ∫(-∞到 +∞)∫(-∞到 +∞) g(x,y)f(x,y)dxdy</li>
+<li>P(a&lt;&#x3D;X&lt;&#x3D;b,c&lt;&#x3D;Y&lt;&#x3D;d) &#x3D; ∫(c到d)∫(a到b) f(x,y)dxdy</li>
+<li>条件概率描述 “在Y满足某条件时，X发生的概率”，分三类情况：<ol>
+<li>P(X&lt;&#x3D;x|Y&lt;&#x3D;y) &#x3D; P(X&lt;&#x3D;x|Y&lt;&#x3D;y) &#x2F; P(Y&lt;&#x3D;y) &#x3D; F(x,y) &#x2F; F(y)</li>
+<li>P(X&lt;&#x3D;x|Y&#x3D;y) &#x3D; ∫(X&lt;&#x3D;x) f(x|y)dx &#x3D; ∫(X&lt;&#x3D;x) f(x,y)&#x2F;f(y) dx</li>
+<li>P(X&lt;&#x3D;x|Y&gt;&#x3D;y) &#x3D; P(X&lt;&#x3D;x|Y&gt;&#x3D;y) &#x2F; P(Y&gt;&#x3D;y) &#x3D; ∫(Y&gt;&#x3D;y)∫(X&lt;&#x3D;x) f(x,y) dxdy &#x2F; ∫(Y&gt;&#x3D;y) f(y) dy</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数字特征与相关性<ol>
+<li>均值的运算性质<ol>
+<li>求和定理(Sum of Means)：对任意随机变量 X₁,X₂,…,Xₙ（离散&#x2F;连续、独立&#x2F;依赖），E(X₁+X₂+…+Xₙ) &#x3D; E(X₁)+E(X₂)+…+E(Xₙ)</li>
+<li>乘积定理(Product of Means)：<strong>仅当X₁,X₂,…,Xₙ独立时（每个随机变量的取值都不会对其他随机变量的取值概率产生影响）（离散、连续都适用）</strong>，E(X₁X₂…Xₙ)&#x3D;E(X₁)E(X₂)…E(Xₙ)</li>
+</ol>
+</li>
+<li>独立性与不相关性<ol>
+<li>独立性(independent)：X与Y独立 -&gt; f(x,y) &#x3D; f(x)f(y)（离散pmf &#x2F; 连续pdf）</li>
+<li>不相关性(uncorrelated)：X与Y不相关 -&gt; E(XY) &#x3D; E(X)E(Y) -&gt; Cov(X,Y) &#x3D; 0 -&gt; ρ(X,Y) &#x3D; 0</li>
+<li>关系：独立→不相关，但不相关≠独立</li>
+</ol>
+</li>
+<li>协方差与相关系数<ol>
+<li>协方差(Covariance)：Cov(X,Y) &#x3D; E[(X-μ_X)(Y-μ_Y)] &#x3D; E(XY) - E(X)E(Y)，反映X与Y“同增同减” 趋势（Cov&gt;0：正相关，Cov&lt;0：负相关）</li>
+<li>相关系数(Correlation)：ρ(X,Y)&#x3D;Cov (X,Y)&#x2F;(σ_Xσ_Y)，ρ∈[-1,1]，是无量纲的线性关联度量<ol>
+<li>ρ&#x3D;1：完全正线性相关</li>
+<li>ρ&#x3D;-1：完全负线性相关</li>
+<li>ρ&#x3D;0：无线性相关</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>双变量正态分布<ol>
+<li>定义：X与Y联合正态 -&gt; 对任意 a,b∈R，aX+bY 正态分布</li>
+<li>关键性质：若 X 与 Y 联合正态且不相关（ρ&#x3D;0），则X与Y独立（区别于一般随机变量）</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 <h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
 <li>我们一步一步走下去，踏踏实实地去走，永不抗拒生命交给我们的重负，才是一个勇者。到了蓦然回首的那一瞬间，生命必然给我们公平的答案和又一次乍喜的心情，那时的山和水，又恢复成最初单纯的样子，而人生走过的是多么美好的一个秋天。 – 三毛</li>
@@ -188,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmguma7p50001lovp0stgh3fb" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmgz3u76o000b0ovphwsh8u5t" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -231,7 +515,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmguma7p60002lovp03j86cfh" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmgz3u76l00020ovpfy0b1lxq" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -469,7 +753,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmguma7p20000lovpefnf6gov" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmgz3u76k00010ovp4ptx628o" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -512,7 +796,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmguma7p90009lovpcpj34uro" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmgz3u76n00070ovp50j9c857" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -556,7 +840,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmguma7p80007lovp3sp4a797" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmgz3u76o000c0ovpdco6bnxe" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -687,7 +971,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmguma7p70003lovp192o5ndc" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmgz3u76m00050ovp9awy4nra" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -730,7 +1014,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmguma7p80006lovp80se6wmv" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmgz3u76o000a0ovp9yteghuo" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -828,7 +1112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/15/2025-9-15/" data-id="cmguma7p90008lovpb6xcal7s" data-title="2025.9.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/15/2025-9-15/" data-id="cmgz3u76m00060ovp96ik2u5e" data-title="2025.9.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -907,108 +1191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmguma7p80005lovp38rzbzy0" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-9-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/10/2025-9-10/" class="article-date">
-  <time class="dt-published" datetime="2025-09-10T10:21:33.000Z" itemprop="datePublished">2025-09-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/10/2025-9-10/">2025.9.10</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>今天跟随视频一步步搭建了属于自己的博客，我把整个过程以及所学记录下来</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ol>
-<li>安装nodejs</li>
-<li>打开终端并切换到root用户（输入了 sudo su）<ul>
-<li>该过程中打开 设置 -&gt; 系统 -&gt; 开发者选项 -&gt; 开启“启用Sudo” -&gt; 选择运行模式“内联”</li>
-<li>之后重启终端 -&gt; 输入sudo whoami -&gt; 显示 laptop-lv27uskg\admin【表示当前以管理员权限执行了命令（laptop-lv27uskg 是我的计算机名，admin 是我的用户名），这说明 sudo 配置生效了。】</li>
-</ul>
-</li>
-<li>终端输入 node -v 和 npm -v（查看版本）<ul>
-<li>输入npm -v后显示:</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> https:/go.microsoft.com/fwlink/?LinkID=<span class="number">135170</span> 中的 about_Execution_Policies。</span><br><span class="line">所在位置 行:<span class="number">1</span> 字符: <span class="number">1</span></span><br><span class="line">+ npm <span class="literal">-v</span></span><br><span class="line">+ ~~~</span><br><span class="line">    + CategoryInfo          : SecurityError: (:) []，PSSecurityException</span><br><span class="line">    + FullyQualifiedErrorId : UnauthorizedAccess</span><br></pre></td></tr></table></figure>
-<pre><code>- 终端输入：Get-ExecutionPolicy，显示：Restricted
-- 终端输入：Set-ExecutionPolicy RemoteSigned
-- 再次执行 Get-ExecutionPolicy，确认显示为 RemoteSigned
-- 上面的步骤设置允许运行本地创建的脚本，同时对从网络下载的脚本进行安全检查，是比较平衡的安全策略。
-</code></pre>
-<ol start="4">
-<li>终端输入：npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npmmirror.com/">https://registry.npmmirror.com</a><ul>
-<li>安装成功，接下来就可以使用 cnpm 命令来替代 npm 进行包管理了</li>
-</ul>
-</li>
-<li>终端输入：cnpm install -g hexo-cli<ul>
-<li>安装好hexo了</li>
-</ul>
-</li>
-<li>在E盘创建blog文件夹，并通过终端cd操作将路径改到创建好的blog文件夹</li>
-<li>终端输入：sudo hexo init, 报错：</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INFO  Cloning hexo<span class="literal">-starter</span> https://github.com/hexojs/hexo<span class="literal">-starter</span>.git</span><br><span class="line"><span class="string">&#x27;git&#x27;</span> 不是内部或外部命令，也不是可运行的程序</span><br><span class="line">或批处理文件。</span><br><span class="line">WARN  git clone failed. Copying <span class="keyword">data</span> instead</span><br><span class="line">FATAL Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: EPERM: operation not permitted, mkdir &#x27;</span>E:\<span class="string">&#x27;</span></span><br><span class="line"><span class="string">    at async Object.mkdir (node:internal/fs/promises:860:10)</span></span><br></pre></td></tr></table></figure>
-<pre><code>- 报错原因是缺少 Git 环境
-- 通过Git 官网 下载 Windows 版本
-</code></pre>
-<ol start="8">
-<li>再次输入：sudo hexo init<ul>
-<li>此时Hexo 已经成功初始化完成，现在博客项目基础框架已经搭建好了</li>
-<li>输入：ls （查看当前目录下的文件）</li>
-</ul>
-</li>
-</ol>
-<h3 id="将博客部署到远端的GitHub上公开使用"><a href="#将博客部署到远端的GitHub上公开使用" class="headerlink" title="将博客部署到远端的GitHub上公开使用"></a>将博客部署到远端的GitHub上公开使用</h3><ol>
-<li>创建并登录GitHub账号</li>
-<li>创建一个仓库(repository)<ul>
-<li>注意：创建仓库时起的名字必须符合格式：名字.github.io</li>
-</ul>
-</li>
-<li>终端在blog文件路径下输入：cnmp install –save hexo-deployer-git</li>
-<li>终端输入：notepad _config.yml, 打开文件后修改最下面的Deployment部分：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/Maverick-Yza/Maverick-Yza-github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>终端输入：hexo d （部署到远端）</li>
-</ol>
-<h3 id="过程所学"><a href="#过程所学" class="headerlink" title="过程所学"></a>过程所学</h3><ol>
-<li>打开终端输入的左边显示的是你当前操作所在的路径<ol start="2">
-<li>cd 后跟你想更改的路径</li>
-<li>pwd —— 查看当前路径</li>
-</ol>
-</li>
-<li>每次更新完博客后需要在终端输入：hexo clean、hexo g、hexo d。使其保存并部署到远端</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/10/2025-9-10/" data-id="cmguma7p70004lovp3fy3brv7" data-title="2025.9.10" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/11/2025-9-11/" data-id="cmgz3u76l00030ovp1wmlgq6o" data-title="2025.9.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1056,6 +1239,10 @@
       <ul>
         
           <li>
+            <a href="/2025/10/20/2025-10-20/">2025.10.20</a>
+          </li>
+        
+          <li>
             <a href="/2025/10/17/2025-10-17/">2025.10.17</a>
           </li>
         
@@ -1069,10 +1256,6 @@
         
           <li>
             <a href="/2025/09/24/2025-9-24/">2025.9.24</a>
-          </li>
-        
-          <li>
-            <a href="/2025/09/23/2025-9-23/">2025.9.23</a>
           </li>
         
       </ul>
