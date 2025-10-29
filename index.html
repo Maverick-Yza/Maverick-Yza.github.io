@@ -71,6 +71,262 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2025-10-29" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/29/2025-10-29/" class="article-date">
+  <time class="dt-published" datetime="2025-10-29T02:17:28.000Z" itemprop="datePublished">2025-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/29/2025-10-29/">2025.10.29</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>学习笔记</li>
+<li>今日总结</li>
+<li>摘录</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<li>数据与数据表示<ol>
+<li>图表类型：<ol>
+<li>柱状图（Bar graph）</li>
+<li>饼图（Pie Chart）</li>
+<li>交叉表（Cross Table）：可以变成并排的簇状图（几个柱作为一个整体）或堆叠的分组条形图（一个柱上有几个不同的特性）</li>
+<li>直方图（Histogram）</li>
+<li>累积频率图（Ogive）：连接各区间上限累积百分比的线，展示累积频率分布</li>
+<li>茎叶图（Stem and Leaf Plot）：同时展示数据的分布和原始值（中间的主干数据加上两边的枝干数据）</li>
+<li>时间序列图（Time Series Plot）：横轴为时间，纵轴为序列值，展示数据随时间的变化趋势</li>
+<li>散点图（Scatterplot）：观测两个定量变量的关系，需关注关联方向（正 &#x2F; 负）、形式（线性 &#x2F; 非线性）、强度（紧密 &#x2F; 松散）</li>
+</ol>
+</li>
+<li>频率表<ol>
+<li>分类数据频率表：列出类别及对应数量（频率），相对频率表则列出百分比（比例）<ol>
+<li>频率表：  <table>
+<thead>
+<tr>
+<th>舱位</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>头等舱（First）</td>
+<td>324</td>
+</tr>
+<tr>
+<td>二等舱（Second）</td>
+<td>285</td>
+</tr>
+<tr>
+<td>三等舱（Third）</td>
+<td>710</td>
+</tr>
+<tr>
+<td>船员（Crew）</td>
+<td>889</td>
+</tr>
+</tbody></table>
+</li>
+<li>相对频率表  <table>
+<thead>
+<tr>
+<th>舱位</th>
+<th>百分比（%）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>头等舱（First）</td>
+<td>14.67</td>
+</tr>
+<tr>
+<td>二等舱（Second）</td>
+<td>12.91</td>
+</tr>
+<tr>
+<td>三等舱（Third）</td>
+<td>32.16</td>
+</tr>
+<tr>
+<td>船员（Crew）</td>
+<td>40.26</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>数值数据频率表：<ol>
+<li>构建规则：根据样本量n选择，如下表：<table>
+<thead>
+<tr>
+<th>样本量（n）</th>
+<th>组数（k）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;50</td>
+<td>5-7</td>
+</tr>
+<tr>
+<td>50-100</td>
+<td>7-8</td>
+</tr>
+<tr>
+<td>101-500</td>
+<td>8-10</td>
+</tr>
+<tr>
+<td>501-1000</td>
+<td>10-11</td>
+</tr>
+<tr>
+<td>1001-5000</td>
+<td>11-14</td>
+</tr>
+<tr>
+<td>&gt;5000</td>
+<td>14-20</td>
+</tr>
+</tbody></table>
+</li>
+<li>选择组宽：class width &#x3D; (最大观测值 - 最小观测值) &#x2F; 组数k （注意：需向上取整（根据数据小数位数））</li>
+<li>组的要求：包含所有数据且不重叠，每个观测属于唯一一组</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>四种测量尺度<table>
+<thead>
+<tr>
+<th align="center">尺度类型</th>
+<th align="center">核心特征</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">名义尺度（Nominal）</td>
+<td align="center">仅用于命名 &#x2F; 标签，非定量值，无顺序和大小关系</td>
+<td align="center">欧洲国家、运动员 T 恤号码、性别、发色</td>
+</tr>
+<tr>
+<td align="center">顺序尺度（Ordinal）</td>
+<td align="center">有顺序，非定量值，无法精确衡量差值</td>
+<td align="center">幸福感等级、服务满意度</td>
+</tr>
+<tr>
+<td align="center">区间尺度（Interval）</td>
+<td align="center">定量，有顺序，可衡量差值，无 “真零”（零无实际意义），无法计算比率</td>
+<td align="center">摄氏温度（60℃与 50℃差值 &#x3D; 80℃与 70℃差值 &#x3D; 10℃，但 0℃不代表无温度）</td>
+</tr>
+<tr>
+<td align="center">比率尺度（Ratio）</td>
+<td align="center">定量，有顺序，可衡量差值，有 “真零”（零代表无），可计算比率</td>
+<td align="center">体重（20kg 是 10kg 的 2 倍）、身高</td>
+</tr>
+</tbody></table>
+</li>
+<li>分布描述<ol>
+<li>集中趋势测量（反映数据典型值）<ol>
+<li>均值（Mean，x̄）：算术平均，公式为 x̄ &#x3D; (∑(i&#x3D;1 到 n) xi) &#x2F; (n - 1)</li>
+<li>中位数（Median，m）：有序数据的中点，即第 50 百分位数</li>
+<li>众数（Mode）：数据中出现频率最高的数值，可能有多个（如双峰、多峰分布）</li>
+</ol>
+</li>
+<li>离散程度测量（反映数据变异性）<ol>
+<li>范围（Range）：最大值与最小值的差值，公式为 Range &#x3D; 最大观测值 - 最小观测值</li>
+<li>四分位距（Interquartile Range，IQR）：上四分位数（Q3）与下四分位数（Q1）的差值，公式为 IQR &#x3D; Q3 - Q1<ol>
+<li>计算Q1和Q3的规则：<ol>
+<li>若n为奇数：Q1是<strong>前</strong>(n+1&#x2F;2)-1个数据的中位数，Q3是<strong>后</strong>(n+1&#x2F;2)-1个数据的中位数</li>
+<li>若n为偶数：Q1是<strong>前</strong>n&#x2F;2个数据的中位数，Q1是<strong>后</strong>n&#x2F;2个数据的中位数</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>方差（Variance，s^2）与标准差（Standard Deviation，s）：<ol>
+<li>方差：衡量数据与均值的偏离程度，样本方差公式为 s^2 &#x3D; ∑(i&#x3D;1 到 n) (xi - x̄)^2 &#x2F; n-1 （<strong>分母用n-1是因为∑(xi - x̄) &#x3D; 0，即仅n−1个偏差可自由变化</strong>）</li>
+<li>标准差：方差的平方根，单位与原始数据一致，<code>值越大说明数据越分散，越小则越集中</code></li>
+</ol>
+</li>
+<li>形状（反映数据分布形态）：<ol>
+<li>偏度（Skewness）：衡量分布的不对称性<ol>
+<li>负偏（Negatively skewed）：均值 &lt; 中位数 &lt; 众数，分布左侧长尾</li>
+<li>正态（Normal，无偏）：均值 &#x3D; 中位数 &#x3D; 众数，分布对称</li>
+<li>正偏（Positively skewed）：众数 &lt; 中位数 &lt; 均值，分布右侧长尾</li>
+</ol>
+</li>
+<li>众数数量：<ol>
+<li>单峰（Unimodal）：只有一个众数</li>
+<li>双峰（Bimodal）：有两个众数</li>
+<li>多峰（Multimodal）：有三个及以上众数</li>
+</ol>
+</li>
+<li>异常值（Outliers）：<ol>
+<li>定义：远离数据主体的观测值，可能由实验误差导致，有时需从数据集中剔除</li>
+<li>判断标准：若观测值落在<code>Q1 - 1.5IQR以下</code>或<code>Q3 + 1.5IQR以上</code>，则可能为异常值</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>箱线图（Box-and-whisker plot）<ol>
+<li>定义：一种图形化展示数据分布的工具，呈现中位数、Q1、Q3及潜在异常值</li>
+<li>组成部分：<ol>
+<li>箱体：从Q1延伸至Q3，箱内横线代表中位数</li>
+<li>须（Whiskers）：从箱体两端延伸至 Q1 - 1.5IQR 和 Q3 + 1.5IQR 范围内的最小和最大数据点</li>
+<li>异常值：超出须范围的数据点，单独标记</li>
+</ol>
+</li>
+<li>用途：作为诊断工具，直观观察数据分布的集中趋势、离散程度和异常值，非用于正式的异常值检验<br><img src="/images/%E7%AE%B1%E7%BA%BF%E5%9B%BE.png" alt="箱线图"></li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li><code>今天在记笔记时要加入表格，发现：为了避免序号被打乱，要通过缩进确保表格属于上一级列表项</code></li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>管理情绪主要包括三个方面的内容：一是认识自己的情绪；二是疏解自己的情绪；三是适当表达自己的情绪。</li>
+<li>脱困四问：<ol>
+<li>Emotion：我正处于何种情绪里？这种情绪的程度如何？</li>
+<li>Event：我为什么产生这样的情绪？（注意：需要客观真实看待所发生的事情，不能带有主观倾向）</li>
+<li>Target：我的初衷是什么？</li>
+<li>Action：接下来我该怎么做？我可以做些什么？</li>
+</ol>
+</li>
+<li>生活的本质在于追求快乐，而让自己的人生变得快乐的途径有两种：不断地发现有限生命中的快乐时光，并增加它；发现那些令自己不快乐的时光，并尽可能减少它。 —— 亚里士多德</li>
+<li>两弊相衡取其轻，两利相权取其重</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhboy3tc00053wvp5kk48c3r" data-title="2025.10.29" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2025-10-28" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/28/2025-10-28/" class="article-date">
@@ -99,7 +355,7 @@
 <li>今日收获</li>
 </ol>
 <h2 id="前段时间的总结"><a href="#前段时间的总结" class="headerlink" title="前段时间的总结"></a>前段时间的总结</h2><p>从上次博客之后以及一周多了，这期间每天都被牙疼所困扰，从而导致作息被打乱了，且状态明显有所下降。但是不能再继续下去了，从今天开始吃两天药看能不能缓解，实在不行就去医院看看。<br>在这段时间内虽然生活被有点打乱，但是还是完成了不少有意义的事情的：上周的两次飞盘活动明显参与感更好了，虽然第一次的活动由于失误误伤了一个同学，但幸好问题不是特别严重，周末的第二次活动上更是难得和一名同学在练习时交流的非常开心，希望之后能够继续照这样发展。其次上周末按惯例去参加了志愿者活动，虽然因为我的固执导致被咬了一下，但没什么大碍，就是我发现我买的防水服洗过之后还是有很大的味道，没办法只能再多洗几次看看行不行吧。昨天进行了第一次的城市之旅活动，这次的主题是“食”，由于我的两个行程都被婉拒了所以最后就在学校里的一个饭店吃了个晚饭，顺便把之后几期的活动都交给对应的人来安排，虽然活动的人有点少，但是我感觉还是很不错的，尤其和老师交流的挺开心，完全像是和朋友一样特别轻松自在。</p>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><ol>
 <li>监督学习（Supervised Learning）基础框架<ol>
 <li>核心流程：数据准备→选择算法→拟合模型→评估模型→更新模型→进行预测 （损失（Loss）：预测结果与真实结果的差异）</li>
 <li>任务分类：<ol>
@@ -155,7 +411,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhahastb00042gvpeb99cohv" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhboy3tc00043wvp63me7clh" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -319,7 +575,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhahastb00022gvpeatsgy4r" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhboy3tb00033wvpa3i1gfv0" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -568,7 +824,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhahastc00062gvpcmhv53vz" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhboy3tb00023wvp99xy3be5" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -611,7 +867,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhahasta00012gvpajty0ry8" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhboy3ta00013wvpb5tw0ap1" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -849,7 +1105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhahast800002gvpfaqxcoed" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhboy3t700003wvpfzd699l9" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -892,7 +1148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhahastc00072gvpa4uo6603" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhboy3tg000e3wvpg7s40y8m" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -936,7 +1192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmhahaste000d2gvp5z2r0moh" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmhboy3tf000b3wvpe7tw9xdl" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1067,7 +1323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmhahastc00082gvp10fub3xo" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmhboy3te00083wvp7ltm0y30" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1110,105 +1366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmhahastd00092gvph7jgamt7" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-9-15" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/15/2025-9-15/" class="article-date">
-  <time class="dt-published" datetime="2025-09-15T03:51:17.000Z" itemprop="datePublished">2025-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/15/2025-9-15/">2025.9.15</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
-<li>周末总结</li>
-<li>今日收获</li>
-</ol>
-<h2 id="周末总结"><a href="#周末总结" class="headerlink" title="周末总结"></a>周末总结</h2><ol>
-<li>录好了需要上交的吉他视频</li>
-<li>带摩羯检查，确认没有问题</li>
-<li>本学期第一次志愿者活动，抓了一只毛发打结非常严重的小狗给剃毛。（就是以后天气热的情况下再也不穿防水服了，差点给我干脱水了，实在太闷热了）</li>
-<li>周日晚上完成了第一周的10km，虽然配速有点慢，不过能跑下来就好</li>
-</ol>
-<h2 id="9-15学习收获"><a href="#9-15学习收获" class="headerlink" title="9.15学习收获"></a>9.15学习收获</h2><ol>
-<li>今天开始跟一个系列视频（不看字幕听懂英语剧）</li>
-<li>今天把这周的课件都预习完了</li>
-</ol>
-<h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><ol>
-<li><strong>中心极限定理（CLT）核心结论（在大样本条件下）</strong><ol start="2">
-<li>样本均值近似正态分布</li>
-<li>样本均值接近总体均值</li>
-<li>样本均值方差 &#x3D; 总体方差 &#x2F; 样本量</li>
-</ol>
-</li>
-<li><strong>均值标准误差（SEM）</strong><ol start="6">
-<li>计算公式：SEM &#x3D; 总体标准差 &#x2F; 样本量 ** 1&#x2F;2</li>
-<li>近似方法：样本量足够大时，用样本标准差代替总体标准差</li>
-</ol>
-</li>
-<li><strong>*基于单个样本估计总体均值的步骤：</strong><ol start="9">
-<li>按总体偏度确定样本量</li>
-<li>随机抽取独立样本</li>
-<li>计算样本均值与标准差</li>
-<li>用样本标准差估算SEM</li>
-<li>用SEM构建样本均值的置信区间</li>
-</ol>
-</li>
-</ol>
-<h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
-<li><strong>条件概率</strong><ol start="2">
-<li>P(A|B) &#x3D; P(A∩B) &#x2F; P(B) [P(B) !&#x3D; 0]</li>
-</ol>
-</li>
-<li><strong>乘法原理</strong><ol start="4">
-<li>P(A∩B) &#x3D; P(A)P(B|A) &#x3D; P(B)P(A|B) [P(A) !&#x3D; 0,P(B) !&#x3D; 0]</li>
-<li>链式法则：P(A1 ∩ A2 ∩ ··· ∩ An) &#x3D; P(A1)P(A2 | A1)P(A3 | A1 ∩ A2) ··· P(An)P(An | A1 ∩ A2 ∩ ··· ∩ An-1)</li>
-</ol>
-</li>
-<li><strong>全概率公式</strong><ol start="7">
-<li>常用应用：将样本空间划分成两个区域，从而有：P(A) &#x3D; P(A|B)P(B) + P(A|B^)P(B^)</li>
-</ol>
-</li>
-<li><strong>**贝叶斯公式</strong><ol start="9">
-<li>常用于：某一情况发生后，两个前提之一发生的概率，P(C|A) &#x3D; P(A|C)P(C) &#x2F; [P(A|C)P(C) + P(A|C^)P(C^)]</li>
-<li>* 核心思想：在知道某个结果发生后，计算对某一前提发生的概率</li>
-</ol>
-</li>
-<li><strong>独立事件</strong><ol start="12">
-<li>定义：P(A∩B) &#x3D; P(A)P(B)，P(A|B) &#x3D; P(A),P(B|A) &#x3D; P(B)</li>
-<li>*注意：独立不等于对立,不是一个发生了另一个就不会发生</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/15/2025-9-15/" data-id="cmhahastc00052gvpaefc5mj7" data-title="2025.9.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/16/2025-9-16/" data-id="cmhboy3te00093wvph1di9bvz" data-title="2025.9.16" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1256,6 +1414,10 @@
       <ul>
         
           <li>
+            <a href="/2025/10/29/2025-10-29/">2025.10.29</a>
+          </li>
+        
+          <li>
             <a href="/2025/10/28/2025-10-28/">2025.10.28</a>
           </li>
         
@@ -1269,10 +1431,6 @@
         
           <li>
             <a href="/2025/10/15/2025-10-15/">2025.10.15</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/13/2025-10-13/">2025.10.13</a>
           </li>
         
       </ul>
