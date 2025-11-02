@@ -71,6 +71,163 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2025-11-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/11/02/2025-11-2/" class="article-date">
+  <time class="dt-published" datetime="2025-11-02T00:53:45.000Z" itemprop="datePublished">2025-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/11/02/2025-11-2/">2025.11.2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhh2syzf0003e0vp2anebxj8" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-31" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/31/2025-10-31/" class="article-date">
+  <time class="dt-published" datetime="2025-10-31T00:58:15.000Z" itemprop="datePublished">2025-10-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/31/2025-10-31/">2025.10.31</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>博客升级</li>
+<li>今日总结</li>
+<li>摘录</li>
+</ol>
+<h2 id="博客升级"><a href="#博客升级" class="headerlink" title="博客升级"></a>博客升级</h2><h3 id="1-过程记录"><a href="#1-过程记录" class="headerlink" title="1. 过程记录"></a>1. 过程记录</h3><ol>
+<li>首先在阿里云注册了账号并购买了一个域名</li>
+<li>登录Vercel网站并登录GitHub账号，再导入之前的博客仓库</li>
+<li>在Vercel中添加购买的域名</li>
+<li>去阿里云里修改DNS设置<ol>
+<li>配置根域名（A 记录）<ol>
+<li>主机记录：@</li>
+<li>记录类型：A</li>
+<li>记录值：216.198.79.1</li>
+</ol>
+</li>
+<li>配置 www 子域名（CNAME 记录）<ol>
+<li>主机记录：www</li>
+<li>记录类型：CNAME</li>
+<li>记录值：a866d5a916b7fd31.vercel-dns-017.com</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-总结"><a href="#2-总结" class="headerlink" title="2. 总结"></a>2. 总结</h3><p>至今为止的博客搭建过程中我用到了以下工具：Node.js、Hexo、GitHub 库、Vercel、域名<br>若把博客比作开一家咖啡厅，则上面的工具可以类比为：  </p>
+<ol>
+<li>Node.js – 咖啡店的电力系统（提供动力）<ol>
+<li>Node.js 就是为所有工具提供“动力”的基础运行环境。Hexo 需要它的“电力”才能运转</li>
+</ol>
+</li>
+<li>Hexo – 全自动咖啡机和标准食谱（生成网站）<ol>
+<li>你提供原材料（Markdown 笔记和文章）</li>
+<li>Hexo（咖啡机）按照固定的食谱（主题和模板），自动、快速地把这些原材料“冲泡”成一整套风格统一、漂亮的网页文件（HTML&#x2F;CSS&#x2F;JS）</li>
+<li>不需要从零开始手写网页</li>
+</ol>
+</li>
+<li>GitHub 库 – 咖啡馆的总部仓库和设计图纸库（存储代码）<ol>
+<li>备份与版本管理：它安全地存储咖啡馆的所有“设计图纸”（博客的源代码）。如果后面改坏了配方，随时可以找回之前的版本</li>
+<li>协作与分发：它是代码的“大本营”，Vercel 可以从这里获取最新图纸来施工</li>
+</ol>
+</li>
+<li>Vercel – 全球顶级的店铺装修和运营团队（部署和加速）<ol>
+<li>自动装修：只需要把图纸（代码）存进 GitHub 仓库，Vercel 团队就会自动领取图纸，帮你把店铺（博客）装修好</li>
+<li>全球连锁：它在全世界都有分店（服务器），确保无论顾客在哪里，都能从最近的店铺拿到咖啡，速度极快</li>
+<li>免费服务：免费帮办好营业执照（SSL证书，即 HTTPS 安全锁），让店铺正规、安全</li>
+</ol>
+</li>
+<li>域名 – 咖啡馆的品牌名和招牌（品牌入口）<ol>
+<li>没有招牌，顾客只能通过一个非常难记的地址（比如 Vercel 给你的默认网址 xxx.vercel.app）找到你。而“域名”这个酷炫的招牌，让顾客很容易就能记住并找到你的店</li>
+</ol>
+</li>
+</ol>
+<p>工作流程：  </p>
+<ol>
+<li>你在“后厨”（你的电脑），用 Hexo（咖啡机）和 Node.js（电力）写好一篇新文章（制作一杯新咖啡）</li>
+<li>把这份新品的“配方”（代码）交给总部仓库（GitHub）存档</li>
+<li>全球运营团队（Vercel）自动从仓库拿到了新配方</li>
+<li>Vercel 立刻指挥它在全球的所有分店，按照新配方进行更新</li>
+<li>分钟后，全世界的顾客都可以通过你醒目的招牌（你的域名）享受到你的新品了</li>
+</ol>
+<h3 id="3-后续规划"><a href="#3-后续规划" class="headerlink" title="3. 后续规划"></a>3. 后续规划</h3><ol>
+<li>通过借鉴别的博客来设计一个属于我自己的博客页面，并尝试手敲代码实现个性化</li>
+<li>日后尝试云服务器部署：<ol>
+<li>购买云服务器</li>
+<li>通过SSH连接到服务器</li>
+<li>在服务器上安装Node.js、Git等环境</li>
+<li>克隆你的博客代码到服务器</li>
+<li>配置Nginx作为Web服务器</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>终于在进入11月前的最后一天学完了Python的所有语法，接下来只剩下爬虫课了</li>
+<li>今天成功完成了对博客的初步升级</li>
+<li>网球活动</li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>对于盲目的船来说，所有的风向都是逆风</li>
+<li>知识是一个细化铺开的过程，而智慧是一个简化浓缩的过程</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhh2syzh0006e0vpfyys40n9" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2025-10-30" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/30/2025-10-30/" class="article-date">
@@ -106,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhdamz2f0002sgvp9x352jj2" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhh2syzh0008e0vp55rg5p72" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -590,7 +747,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhdamz2g0004sgvpdspp9qw4" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhh2syzi000ae0vp8ert74fg" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -686,7 +843,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhdamz2h0008sgvp4o949ekv" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhh2syzf0002e0vp9ct9crij" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -850,7 +1007,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhdamz2f0003sgvp0cgg8r1i" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhh2syze0001e0vp2od66wy1" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1102,7 +1259,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhdamz2i000esgvpfn6ifcdm" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhh2syzh0007e0vp1frzdf4g" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1145,7 +1302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhdamz2a0000sgvpexs70tp1" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhh2syza0000e0vp7tlw4bsc" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1383,7 +1540,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhdamz2e0001sgvpbrz27ecj" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhh2syzg0004e0vphxk11lfn" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1426,182 +1583,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhdamz2h000asgvpdfum2q3j" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-9-23" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/23/2025-9-23/" class="article-date">
-  <time class="dt-published" datetime="2025-09-23T10:33:06.000Z" itemprop="datePublished">2025-09-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/23/2025-9-23/">2025.9.23</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
-<li>Python学习（封装、继承、多态、单例模式、魔法方法&amp;属性）</li>
-<li>**之后的学习计划：算法与数据结构 –&gt; 计算机基础知识（数据库、计算机组成原理、操作系统、计算机网络）</li>
-<li>沟通完节目灯光安排</li>
-<li>每日英语</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cmhdamz2i000dsgvp3u995mnw" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-9-22" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/22/2025-9-22/" class="article-date">
-  <time class="dt-published" datetime="2025-09-22T04:04:09.000Z" itemprop="datePublished">2025-09-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/22/2025-9-22/">2025.9.22</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
-<li>9.17–9.21 总结与反思</li>
-<li>学习了本周以及假期的课件</li>
-</ol>
-<h2 id="9-17–9-21-总结与反思"><a href="#9-17–9-21-总结与反思" class="headerlink" title="9.17–9.21 总结与反思"></a>9.17–9.21 总结与反思</h2><p>过去几天有点放纵了，还是有点没克服因为一些身体上的原因而不影响状态，而且接下来必须做到睡前不看手机，并且需要注意在进行了比较剧烈的运动的当晚就要早点休息以防影响第二天的状态。<br>过去几天摩羯身上也接连出现状况导致心情有点受影响，不过现在我感觉我找到了担心的分界线，其实主要就是保持毛发和环境的干净，除此之外只要不是持续几天的异常都没必要太过担心。<br>不过还是有一些好事情发生的，比如：上周末通知了我的节目被通过了，这次一定要不留遗憾的表演成功；此外各个社团的招新也结束了，这周总算可以开始社团活动了，期待遇见优秀的人吧；最后唯一在过去几天里完成不错的就是依旧保持每天背单词了，总算一天不落的完成了开学打卡，期待下一次累签。</p>
-<h2 id="课件知识点"><a href="#课件知识点" class="headerlink" title="课件知识点"></a>课件知识点</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><p><strong>核心目标：想要找到一个适合工业数据的模型，以实现两大功能<br>—— <code>解释数据背后的现象、对新场景下的行为进行预测</code></strong></p>
-<ol>
-<li>数据拟合核心内容<ol start="2">
-<li>拟合目标：建立自变量（如质量）与因变量（如距离）的关系，找到最优拟合曲线</li>
-<li>拟合评估指标：<ol start="4">
-<li>最小二乘法目标函数：计算观测值与预测值差值平方和，最小化该值即最小化方差</li>
-<li>平均均方误差：衡量模型拟合误差，公式为（误差总和&#x2F;数据长度）</li>
-<li>决定系数R²：反映模型对数据变异性的解释能力，越接近1代表模型越能解释数据的底层逻辑</li>
-</ol>
-</li>
-<li>多项式拟合时用到的拟合工具：Python pylab库函数，polyfit（求n次多项式系数，如n&#x3D;1求直线系数）、polyval（根据模型计算预测值）</li>
-</ol>
-</li>
-<li>模型选择的关键矛盾：拟合优度与泛化能力<ol start="9">
-<li>高阶模型的 “虚假优势” – 虽然在案例中的16 次多项式在训练数据上的R^2最高，但其并不能代表模型对新数据的适配能力（即泛化能力）<ol start="10">
-<li>矛盾现象的根本原因：源于训练误差的局限性 – 训练误差仅反映模型在训练数据上的表现</li>
-<li><strong>过度拟合</strong>的本质：当模型复杂度（如多项式次数）过高时，会 “拟合噪声而非数据底层规律”</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>泛化能力的评估方法：交叉验证<ol start="13">
-<li>核心逻辑：将数据分为训练集与测试集，用训练集构建模型后，在测试集上验证性能，测试误差更能反映泛化能力，且通常大于训练误差。</li>
-<li>常用交叉验证策略：<ol start="15">
-<li>留一法（Leave-one-out）：适用于小数据集，每次从原始数据中剔除 1 个样本作为测试集，剩余作为训练集，重复所有样本后取测试结果平均值。</li>
-<li>k 折交叉验证（k-fold）：适用于大数据集，将数据划分为 k 个等规模子集，每次用 k-1 个子集训练，1 个子集测试，循环 k 次后评估。</li>
-<li>重复随机抽样验证：每次从数据中随机抽取 20%-50% 作为测试集，剩余为训练集，重复 k 次后取平均结果，降低随机划分带来的偏差。</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>模型复杂度的平衡策略<ol start="19">
-<li>理论指导优先若存在明确理论（如胡克定律表明弹簧受力与位移呈线性关系），即使高阶模型（如二次多项式）在训练数据上R^2更高，仍应优先选择符合理论的模型</li>
-<li><code>无理论时的搜索流程：</code><ol start="21">
-<li>从低复杂度模型（如 1 次多项式）开始，在训练集上拟合</li>
-<li>在测试集上验证并记录R^2</li>
-<li>逐步提升模型复杂度，重复拟合与验证</li>
-<li>当测试集R^2开始下降时，停止提升复杂度，选择此前最优模型</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>课程核心结论 <ol start="26">
-<li>线性回归的价值：可用于构建从自变量到因变量的映射模型，实现对未知数据的预测，但需结合模型复杂度控制</li>
-<li><code>R^2的合理使用：R^2是评估模型拟合优度的重要指标，但 “更高的R^2” 不代表 “更优模型”，需警惕过度拟合导致的泛化能力下降</code></li>
-<li>模型选择三原则：<ol start="29">
-<li>优先参考数据底层理论（如物理定律、业务逻辑）</li>
-<li>用交叉验证验证模型泛化能力</li>
-<li><code>在性能相近时，选择更简单的模型</code></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
-<li>Number systems（数字系统）：<ol start="2">
-<li>natural numbers ℕ，integers ℤ，rational numbers ℚ，real numbers ℝ</li>
-</ol>
-</li>
-<li>Closure（闭包）：<ol start="4">
-<li>Definition：Let 𝑋 be a set of numbers. We say that 𝑋 is：<ol start="5">
-<li>closed under addition（加法封闭） if 𝑥 + 𝑦 ∈ 𝑋 whenever 𝑥，𝑦 ∈ 𝑋</li>
-<li>closed under multiplication（乘法封闭） if 𝑥𝑦 ∈ 𝑋 whenever 𝑥，𝑦 ∈ 𝑋</li>
-<li>closed under subtraction（减法封闭） if 𝑥 − 𝑦 ∈ 𝑋 whenever 𝑥，𝑦 ∈ 𝑋</li>
-<li>closed under division（除法封闭） if 𝑥&#x2F;𝑦 ∈ 𝑋 whenever 𝑥，𝑦 ∈ 𝑋 and 𝑦 ≠ 0</li>
-</ol>
-</li>
-<li>注意：要证明一个集合在某个运算下不是闭的，只要给出一个精心挑选的例子（反例）就足够了。但要证明它是闭包的，则需要一个一般的论证</li>
-<li><code>一个严格的证明必须从定义开始</code></li>
-</ol>
-</li>
-<li>Permutations（排列）<ol start="12">
-<li>Definition：A permutation of objects is an arrangement of these objects in a row <code>in some order</code></li>
-<li>Theorem 1:The number of permutations, or ordered arrangements, of 𝑛 <code>distinct</code> objects is 𝑛(𝑛 − 1)(𝑛 − 2) ⋯ 2 ⋅ 1 &#x3D; 𝑛!</li>
-<li><code>Theorem 2:If 𝑛 objects consisting of 𝑐 classes of identical objects with size 𝑛1 , 𝑛2 , ⋯ , 𝑛C such that 𝑛1 + 𝑛2 + ⋯ + 𝑛C = 𝑛 , then the number of permutations of these 𝑛 objects is：𝑛! / 𝑛1!𝑛2!···𝑛C!</code><ol start="15">
-<li>多重集合的排列数公式的理解：如果n个元素完全不同，那么它们的排列数是 n!。现在的情况是：n个元素分为c类，同类元素完全相同，第i类有ni个元素，此时，“同类元素的重复” 会导致 “原本不同的排列被算成了相同的”，所以要除以每一类重复元素内部的排列数</li>
-</ol>
-</li>
-<li>Theorem 3：The number of permutations, or ordered arrangements, of 𝑛 distinct objects taken 𝑟 at a time , where 𝑟 ≤ 𝑛, is given by：𝑃(n,r) &#x3D; n(n-1)(n-2)···(n-r+1) &#x3D; n! &#x2F; (n-r)!</li>
-</ol>
-</li>
-<li>Combinations（组合）<ol start="18">
-<li>Theorem:Suppose we are now interested in the number of subsets of size 𝑟, where 𝑟 ≤ 𝑛, that can be chosen from 𝑛 distinct objects. The order of elements in each subset makes no difference.We denote as C(n,r) &#x3D; n! &#x2F; r!(n-r)!</li>
-<li>注意：C(n,r) &#x3D; C(n,n-r)</li>
-</ol>
-</li>
-<li>Probability of Counting:Permutations and combinations can be used in finding probabilities.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/22/2025-9-22/" data-id="cmhdamz2h000bsgvp70pb34eg" data-title="2025.9.22" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhh2syzj000ce0vpfhtnf9se" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1636,7 +1618,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">September 2025</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/11/">November 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">September 2025</a></li></ul>
     </div>
   </div>
 
@@ -1649,6 +1631,14 @@
       <ul>
         
           <li>
+            <a href="/2025/11/02/2025-11-2/">2025.11.2</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/31/2025-10-31/">2025.10.31</a>
+          </li>
+        
+          <li>
             <a href="/2025/10/30/2025-10-30/">2025.10.30</a>
           </li>
         
@@ -1658,14 +1648,6 @@
         
           <li>
             <a href="/2025/10/28/2025-10-28/">2025.10.28</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/20/2025-10-20/">2025.10.20</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/17/2025-10-17/">2025.10.17</a>
           </li>
         
       </ul>
