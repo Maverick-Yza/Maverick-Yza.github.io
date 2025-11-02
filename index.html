@@ -93,11 +93,82 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>周末总结</li>
+<li>学习笔记</li>
+</ol>
+<h2 id="周末总结"><a href="#周末总结" class="headerlink" title="周末总结"></a>周末总结</h2><ol>
+<li>骑行探索了一下市区的两个湿地公园，并带摩羯溜了一圈</li>
+<li>在飞盘活动中学习了长传和正手发盘</li>
+<li>训练好了一个英语口语交流AI</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><ol>
+<li>人工智能（AI）基础<ol>
+<li>AI 的定义与核心能力<ol>
+<li>定义：AI 即 “人工（人造）” 与 “智能（思考能力）” 的结合，是计算机科学的一个分支，能模拟人类智能并在机器上实现，用于执行原本需要人类智能的任务</li>
+<li>核心功能：包括学习、推理、问题解决和快速决策</li>
+</ol>
+</li>
+<li>AI 的典型应用领域：图像、制造、医疗、互联网、金融、零售、自然语言生成</li>
+</ol>
+</li>
+<li>神经网络（NN）概述<ol>
+<li>神经网络与 AI 的关系<ol>
+<li>核心地位：当前大多数主流 AI 模型均基于神经网络，神经网络是 AI 模拟人类智能的核心技术</li>
+<li>结构灵感：神经网络由相互连接的 “神经元” 构成，灵感来源于生物大脑的神经元连接结构</li>
+<li>基础架构示例：以图像识别鸟类为例，输入层接收图像像素，经隐藏层处理，最终由输出层输出识别结果，各层间通过权重传递信息</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>卷积神经网络（CNN）<ol>
+<li>CNN 的基础：神经元行为<ol>
+<li>神经元输出公式：单个神经元的输出遵循公式 y &#x3D; tanh(w₁x₁ + w₂x₂ + b)，其中 w₁、w₂为输入 x₁、x₂的权重，b 为偏置，tanh 为激活函数（输出范围 - 1 至 1）</li>
+</ol>
+</li>
+<li>卷积层与 CNN 的核心功能<ol>
+<li>卷积层的作用：通过 “滤波器（Filter）” 对输入图像进行处理，提取图像特征，如垂直条纹、水平边缘、对角线边缘、白色斑点、对角线交叉等</li>
+<li>特征图（激活值）：卷积层的输出是一组滤波后的图像，称为 “特征图”，也叫该层的 “激活值”，其形式为 3D 数组，第三维度称为 “通道”，可单独可视化（灰度图）或组合可视化（彩色图）</li>
+</ol>
+</li>
+<li>CNN 的实用技巧与数据处理<ol>
+<li>预训练网络的应用：由于深度学习训练耗时久（无 GPU 时难度大），可利用预训练网络提取特征，再结合传统机器学习方法进行分类</li>
+<li>特征提取流程：CNN 在学习图像分类的同时提取有用特征 —— 早期层读取输入图像并提取基础特征，全连接层利用这些特征完成分类；其中，第一个全连接层之前的所有层可作为独立的特征提取网络</li>
+<li>信号数据的图像化：将信号数据（如频谱图）转化为图像形式，输入 CNN 进行特征提取与分类，拓展 CNN 的应用场景</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>循环神经网络（RNN）<ol>
+<li>RNN 的关键类型<ol>
+<li>长短期记忆网络（LSTM）：解决传统 RNN 的长期依赖问题，能处理序列数据，可用于序列分类（如 “喜欢跳舞” 的文本分类）</li>
+<li>双向 LSTM：同时从序列的正向和反向进行学习，提升序列分类的准确性，适用于对上下文依赖较强的任务（如文本标点优化：将 “punctuation is important and need” 优化为 “punctuation important, and”）</li>
+</ol>
+</li>
+<li>RNN 的序列预处理<ol>
+<li>分类序列的数值化：训练 LSTM 需输入数值型序列，若序列为分类类型（如天气序列、DNA 序列（A&#x2F;G&#x2F;T）、音符序列、星期序列（周一至周六）），需先将其转化为数值形式才能进行模型训练</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>网络训练与大数据的关系<ol>
+<li>网络训练的核心要素<ol>
+<li>训练 checklist：成功的网络训练需具备四大要素 ——训练数据（模型学习的基础）、网络架构（模型的结构设计）、算法选项（训练所用的算法）、损失函数（计算模型输出与真实值的总误差，用于优化模型）</li>
+</ol>
+</li>
+<li>AI 与大数据的依存关系<ol>
+<li>数据是 AI 的基础：没有大数据，AI 无法进行有效学习；AI 模型的智能程度与接触的数据量正相关 —— 数据越多，模型能学习到的规律越丰富，智能程度越高</li>
+<li>类比人类学习：AI 模型通过大数据训练，类似人类大脑通过积累大量经验（数据）来学习和提升能力</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhh2syzf0003e0vp2anebxj8" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhh6cade0006x0vpcy9x3bj5" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -192,6 +263,29 @@
 <li>Vercel 立刻指挥它在全球的所有分店，按照新配方进行更新</li>
 <li>分钟后，全世界的顾客都可以通过你醒目的招牌（你的域名）享受到你的新品了</li>
 </ol>
+<p>知识点：</p>
+<ol>
+<li>IP地址：<ol>
+<li>IP 地址就像互联网世界里设备的 “身份证号码 + 门牌号”，是给电脑、手机等联网设备分配的唯一数字标识</li>
+<li>核心特点：<ol>
+<li>格式是一串点分隔的数字（比如 IPv4 常见的 192.168.1.1），每段数字有范围限制</li>
+<li>唯一性，同一时间同一网络里，没有两台设备的公开 IP 完全相同</li>
+<li>作用是让数据在网络中找准 “收发对象”，就像寄快递必须填清楚收件人地址</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>DNS（域名系统）：<ol>
+<li>DNS（域名系统）本质是互联网的 “地址簿”，DNS 负责将易记的域名（比如 <a target="_blank" rel="noopener" href="http://www.baidu.com)翻译成计算机能识别的/">www.baidu.com）翻译成计算机能识别的</a> IP 地址（比如 180.101.49.11），让设备能准确连接目标服务器</li>
+<li>关键作用：<ol>
+<li>简化访问流程，不用记复杂的数字 IP 地址</li>
+<li>实现负载均衡，让多个服务器分担访问压力</li>
+<li>保障网络弹性，某台服务器故障时可切换至备用 IP</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 <h3 id="3-后续规划"><a href="#3-后续规划" class="headerlink" title="3. 后续规划"></a>3. 后续规划</h3><ol>
 <li>通过借鉴别的博客来设计一个属于我自己的博客页面，并尝试手敲代码实现个性化</li>
 <li>日后尝试云服务器部署：<ol>
@@ -216,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhh2syzh0006e0vpfyys40n9" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhh6cade0005x0vp1knbecef" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -263,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhh2syzh0008e0vp55rg5p72" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhh6cade0004x0vphqo8gkft" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -747,7 +841,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhh2syzi000ae0vp8ert74fg" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhh6cadd0003x0vp35up4qla" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -843,7 +937,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhh2syzf0002e0vp9ct9crij" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhh6cadd0002x0vpezrqfaua" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1007,7 +1101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhh2syze0001e0vp2od66wy1" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhh6cadc0001x0vp4z3ba6vr" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1259,7 +1353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhh2syzh0007e0vp1frzdf4g" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhh6cadf0009x0vpaohjc43k" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1302,7 +1396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhh2syza0000e0vp7tlw4bsc" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhh6cadg000ax0vpfs683s80" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1540,7 +1634,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhh2syzg0004e0vphxk11lfn" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhh6cad90000x0vpgilk0hbv" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1583,7 +1677,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhh2syzj000ce0vpfhtnf9se" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhh6cadg000dx0vpcyqb3l3r" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
