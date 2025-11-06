@@ -71,6 +71,711 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2025-11-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/11/06/2025-11-6/" class="article-date">
+  <time class="dt-published" datetime="2025-11-06T05:53:38.000Z" itemprop="datePublished">2025-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/11/06/2025-11-6/">2025.11.6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>今日总结</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天把《墨菲定律》看完了，整体读下来发现这本书就是一个如何提升自我的工具书，书中从各种心理学效应出发，对于不同的情景下自己该怎么做给出了建议</li>
+<li></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/11/06/2025-11-6/" data-id="cmhn1ebs20009ywvpbmjy7ktn" data-title="2025.11.6" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-11-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/11/05/2025-11-5/" class="article-date">
+  <time class="dt-published" datetime="2025-11-05T07:01:48.000Z" itemprop="datePublished">2025-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/11/05/2025-11-5/">2025.11.5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>昨日总结</li>
+<li>学习笔记</li>
+<li>今日总结</li>
+</ol>
+<h2 id="昨日总结"><a href="#昨日总结" class="headerlink" title="昨日总结"></a>昨日总结</h2><ol>
+<li>昨天去看牙了，最后拔掉了一颗智齿，还是比想象中轻松的，虽然到了晚上会有点疼但是可以忍受</li>
+<li>昨天在中途休息的时候去到了一家特别大的书店，在里面逛了一圈后我买了6本书，并且成功用一天的时间看完了一本《追逐繁星的孩子》，接下来也要继续多多看书</li>
+<li>晚上继续带摩羯出去锻炼胆量，明显还是一到外面的环境里就害怕</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="计算机体系结构与操作系统"><a href="#计算机体系结构与操作系统" class="headerlink" title="计算机体系结构与操作系统"></a>计算机体系结构与操作系统</h3><ol>
+<li>数制系统<ol>
+<li>核心概念：数制是表示数字的 “规则”，计算机底层仅能识别二进制（0 和 1），但为了简化表示，会用到十进制（日常使用）和十六进制（简化二进制书写）</li>
+<li>二进制转十进制：按权展开法<br>二进制数的每一位都有 “权重”，权重为 2 的 “位数 - 1” 次方（从右往左，位数从 0 开始）。将每一位数字乘以对应权重，再求和，即可得到十进制数。</li>
+<li>十进制转二进制：除 2 取余法<br>将十进制数反复除以 2，记录每次的余数（余数为 0 或 1），最后将余数从后往前排列，即可得到二进制数。</li>
+<li>二进制与十六进制转换：十六进制的 1 位对应二进制的 4 位（因为 16&#x3D;2⁴），转换时只需将二进制数按 4 位分组（不足 4 位补 0），再将每组转换为对应的十六进制数即可</li>
+</ol>
+</li>
+<li>逻辑门：数字电路的 “基本积木”<ol>
+<li>单输入逻辑门<ol>
+<li>NOT 门（非门）：功能是 “取反”，输入为 0 时输出 1，输入为 1 时输出 0。</li>
+<li>缓冲器（BUF）：功能是 “保持输入”，输入为 0 时输出 0，输入为 1 时输出 1（相当于 “无操作”，主要用于增强信号）</li>
+</ol>
+</li>
+<li>双输入逻辑门：核心双输入逻辑门的功能：<table>
+<thead>
+<tr>
+<th align="center">逻辑门类型</th>
+<th align="center">功能描述</th>
+<th align="center">逻辑表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AND 门（与门）</td>
+<td align="center">只有 A、B 都为 1 时，Y 才为 1</td>
+<td align="center">Y&#x3D;A・B（“・” 表示与）</td>
+</tr>
+<tr>
+<td align="center">OR 门（或门）</td>
+<td align="center">A、B 只要有一个为 1，Y 就为 1</td>
+<td align="center">Y&#x3D;A+B（“+” 表示或）</td>
+</tr>
+<tr>
+<td align="center">XOR 门（异或门）</td>
+<td align="center">A、B 不同时，Y 为 1；相同为 0</td>
+<td align="center">Y&#x3D;A⊕B</td>
+</tr>
+<tr>
+<td align="center">NAND 门（与非门）</td>
+<td align="center">只有 A、B 都为 1 时，Y 为 0（AND 门取反）</td>
+<td align="center">Y&#x3D;¬(A·B)</td>
+</tr>
+<tr>
+<td align="center">NOR 门（或非门）</td>
+<td align="center">A、B 只要有一个为 1，Y 就为 0（OR 门取反）</td>
+<td align="center">Y&#x3D;¬(A+B)</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>组合逻辑电路<ol>
+<li>核心定义：组合逻辑电路是由多个逻辑门组成的电路，<strong>无记忆功能</strong>—— 输出仅由当前输入决定，与过去的输入无关</li>
+<li>电路组成与描述方式：<br>描述组合逻辑电路的核心方式是 “布尔方程”—— 用逻辑运算符（・、+、¬）表示输入与输出的关系<br>组合逻辑电路的组成包括三部分：<ol>
+<li>输入：外部信号来源（如传感器信号，用 A、B、C 等变量表示）</li>
+<li>内部节点：电路中间的信号节点（如多个门之间的连接点，用 n1、n2 等表示）</li>
+<li>输出：电路最终的信号（如机器启动信号，用 Y、Z 等变量表示）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>布尔代数<ol>
+<li>核心定义：布尔代数是描述逻辑关系的 “数学工具”，变量仅取值 0 或 1（对应假和真），运算包括与（・）、或（+）、非（¬），主要用于简化布尔方程（减少逻辑门数量，降低电路成本）</li>
+<li>核心公理（基础规则，无需证明）<br> 布尔代数的公理是推导所有定理的基础，核心公理及对偶公理（将 “・” 与 “+” 互换、0 与 1 互换，公理仍成立）如下表：<table>
+<thead>
+<tr>
+<th align="center">公理编号</th>
+<th align="center">公理内容</th>
+<th align="center">对偶公理（A’）</th>
+<th align="center">含义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A1（二进制域）</td>
+<td align="center">B&#x3D;0，若 B≠1</td>
+<td align="center">B&#x3D;1，若 B≠0</td>
+<td align="center">变量仅取 0 或 1（二进制域）</td>
+</tr>
+<tr>
+<td align="center">A2（非运算（NOT））</td>
+<td align="center">¬0&#x3D;1</td>
+<td align="center">¬1&#x3D;0</td>
+<td align="center">非运算的基本规则</td>
+</tr>
+<tr>
+<td align="center">A3（与 &#x2F; 或运算（AND&#x2F;OR））</td>
+<td align="center">0·0&#x3D;0</td>
+<td align="center">1+1&#x3D;1</td>
+<td align="center">与 &#x2F; 或运算的边界情况</td>
+</tr>
+<tr>
+<td align="center">A4（与 &#x2F; 或运算（AND&#x2F;OR））</td>
+<td align="center">1·1&#x3D;1</td>
+<td align="center">0+0&#x3D;0</td>
+<td align="center">与 &#x2F; 或运算的边界情况</td>
+</tr>
+<tr>
+<td align="center">A5（与 &#x2F; 或运算（AND&#x2F;OR））</td>
+<td align="center">0·1&#x3D;1·0&#x3D;0</td>
+<td align="center">1+0&#x3D;0+1&#x3D;1</td>
+<td align="center">与 &#x2F; 或运算的交换性边界情况</td>
+</tr>
+</tbody></table>
+</li>
+<li>核心定理（可通过公理推导，需记忆）<br>布尔代数的定理是简化方程的关键，常用定理及对偶定理如下表（B、C、D 为布尔变量）：<table>
+<thead>
+<tr>
+<th align="center">定理名</th>
+<th align="center">定理内容</th>
+<th align="center">对偶定理（T’）</th>
+<th align="center">含义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Identity Theorem（同一律）</td>
+<td align="center">B·1&#x3D;B；B+0&#x3D;B</td>
+<td align="center">B+1&#x3D;B；B·0&#x3D;B</td>
+<td align="center">与 1 相乘 &#x2F; 或 0 相加，结果不变</td>
+</tr>
+<tr>
+<td align="center">Null Element Theorem（零律）</td>
+<td align="center">B·0&#x3D;0；B+1&#x3D;1</td>
+<td align="center">B+0&#x3D;0；B·1&#x3D;1</td>
+<td align="center">与 0 相乘 &#x2F; 或 1 相加，结果为 0&#x2F;1</td>
+</tr>
+<tr>
+<td align="center">Idempotency Theorem（幂等律）</td>
+<td align="center">B·B&#x3D;B；B+B&#x3D;B</td>
+<td align="center">B+B&#x3D;B；B·B&#x3D;B</td>
+<td align="center">与 &#x2F; 或自身，结果不变</td>
+</tr>
+<tr>
+<td align="center">Involution Theorem（对合律）</td>
+<td align="center">¬(¬B)&#x3D;B</td>
+<td align="center">¬(¬B)&#x3D;B</td>
+<td align="center">两次非运算，结果还原</td>
+</tr>
+<tr>
+<td align="center">Complement theorem（互补律）</td>
+<td align="center">B·¬B&#x3D;0；B+¬B&#x3D;1</td>
+<td align="center">B+¬B&#x3D;1；B·¬B&#x3D;0</td>
+<td align="center">与自身非相乘为 0，相加为 1</td>
+</tr>
+<tr>
+<td align="center">Commutativity（交换律）</td>
+<td align="center">B·C&#x3D;C·B；B+C&#x3D;C+B</td>
+<td align="center">B+C&#x3D;C+B；B·C&#x3D;C·B</td>
+<td align="center">与 &#x2F; 或运算的顺序不影响结果</td>
+</tr>
+<tr>
+<td align="center">Associativity（结合律）</td>
+<td align="center">(B·C)·D&#x3D;B·(C·D)；(B+C)+D&#x3D;B+(C+D)</td>
+<td align="center">(B+C)+D&#x3D;B+(C+D)；(B·C)·D&#x3D;B·(C·D)</td>
+<td align="center">与 &#x2F; 或运算的分组不影响结果</td>
+</tr>
+<tr>
+<td align="center">Distributivity（分配律）</td>
+<td align="center">B·(C+D)&#x3D;B·C+B·D；B+C·D&#x3D;(B+C)·(B+D)</td>
+<td align="center">B+(C·D)&#x3D;(B+C)·(B+D)；B·(C+D)&#x3D;B·C+B·D</td>
+<td align="center">与对或 &#x2F; 或对与的分配规则</td>
+</tr>
+<tr>
+<td align="center">Covering（覆盖律）</td>
+<td align="center">B·(B+C)&#x3D;B；B+(B·C)&#x3D;B</td>
+<td align="center">B+(B·C)&#x3D;B；B·(B+C)&#x3D;B</td>
+<td align="center">变量与自身和 &#x2F; 积，结果为自身</td>
+</tr>
+<tr>
+<td align="center">Combining（合并律）</td>
+<td align="center">B·C+B·¬C&#x3D;B；(B+C)·(B+¬C)&#x3D;B</td>
+<td align="center">(B+C)·(B+¬C)&#x3D;B；B·C+B·¬C&#x3D;B</td>
+<td align="center">提取相同变量，合并不同变量</td>
+</tr>
+<tr>
+<td align="center">Consensus（共识律）</td>
+<td align="center">B·C+¬B·D+C·D&#x3D;B·C+¬B·D；(B+C)·(¬B+D)·(C+D)&#x3D;(B+C)·(¬B+D)</td>
+<td align="center">(B+C)·(¬B+D)·(C+D)&#x3D;(B+C)·(¬B+D)；B·C+¬B·D+C·D&#x3D;B·C+¬B·D</td>
+<td align="center">消除冗余的共识项</td>
+</tr>
+<tr>
+<td align="center">De Morgan’s Theorem（德摩根定律）</td>
+<td align="center">¬(B·C)&#x3D;¬B+¬C；¬(B+C)&#x3D;¬B·¬C</td>
+<td align="center">¬(B+C)&#x3D;¬B·¬C；¬(B·C)&#x3D;¬B+¬C</td>
+<td align="center">与的非等于非的或，或的非等于非的与</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>数字构建块<ol>
+<li>组合逻辑电路<ol>
+<li>核心特性：无记忆功能，输出仅由当前输入决定，包含输入（如 A、B、C）、输出（如 Y、Z）和内部节点（如 n1），通过电路元素（E1、E2、E3）实现逻辑关系，可用布尔方程描述（如 n1&#x3D;E1 (A,B)、Z&#x3D;E2 (A,C)、Y&#x3D;E3 (n1,B,Z)）</li>
+<li>常用组件：<ol>
+<li>多路复用器（Mux）：从 N 个输入中选择 1 个输出，需log(2)N位选择信号（S）。以 2:1 Mux 为例，选择信号 S&#x3D;0 时输出 D0，S&#x3D;1 时输出 D1，其真值表如下：<table>
+<thead>
+<tr>
+<th align="center">S</th>
+<th align="center">D1</th>
+<th align="center">D0</th>
+<th align="center">Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+</li>
+<li>解码器：N 个输入对应2^N个输出，采用 “独热编码”（仅 1 个输出为高电平）。以 2:4 Decoder 为例，输入 A1、A0 控制输出 Y3-Y0，真值表关键逻辑为：A1A0&#x3D;00 → Y0&#x3D;1；A1A0&#x3D;01 → Y1&#x3D;1；A1A0 &#x3D; 10 → Y2&#x3D;1；A1A0&#x3D;11 → Y3&#x3D;1</li>
+<li>移位器：分三类，具体功能及示例（输入 11001）如下：<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">功能</th>
+<th align="center">示例（输入 11001）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">逻辑移位器</td>
+<td align="center">左右移位，空位补 0</td>
+<td align="center">右移 2 位：11001&gt;&gt;2&#x3D;00110；左移 2 位：11001&lt;&lt;2&#x3D;00100</td>
+</tr>
+<tr>
+<td align="center">算术移位器</td>
+<td align="center">左移同逻辑移位，右移空位补最高有效位（MSB）</td>
+<td align="center">右移 2 位：11001&gt;&gt;&gt;2&#x3D;11110；左移 2 位：11001&lt;&lt;&lt;2&#x3D;00100</td>
+</tr>
+<tr>
+<td align="center">旋转移位器</td>
+<td align="center">循环移位，移出位补到另一端</td>
+<td align="center">右旋转 2 位：11001 ROR 2&#x3D;01110；左旋转 2 位：11001 ROL 2&#x3D;00111</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>时序逻辑电路<ol>
+<li>核心特性：有短期记忆功能，通过输出到输入的反馈存储信息，能为事件提供时序顺序</li>
+<li>基础电路：双稳态电路，可存储 1 位状态（Q），存在两种稳定状态：Q&#x3D;0 时¬Q&#x3D;1；Q&#x3D;1 时¬Q&#x3D;0，但无输入控制状态</li>
+<li>常用组件<ol>
+<li>S-R 锁存器：含置位（S）、复位（R）输入，四种工作状态如下：<ol>
+<li>S&#x3D;1、R&#x3D;0：置位，Q&#x3D;1、¬Q&#x3D;0</li>
+<li>S&#x3D;0、R&#x3D;1：复位，Q&#x3D;0、¬Q&#x3D;1</li>
+<li>S&#x3D;0、R&#x3D;0：保持，Q&#x3D;Q_prev（前一状态）</li>
+<li>S&#x3D;1、R&#x3D;1：<strong>无效</strong>，Q&#x3D;0、¬Q&#x3D;0（Q≠¬Q）</li>
+</ol>
+</li>
+<li>D 锁存器：含时钟（CLK）、数据（D）输入，<code>避免 S-R 锁存器的无效状态</code>：<ol>
+<li>CLK&#x3D;1：透明模式，D 直接传递到 Q</li>
+<li>CLK&#x3D;0：不透明模式，Q 保持前一状态（Q_prev）</li>
+</ol>
+</li>
+<li>D 触发器：边沿触发（仅时钟上升沿有效），输入为 CLK 和 D<ol>
+<li>时钟从 0→1（上升沿）：采样 D 值并传递到 Q</li>
+<li>其他时刻：Q 保持前一状态，仅在上升沿变化</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>算术组件<ol>
+<li>加法器<ol>
+<li>半加器：仅处理 2 位输入（A、B），输出和（S）与进位输出（Cout），真值表如下：<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">Cout</th>
+<th align="center">S</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+</li>
+<li>全加器：在半加器基础上增加进位输入（Cin），处理 3 位输入（A、B、Cin），输出和（S）与进位输出（Cout），真值表含 8 种输入组合，关键逻辑为 S&#x3D;A⊕B⊕Cin、Cout&#x3D;AB+ACin+BCin</li>
+<li>纹波进位加法器：将多个 1 位全加器链式连接，进位信号从低位向高位 “ripple” 传递，<code>缺点是速度慢（依赖进位传递延迟）</code></li>
+</ol>
+</li>
+<li>减法器<ol>
+<li>含输入 X（被减数）、Y（减数）、借位输入（Bin），输出差值（D）、借位输出（Bout），核心逻辑如下：<ol>
+<li>无 Bin 时：D&#x3D;X⊕Y，Bout&#x3D;X⋅Y</li>
+<li>有 Bin 时，D&#x3D;X⊕Y⊕Bin，Bout&#x3D;XBin+XY+YBin</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>算术逻辑单元（ALU）<ol>
+<li>通过 2 位控制信号（ALUControl [1:0]）选择运算功能，是处理器核心算术逻辑组件，功能表如下：<table>
+<thead>
+<tr>
+<th align="center">ALUControl[1:0]</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">00</td>
+<td align="center">加法（Add）</td>
+</tr>
+<tr>
+<td align="center">01</td>
+<td align="center">减法（Subtract）</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">与运算（AND）</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">或运算（OR）</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>其他数字模块<ol>
+<li>计数器<ol>
+<li>功能：在每个时钟边沿实现计数递增，循环遍历数字（如 000→001→010→…→111→000…）</li>
+<li>应用：数字时钟显示、程序计数器（跟踪当前执行指令地址）</li>
+<li>结构：含时钟（CLK）、复位（Reset）输入和状态输出（Q），复位信号可重置计数状态</li>
+</ol>
+</li>
+<li>移位寄存器<ol>
+<li>功能：每个时钟边沿控制 1 位数据移入（Sin）和移出（Sout），实现串行数据与并行数据的转换（串并转换）</li>
+<li>结构：含串行输入（Sin）、串行输出（Sout）、时钟（CLK）和并行输出（Q0~QN-1）</li>
+</ol>
+</li>
+<li>存储阵列<ol>
+<li>核心功能：高效存储大量数据，通过 N 位地址访问 M 位数据（地址→数据映射）</li>
+<li>分类：<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">特性</th>
+<th align="center">存储原理</th>
+<th align="center">应用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DRAM（动态 RAM）</td>
+<td align="center">易失性（断电失数据）、速度较慢、成本低</td>
+<td align="center">电容存储电荷</td>
+<td align="center">计算机主内存</td>
+</tr>
+<tr>
+<td align="center">SRAM（静态 RAM）</td>
+<td align="center">易失性、速度快、成本高</td>
+<td align="center">交叉耦合反相器</td>
+<td align="center">高速缓存（Cache）</td>
+</tr>
+<tr>
+<td align="center">ROM（只读存储器）</td>
+<td align="center">非易失性（断电保数据）、读快写难 &#x2F; 慢</td>
+<td align="center">制造时编程或电编程</td>
+<td align="center">相机闪存、U 盘</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>逻辑阵列<ol>
+<li>PLA（可编程逻辑阵列）：由 “与阵列” 和 “或阵列” 组成，仅实现组合逻辑，内部连接固定，通过编程配置逻辑功能（如实现 AB+AC、NC+RC 等布尔表达式）</li>
+<li>FPGA（现场可编程门阵列）：由逻辑元素（LEs）阵列构成，可实现组合逻辑和时序逻辑，内部连接可编程，部分 FPGA 还集成乘法器、RAM 等模块，灵活性高</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天开始上了后半学期的新课，教课的是一位印尼的老师，虽然听口语还是有点困难，但是一节课下来也完全知道在讲什么，而且明显感觉老师的教学比较活跃，课堂气氛不错，继续努力吧</li>
+<li>办理了住宿证明，以及在读证明，只差学生证了</li>
+<li>保险起见，今天的网球活动就不参加了</li>
+<li>英语学习</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/11/05/2025-11-5/" data-id="cmhn1ebs10007ywvph0pmb8fc" data-title="2025.11.5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-11-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/11/03/2025-11-3/" class="article-date">
+  <time class="dt-published" datetime="2025-11-03T00:35:40.000Z" itemprop="datePublished">2025-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/11/03/2025-11-3/">2025.11.3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>学习笔记</li>
+<li>今日总结</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<li>点估计<ol>
+<li>核心定义  <ol>
+<li>估计量（Estimator）：是样本X1、X2、··· 、Xn的函数（统计量），用于推断总体参数θ，如样本均值¬X &#x3D; （X1+X2+···+Xn)&#x2F;n是总体均值μ的估计量</li>
+<li>估计值（Estimate）：估计量在具体样本下的取值，如由观测值x1、x2、···、xn计算的¬x是μ的点估计值</li>
+</ol>
+</li>
+<li>估计量的评估标准<ol>
+<li>无偏估计（Unbiased Estimator）<ol>
+<li>定义：若统计量¬Θ满足E[¬Θ]&#x3D;θ，则¬Θ是θ的无偏估计量（估计量的期望等于真实参数）</li>
+<li>关键示例：样本方差S^2是总体方差σ^2的无偏估计量</li>
+</ol>
+</li>
+<li>估计量的方差（Variance of an Estimator）<ol>
+<li>核心原则：当¬Θ1和¬Θ2均为θ的无偏估计时，选择方差更小的估计量（抽样分布更集中，估计更精确）</li>
+<li>最有效估计（Most Efficient Estimator）：在所有θ的无偏估计中，方差最小的估计量</li>
+<li>示例结论：若三个估计量¬Θ1、¬Θ2、¬Θ3中，仅前两者无偏且¬Θ1方差更小，则¬Θ1是最优选择</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>区间估计<ol>
+<li>基础概念<ol>
+<li>区间估计定义：通过样本确定一个区间¬ΘL &lt; Θ &lt; ¬ΘU，其中¬ΘL（下边界）和¬ΘU（上边界）依赖于估计量的抽样分布，反映 “真实参数大概率落在该区间” 的范围</li>
+<li>置信区间（Confidence Interval）：<ol>
+<li>定义：100(1−α)%置信区间表示 “长期重复抽样下，95%（如α&#x3D;0.05）的此类区间会包含真实参数”</li>
+<li>关键误区：<strong>不能说 “某具体区间含参数的概率是1−α”</strong>，因为区间计算后是确定值，要么含参数要么不含；概率仅反映估计 procedure 的可靠性</li>
+<li>理想区间：短区间 + 高置信度（如 95% 置信区间[6,7]优于 99% 置信区间[3,10]）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>单样本估计总体均值μ（Single Sample: Estimating μ）<ol>
+<li>场景 1：总体方差σ^2已知（大样本n≥30适用 CLT）<ol>
+<li>抽样分布：由中心极限定理（CLT），¬X ∼ N(μ,σ^2&#x2F;n)，标准化后Z &#x3D; （¬X - μ） &#x2F; σ&#x2F;√n ∼ N（0,1）</li>
+<li>置信区间公式：¬x - z(α&#x2F;2)·σ&#x2F;√n &lt; μ &lt; ¬x + z(α&#x2F;2)·σ&#x2F;√n，其中z(α&#x2F;2)是标准正态分布右侧面积为α&#x2F;2的分位数（如 95% 置信度下z(0.025)&#x3D; 1.96）</li>
+</ol>
+</li>
+<li>场景 2：单 - sided 置信界（σ^2已知）<ol>
+<li>适用场景：仅关注 “下界”（如钢棒抗拉强度）或 “上界”（如河流汞含量）</li>
+<li>公式：<ol>
+<li>下置信界（95%）：μ &gt; ¬x - z(α)·σ&#x2F;√n</li>
+<li>上置信界（95%）：μ &lt; ¬x + z(α)·σ&#x2F;√n</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>场景 3：总体方差σ^2未知（小样本n&lt;30且总体正态）<ol>
+<li>抽样分布：用样本标准差S替代σ，统计量 T &#x3D; （¬X - μ） &#x2F; S&#x2F;√n ∼ t(n-1)（t 分布，自由度df&#x3D;n−1）</li>
+<li>置信区间公式：¬x - t(α&#x2F;2),(n-1)·S&#x2F;√n &lt; μ &lt; ¬x + t(α&#x2F;2),(n-1)·S&#x2F;√n</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>两样本估计总体均值差μ1−μ2（Two Samples: Estimating μ1−μ2）<ol>
+<li>点估计：¬X1 - ¬X2（两样本均值差）</li>
+<li>三大场景对比：<table>
+<thead>
+<tr>
+<th align="center">场景</th>
+<th align="center">前提条件</th>
+<th align="center">抽样分布</th>
+<th align="center">关键参数 &#x2F; 公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">场景 1：σ^2(1)、σ^2(2)已知</td>
+<td align="center">大样本（n1≥30，n2≥30），CLT 适用</td>
+<td align="center">Z 分布</td>
+<td align="center">区间含 √（σ^2(1)&#x2F;n1 + σ^2(2)&#x2F;n2）</td>
+</tr>
+<tr>
+<td align="center">场景 2：σ^2(1) &#x3D; σ^2(2)未知</td>
+<td align="center">小样本，总体正态</td>
+<td align="center">t 分布（df&#x3D;n1+n2−2）</td>
+<td align="center">合并方差 S^2(P) &#x3D; （（n1-1）S^2(1) + （n2-1）S^2(2)） &#x2F; n1+n2-2</td>
+</tr>
+<tr>
+<td align="center">场景 3：σ^2(1) !&#x3D; σ^2(2)未知</td>
+<td align="center">小样本，总体正态</td>
+<td align="center">t’ 分布（df&#x3D;v）</td>
+<td align="center">自由度 v &#x3D; （S^2(1)&#x2F;n1 + S^2(2)&#x2F;n2）^2 &#x2F; （S^2(1)&#x2F;n1）^2&#x2F;n1-1 + （S^2(2)&#x2F;n2）^2&#x2F;n2-1，向下取整</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>配对观测（Paired Observations）<ol>
+<li>适用场景：<ol>
+<li>同一单元接受两条件（如 15 人节食前后体重）</li>
+<li>配对单元接受两条件（如 IQ 相同的两人分属传统 &#x2F; 新型教学班级）</li>
+<li>目的：消除 “单元间差异”（如汽车差异对轮胎磨损的影响），提高估计精度</li>
+</ol>
+</li>
+<li>核心方法：将配对观测转化为 “差异样本”di &#x3D; x(1i) - x(2i)，估计μD &#x3D; μ1 - μ2（差异总体的均值）</li>
+<li>置信区间公式：<ol>
+<li>小样本（n&lt;30，di正态）：¬d ± t(α&#x2F;2),(n-1)·Sd&#x2F;√n</li>
+<li>大样本（n≥30）：用 Z 分布，¬d ± z(α&#x2F;2)·Sd&#x2F;√n</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>单样本估计总体方差σ^2（Single Sample: Estimating σ^2）<ol>
+<li>抽样分布：统计量 X^2 &#x3D; （n-1）S^2 &#x2F; σ^2 ∼ X^2(n-1)（X^2分布，自由度n−1），该分布非对称，分位数需区分X^2(α&#x2F;2)和X^2(1 - α&#x2F;2)</li>
+<li>置信区间公式：（n-1）s^2 &#x2F; X^2(α&#x2F;2),(n-1) &lt; σ &lt; （n-1）s^2 &#x2F; X^2(1 - α&#x2F;2),(n-1)</li>
+</ol>
+</li>
+<li>两样本估计总体方差比σ^2(1)&#x2F;σ^2(2)（Two Samples: Estimating σ^2(1)&#x2F;σ^2(2)）<ol>
+<li>点估计：s^2(1)&#x2F;s^2(2)（两样本方差比）</li>
+<li>抽样分布：统计量 F &#x3D; σ^2(2)S^2(1) &#x2F; σ^2(1)S^2(2) ∼ F(n1-1),(n2-1)（F 分布，分子自由度n1−1，分母自由度n2−1），满足 f(1-α&#x2F;2)（v1，v2） &#x3D; 1 &#x2F; f(α&#x2F;2)（v2，v1）</li>
+<li>置信区间公式：S^2(1)&#x2F;S^2(2) · 1&#x2F;f(α&#x2F;2)（n1-1，n2-1） &lt; σ^2(1)&#x2F;σ^2(2) &lt; S^2(1)&#x2F;S^2(2) · f(α&#x2F;2)（n2-1，n1-1）</li>
+<li>核心用途：判断方差是否相等 —— 若区间不含 1，则认为σ^2(1) !&#x3D; σ^2(2)；含 1 则认为方差相等</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天参加的这周的城市之旅活动体验感非常好，首先把我之前探索的路线骑了一圈，然后我们去到了一个古镇上参观，最后还去到了长江边上，过程中聊天也挺开心的，希望以后也会这么开心</li>
+<li>今天在结束了城市之旅活动后我还去参加了班级举办的羽毛球活动，在活动上认识了一个非常热情的朋友，即使活动结束后我们俩也聊了许久</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/11/03/2025-11-3/" data-id="cmhn1ebs2000aywvp11jcez83" data-title="2025.11.3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2025-11-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/11/02/2025-11-2/" class="article-date">
@@ -192,7 +897,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhhh1bpe00077wvp57wx8b9q" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhn1ebs2000bywvp8tlg2q59" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -334,7 +1039,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhhh1bpc00037wvp5b30hgha" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhn1ebs10008ywvpbx9b2ar2" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -381,7 +1086,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhhh1bpf000a7wvp430d4m95" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhn1ebrz0002ywvp00ls4b15" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -865,7 +1570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhhh1bpd00067wvp1tfb0z1e" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhn1ebs00005ywvpblb57qgl" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -961,7 +1666,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhhh1bpc00047wvp1p1efj3f" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cmhn1ebs10006ywvph2fb9jn2" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1125,7 +1830,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhhh1bpd00057wvp1vki6fqk" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cmhn1ebs00003ywvph8gdhybt" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1377,331 +2082,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhhh1bpb00027wvpgv9lgwf9" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-10-15" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/10/15/2025-10-15/" class="article-date">
-  <time class="dt-published" datetime="2025-10-15T10:04:54.000Z" itemprop="datePublished">2025-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/10/15/2025-10-15/">2025.10.15</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
-<li>今天受到之前表演时的一个外国朋友的邀请去到了专业的录音棚里面弹琴，以帮助他们学习如何调试录音设备，预计之后会有更多机会既能帮助他们完成毕设也能够让我体验梦寐以求的专业录音，所以接下来要好好练琴了</li>
-<li>今天和老师汇报了一下近期的情况，还是比较满意吧</li>
-<li>第二次参加本学期的网球社团活动，明显开始适应社团活动的流程了，今天从头到尾一直在打球，比起上一次体验感强多了</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cmhhh1bpa00017wvpf8o59nio" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-10-13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/10/13/2025-10-13/" class="article-date">
-  <time class="dt-published" datetime="2025-10-13T02:25:54.000Z" itemprop="datePublished">2025-10-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/10/13/2025-10-13/">2025.10.13</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
-<li>十一回顾</li>
-<li>思考与摘录</li>
-<li>今日学习笔记</li>
-<li>迎新晚会感受</li>
-</ol>
-<h2 id="十一回顾"><a href="#十一回顾" class="headerlink" title="十一回顾"></a>十一回顾</h2><ol>
-<li>Day1：<ol>
-<li>上午到达杭州，在办理入住前在大厅里学习了一会儿</li>
-<li>在办理完入住放好东西后去逛了杭州图书馆</li>
-<li>之后去了天目里逛了一圈并在茑屋书店呆了一会儿</li>
-<li>逛了五柳巷历史街区</li>
-<li>前往胜利河美食街吃完饭并买了防晒防虫喷雾</li>
-</ol>
-</li>
-<li>Day2：<ol>
-<li>早起坐车前往九溪烟树，走了九溪十八涧</li>
-<li>中午前到达龙井村，被一家热情人家拉进去喝了一会儿龙井茶，聊天的过程中了解了龙井茶主要是采摘的春茶，且根据采摘的时间不同品质也有所区分，可分为明前茶、雨前茶和雨后茶，且采摘完的茶还要炒三遍需要花费一个多小时</li>
-<li>在吃过午饭和买了点龙井茶后开始顺着十里锒铛开始爬茶山，一路直至云栖竹径出山</li>
-<li>晚上前往参加Anson Seabra的live house</li>
-</ol>
-</li>
-<li>Day3：<ol>
-<li>凌晨4点起床骑车前往西湖，到了后沿着北山街一路骑行欣赏夜景</li>
-<li>于5点在神舟基地景点坐等日出</li>
-<li>看完日出后骑行到西湖东南角开始环湖步行</li>
-<li>用了不到3小时换西湖一圈</li>
-<li>晚上前往城市阳台观看灯光秀</li>
-</ol>
-</li>
-<li>Day4：<ol>
-<li>早起前往灵隐寺，并把整个景区逛完</li>
-<li>骑车前往茅家埠，并徒步沿着湖边的小道把西湖西面逛完</li>
-<li>乘坐了水上公交7号线</li>
-<li>去了钟书阁</li>
-</ol>
-</li>
-<li>Day5：<ol>
-<li>参加了西湖边的国庆音乐喷泉</li>
-<li>买了伴手礼</li>
-</ol>
-</li>
-<li>Day6：<ol>
-<li>去到了拱宸桥，逛了博物馆，并沿着河道一路观赏</li>
-<li>乘坐了水上公交1号线</li>
-<li>去了顾雪岩旧居，并一路穿过街巷直至西湖边</li>
-</ol>
-</li>
-<li>Day7:<ol>
-<li>一整天在杭州宋城景区游玩</li>
-</ol>
-</li>
-<li>Day8:<ol>
-<li>逛了良渚古城遗址公园</li>
-<li>去了玉鸟集文艺街区</li>
-</ol>
-</li>
-<li>Day9：<ol>
-<li>逛了西溪湿地</li>
-</ol>
-</li>
-<li>Day10：<ol>
-<li>去了临安的青山湖，绕湖骑行一圈并参观了水上森林</li>
-<li>下午再次去到茑屋书店用一下午的时间看完了《通往夏天的隧道，再见的出口》一书</li>
-</ol>
-</li>
-</ol>
-<p>由于最后一天晚上吃了一家过辣的饭导致接下来几天只能躺在宿舍</p>
-<h2 id="思考与摘录"><a href="#思考与摘录" class="headerlink" title="思考与摘录"></a>思考与摘录</h2><p>思考：在旅行最后一下午我决心一直待在书店里看完一本书，最终总算在关店前看完了我此生最快速看完的一本书，我其实原本对看书就不是特别上心，虽然时常在脑海里闪过要多看书的念头，也常常去书店寻找自己感兴趣的书，但读着读着最后总会不了了之，所以这次我下定决心当天不看完不走，第一次快速完整的看完一本书真的很开心，而且其实之前就看过了这本书翻拍的电影，但这次读过原著后我深深体会到电影还是没办法很好展现书中的细节和打动人的地方的，所以经此转折我将对读书更进一步，我发现最近我读书的速度和耐心明显提升了，我终会将看书变成由衷热爱的事情<br>其次在旅行的其中一天我看到了一个让我收获很多的视频，视频采访了某个行业大佬，使我决定要将生活中的自己记录下来，我打算尝试拍点视频，而且也会在此后的博客文章中加入更多平日里的所思所想，这既是对自己的激励，也希望对日后读到这些内容的人们有所帮助</p>
-<p>文案摘录：</p>
-<ol>
-<li>心灯不借他人火，自照乾坤步步明，人生如逆旅，你我皆行人，唯有不断悦己、阅己、越己，才能活出生命的真正意义</li>
-<li>所有不尊重你的人，赌的都是你没有前途，他们赌你会忍，赌你会忘，赌你就算记得也没有本事反抗。所以你一定要记住你来时路的苦楚，待到来年春暖花开时，愿你安睡时山河入梦，醒来时满目春风，愿你快乐事有始有终，愿你未来路坦荡从容</li>
-<li>大仁不仁</li>
-</ol>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><p>机器学习 – 让计算机无需显式编程即可获得学习能力的研究领域  </p>
-<ol>
-<li>与传统编程的区别：<ol>
-<li>传统编程：数据 + 预设程序（函数） –通过程序中的函数进行计算–&gt; 基于计算得到结果  </li>
-<li>机器学习：数据 + 期望输出  –通过曲线拟合（如线性回归）等方式推导程序–&gt; 能预测新数据的程序（模型）</li>
-</ol>
-</li>
-<li>机器学习的两种学习方式：<ol>
-<li>记忆（memorization）：仅积累个体事实，限制于“观察事实的时间”和“储存事实的记忆空间”，无法应对未见过的情况</li>
-<li>泛化（generalization）：从已有的事实推导新事实，本质是一种预测活动，核心假设是“过去可以预测未来”，限制于“推导过程的准确性”，<strong>是机器学习的核心</strong></li>
-</ol>
-</li>
-<li>机器学习的基本步骤：<ol>
-<li>观察训练数据：获取用于学习的样本集合</li>
-<li>推断数据生成过程：通过算法（如线性回归拟合多项式曲线）分析训练数据，提炼数据背后的规律</li>
-<li>预测测试数据：利用推断出的规律，对未见过的样本（测试数据）进行预测</li>
-</ol>
-</li>
-<li>机器学习的核心范式：监督学习与无监督学习<ol>
-<li>监督学习（supervised）：<ol>
-<li>核心输入：包含 “特征 &#x2F; 标签对” 的数据集，标签明确指示样本的类别</li>
-<li>核心目标：找到能预测标签的规则，为未见过的输入（仅特征）分配正确标签。</li>
-<li>关键任务：分类（classification）<ol>
-<li>目标：在特征空间中找到分隔不同标签组的 “分类面”（如 2D 空间中的直线、高维空间中的平面）</li>
-<li>约束：需控制分类面复杂度，避免过拟合（若分类面过于复杂，会精准匹配训练数据但无法适应测试数据）</li>
-<li>权衡：当标签组存在重叠时，需平衡 “假阳性”（将负类误判为正类）与 “假阴性”（将正类误判为负类）</li>
-</ol>
-</li>
-<li>案例：足球队员位置分类</li>
-</ol>
-</li>
-<li>无监督学习（unsupervised）<ol>
-<li>核心输入：仅包含特征向量的数据集，无任何标签信息</li>
-<li>核心目标：将数据自动分组为 “自然簇”（具有相似特征的样本集合），或为不同簇创建标签</li>
-<li>关键任务：聚类（clustering）<ol>
-<li>聚类步骤：<ol>
-<li>随机选择 k 个样本作为 “原型”（初始簇中心）</li>
-<li>计算剩余样本与各原型的距离，将样本归入距离最近的簇（最小化簇内样本距离，即优化目标函数）</li>
-<li>计算每个簇的中值样本，将其作为新原型</li>
-<li>重复步骤 2-3，直至原型不再变化</li>
-</ol>
-</li>
-<li>关键指标：相似度（通过距离度量衡量，距离越小相似度越高）</li>
-</ol>
-</li>
-<li>案例：足球队员身高体重聚类</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>机器学习方法的关键要素<ol>
-<li>训练数据与评估方法<ol>
-<li>数据划分：需将数据集随机分为 “训练集”（用于学习模型）与 “测试集”（用于评估模型泛化能力），避免用训练数据直接评估（易高估性能）</li>
-<li>评估逻辑：通过模型在测试集上的预测结果，判断模型是否能适应未见过的数据</li>
-</ol>
-</li>
-<li>特征表示与特征工程<ol>
-<li>核心观点：“所有模型都是错的，但有些是有用的”，特征的质量决定模型的有用性</li>
-<li>特征工程目标：构建 “高信噪比（SNR）” 的特征向量 —— 最大化 “有用输入”占比，最小化 “无关输入”占比，避免过拟合</li>
-<li>案例：爬行动物分类特征优化</li>
-</ol>
-</li>
-<li>距离度量（Distance Metric）<ol>
-<li>常用度量：闵可夫斯基度量<ol>
-<li>当 p&#x3D;1 时：曼哈顿距离，计算各维度差值的绝对值之和，适用于维度不可比的场景</li>
-<li>当 p&#x3D;2 时：欧氏距离，计算各维度差值的平方和的平方根，是最常用的度量方式。</li>
-</ol>
-</li>
-<li>案例：动物距离计算对比</li>
-<li>关键注意事项：需统一特征维度的权重，避免某一维度（如整数型腿数）对距离计算产生过度影响</li>
-</ol>
-</li>
-<li>目标函数与约束<ol>
-<li>目标函数：定义模型的优化方向（如聚类中 “最小化簇内样本距离”，分类中 “最大化分类面与样本的距离”）</li>
-<li>约束条件：限制模型复杂度（如聚类中指定簇数 k，分类中限制分类面为直线而非复杂曲线），避免过拟合</li>
-</ol>
-</li>
-<li>优化方法：用于求解目标函数的算法，如聚类中 “更新簇中值为新原型”、分类中 “寻找最优分类面” 的梯度下降算法等</li>
-</ol>
-</li>
-<li><strong>本节知识的重点问题</strong><ol>
-<li>监督学习与无监督学习的核心差异是什么？在实际应用中如何选择这两种范式？<ol>
-<li>二者的核心差异体现在数据要求与核心目标上：<ol>
-<li>数据要求：监督学习需 “特征 &#x2F; 标签对”，无监督学习仅需无标签特征向量</li>
-<li>核心目标：监督学习目标是构建分类器，为新输入预测标签；无监督学习目标是将数据聚类为自然簇，挖掘隐含分组</li>
-</ol>
-</li>
-<li>实际应用选择依据：<ol>
-<li>若有明确的标签数据，且需预测新样本标签，选择监督学习</li>
-<li>若无标签数据，仅需探索数据内在结构，或为后续监督学习生成初始标签，选择无监督学习</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>特征工程在机器学习中扮演什么角色？如何通过特征工程提升模型性能？<ol>
-<li>特征工程的核心角色是构建高信噪比（SNR）的特征向量，即筛选 “有用输入”、剔除 “无关输入”，直接决定模型能否从数据中学习到有效规律</li>
-<li>提升模型性能的方式：<ol>
-<li>保留有用特征：选择与目标强相关的特征</li>
-<li>剔除无关特征：移除与目标无关的特征</li>
-<li>优化特征格式：统一特征维度权重（如将整数型 “腿数” 转为二进制，避免距离计算偏差）</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>什么是过拟合？为什么会出现过拟合？如何通过模型设计或评估方式避免过拟合？<ol>
-<li>过拟合定义：模型在训练数据上表现极佳，但在测试数据上表现差，即模型过度学习训练数据的噪声，而非普遍规律，无法泛化到新数据</li>
-<li>过拟合原因：<ol>
-<li>模型复杂度过高</li>
-<li>特征质量差</li>
-<li>仅用训练数据评估模型</li>
-</ol>
-</li>
-<li>避免方式：<ol>
-<li>控制模型复杂度：如分类时选择简单分类面（直线 &#x2F; 平面），聚类时限制簇数 k（而非 k 等于样本数）</li>
-<li>优化特征工程：剔除无关特征，提升信噪比</li>
-<li>合理划分数据与评估：将数据分为训练集与测试集，仅通过测试集性能判断模型好坏（如复杂模型训练准确率高但测试准确率低，需放弃）</li>
-<li>权衡假阳性与假阴性：避免为追求训练准确率而构建过度复杂的模型</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="迎新晚会总结"><a href="#迎新晚会总结" class="headerlink" title="迎新晚会总结"></a>迎新晚会总结</h2><p>今天的表演还算是成功吧，和上一次相比明显放松多了，而且这次的听众也挺多，再接再厉吧。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cmhhh1bp700007wvp3vftekr0" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2025-9-24" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/24/2025-9-24/" class="article-date">
-  <time class="dt-published" datetime="2025-09-24T08:00:56.000Z" itemprop="datePublished">2025-09-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/24/2025-9-24/">2025.9.24</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
-<li>Python学习（文件）</li>
-<li>第一次网球社团活动</li>
-<li>每日英语</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cmhhh1bph000e7wvp80lr9as3" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cmhn1ebry0001ywvpg5hec66d" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1717,7 +2098,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -1749,23 +2130,23 @@
       <ul>
         
           <li>
+            <a href="/2025/11/06/2025-11-6/">2025.11.6</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/05/2025-11-5/">2025.11.5</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/03/2025-11-3/">2025.11.3</a>
+          </li>
+        
+          <li>
             <a href="/2025/11/02/2025-11-2/">2025.11.2</a>
           </li>
         
           <li>
             <a href="/2025/10/31/2025-10-31/">2025.10.31</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/30/2025-10-30/">2025.10.30</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/29/2025-10-29/">2025.10.30</a>
-          </li>
-        
-          <li>
-            <a href="/2025/10/28/2025-10-28/">2025.10.28</a>
           </li>
         
       </ul>
