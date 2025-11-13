@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/13/2025-11-13/" data-id="cmhwywf8l0006w8vpc3jvbln0" data-title="2025.11.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/13/2025-11-13/" data-id="cmhwz0hj000077cvpbnji8w75" data-title="2025.11.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -222,28 +222,29 @@
 </ol>
 </li>
 <li>数组操作<ol>
-<li><p>数组存储：数组元素连续存储，基地址为首个元素地址（如 5 元素数组 base&#x3D;0x12348000，元素地址为 base、base+4、base+8 等）</p>
+<li>数组存储：数组元素连续存储，基地址为首个元素地址（如 5 元素数组 base&#x3D;0x12348000，元素地址为 base、base+4、base+8 等）</li>
+<li>单元素操作示例：<br>C 代码：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array[0] *=2; array[1] *=2（base=0x12348000）</span><br></pre></td></tr></table></figure>
+汇编代码：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lui $s0, 0x1234       # $s0 = 0x12340000</span><br><span class="line">ori $s0, $s0, 0x8000  # $s0 = 0x12348000（数组基地址）</span><br><span class="line"></span><br><span class="line">lw $t1, 0($s0)     # $t1 = array[0]</span><br><span class="line">sll $t1, $t1, 1    # $t1 = array[0] * 2</span><br><span class="line">sw $t1, 0($s0)     # array[0] = $t1</span><br><span class="line"></span><br><span class="line">lw $t1, 4($s0)     # $t1 = array[1]</span><br><span class="line">sll $t1, $t1, 1    # $t1 = array[1] * 2</span><br><span class="line">sw $t1, 4($s0)     # array[1] = $t1</span><br></pre></td></tr></table></figure></li>
+<li>for 循环操作数组：<br>C 代码：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for(i=0;i&lt;1000;i++) array[i] *=8</span><br></pre></td></tr></table></figure>
+汇编代码：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 初始化：$s0=数组基址（0x23B8F000），$s1=i=0，$t2=1000</span><br><span class="line">lui $s0, 0x23B8</span><br><span class="line">ori $s0, $s0, 0xF000      </span><br><span class="line">addi $s1, $0, 0</span><br><span class="line">addi $t2, $0, 1000</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">slt $t0, $s1, $t2  # $t0=1（i&lt;1000），否则0</span><br><span class="line">beq $t0, $0, done  # 若i&gt;=1000，跳至done</span><br><span class="line">sll $t0, $s1, 2    # $t0 = i*4（字节偏移）</span><br><span class="line">add $t0, $t0, $s0  # $t0 = array[i]地址</span><br><span class="line">lw $t1, 0($t0)     # $t1 = array[i]</span><br><span class="line">sll $t1, $t1, 3    # $t1 = array[i] *8（左移3位）</span><br><span class="line">sw $t1, 0($t0)     # array[i] = $t1</span><br><span class="line">addi $s1, $s1, 1   # i = i+1</span><br><span class="line">j loop             # 跳回loop</span><br><span class="line"></span><br><span class="line">done:</span><br></pre></td></tr></table></figure></li>
+</ol>
 </li>
-<li><p>单元素操作示例：<br>C 代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array[0] *=2; array[1] *=2（base=0x12348000）</span><br><span class="line">```  </span><br><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
-<p>lui $s0, 0x1234       # $s0 &#x3D; 0x12340000<br>ori $s0, $s0, 0x8000  # $s0 &#x3D; 0x12348000（数组基地址）</p>
-<p>lw $t1, 0($s0)     # $t1 &#x3D; array[0]<br>sll $t1, $t1, 1    # $t1 &#x3D; array[0] * 2<br>sw $t1, 0($s0)     # array[0] &#x3D; $t1</p>
-<p>lw $t1, 4($s0)     # $t1 &#x3D; array[1]<br>sll $t1, $t1, 1    # $t1 &#x3D; array[1] * 2<br>sw $t1, 4($s0)     # array[1] &#x3D; $t1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3. for 循环操作数组：  </span><br><span class="line">   C 代码：</span><br></pre></td></tr></table></figure>
-<p>for(i&#x3D;0;i&lt;1000;i++) array[i] *&#x3D;8</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
-<h1 id="初始化：-s0-数组基址（0x23B8F000），-s1-i-0，-t2-1000"><a href="#初始化：-s0-数组基址（0x23B8F000），-s1-i-0，-t2-1000" class="headerlink" title="初始化：$s0&#x3D;数组基址（0x23B8F000），$s1&#x3D;i&#x3D;0，$t2&#x3D;1000"></a>初始化：$s0&#x3D;数组基址（0x23B8F000），$s1&#x3D;i&#x3D;0，$t2&#x3D;1000</h1><p>lui $s0, 0x23B8<br>ori $s0, $s0, 0xF000<br>addi $s1, $0, 0<br>addi $t2, $0, 1000</p>
-<p>loop:<br>slt $t0, $s1, $t2  # $t0&#x3D;1（i&lt;1000），否则0<br>beq $t0, $0, done  # 若i&gt;&#x3D;1000，跳至done<br>sll $t0, $s1, 2    # $t0 &#x3D; i*4（字节偏移）<br>add $t0, $t0, $s0  # $t0 &#x3D; array[i]地址<br>lw $t1, 0($t0)     # $t1 &#x3D; array[i]<br>sll $t1, $t1, 3    # $t1 &#x3D; array[i] *8（左移3位）<br>sw $t1, 0($t0)     # array[i] &#x3D; $t1<br>addi $s1, $s1, 1   # i &#x3D; i+1<br>j loop             # 跳回loop</p>
-<p>done:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">5. 函数调用机制</span><br><span class="line">   1. 核心概念：</span><br><span class="line">      1. 调用者（Caller）：发起调用的函数（如 main）</span><br><span class="line">      2. 被调用者（Callee）：被调用的函数（如 sum）</span><br><span class="line">   2. `MIPS 函数调用约定`：</span><br><span class="line">      1. 传参：前 4 个参数通过a0−a3 传递，超过 4 个需用栈</span><br><span class="line">      2. 返回值：通过v0−v1 返回</span><br><span class="line">      3. 跳转与返回：jal（jump and link）指令跳转（同时将返回地址存入$ra），jr $ra（jump register）指令返回</span><br><span class="line">   3. 简单函数示例：  </span><br><span class="line">      C 代码：</span><br></pre></td></tr></table></figure>
-<p>void main(){simple(); a&#x3D;b+c;} void simple(){return;}</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
-<p>0x00400200 main: jal simple  # 跳至simple，$ra&#x3D;0x00400204（下一条指令地址）<br>0x00400204      add $s0, $s1, $s2  # a&#x3D;b+c<br>…<br>0x00401020 simple: jr $ra  # 跳回$ra（0x00400204）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">6. 分支、循环、栈内存与寻址方式</span><br><span class="line">   1. 条件标志（CPSR 寄存器）：  </span><br><span class="line">      | 标志位 | 名称 | 含义 |</span><br><span class="line">      | :---: | :---: | :---: |</span><br><span class="line">      | N | Negative（负） | 指令结果为负（结果第 31 位为 1） |</span><br><span class="line">      | Z | Zero（零） | 指令结果为 0 |</span><br><span class="line">      | C | Carry（进位） | 指令执行产生进位 / 借位 |</span><br><span class="line">      | V | Overflow（溢出） | 指令执行产生溢出 |</span><br><span class="line">   2. 分支指令（流程跳转）：用于 “打破顺序执行”，分为条件分支（满足条件才跳）和无条件分支（强制跳），依赖 CPSR 寄存器的标志位（N/Z/C/V）判断条件，核心分支指令如下：</span><br><span class="line">      | 指令类型 | 指令 | 格式 | 功能 | 示例 |</span><br><span class="line">      | :---: | :---: | :---: | :---: | :---: |</span><br><span class="line">      | 条件分支	| beq | beq $s, $t, label | 若$s == $t，跳 label | beq $s0, $s1, target（s0==s1 跳 target） | </span><br><span class="line">      | | bne |	bne $s, $t, label | 若$s != $t，跳 label | bne $s0, $s1, target（s0!=s1 跳 target） |</span><br><span class="line">      | 无条件分支 | j | j label | 强制跳 label（直接使用地址） | j target（跳 target） |</span><br><span class="line">      | | jr | jr $s | 强制跳 $s 存储的地址（寄存器间接跳转） | jr $ra（跳 $ra 地址，函数返回） |</span><br><span class="line">      | | jal | jal label | 跳 label，并将返回地址存入 $ra | jal sum（调用 sum，保存返回地址） |</span><br><span class="line">   3. 循环与条件语句（if/while/for）</span><br><span class="line">      1. MIPS 通过 “分支指令 + 跳转指令” 实现高级语言的条件与循环逻辑，核心是 “判断条件→跳转到对应代码块”</span><br><span class="line">      2. if 语句示例    </span><br><span class="line">         C 代码：</span><br></pre></td></tr></table></figure>
-<p>   if(i &#x3D;&#x3D; j) f &#x3D; g + h; f &#x3D; f - i;（s0&#x3D;f,s1&#x3D;g,s2&#x3D;h,s3&#x3D;i,$s4&#x3D;j）</p>
-   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
-<p>   bne $s3, $s4, L1   # 若i!&#x3D;j，跳L1（跳过if体）<br>   add $s0, $s1, $s2  # if体：f &#x3D; g + h（i&#x3D;&#x3D;j时执行）<br>   L1:<br>   sub $s0, $s0, $s3  # 无论if是否执行，都执行f &#x3D; f -i&#96;&#96;&#96;</p>
-<ol start="3">
+<li>函数调用机制<ol>
+<li>核心概念：<ol>
+<li>调用者（Caller）：发起调用的函数（如 main）</li>
+<li>被调用者（Callee）：被调用的函数（如 sum）</li>
+</ol>
+</li>
+<li><code>MIPS 函数调用约定</code>：<ol>
+<li>传参：前 4 个参数通过a0−a3 传递，超过 4 个需用栈</li>
+<li>返回值：通过v0−v1 返回</li>
+<li>跳转与返回：jal（jump and link）指令跳转（同时将返回地址存入$ra），jr $ra（jump register）指令返回</li>
+</ol>
+</li>
+<li>简单函数示例：<br>C 代码：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void main()&#123;simple(); a=b+c;&#125; void simple()&#123;return;&#125;</span><br><span class="line">```  </span><br><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
+0x00400200 main: jal simple  # 跳至simple，$ra&#x3D;0x00400204（下一条指令地址）<br>0x00400204      add $s0, $s1, $s2  # a&#x3D;b+c<br>…<br>0x00401020 simple: jr $ra  # 跳回$ra（0x00400204）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">6. 分支、循环、栈内存与寻址方式</span><br><span class="line">   1. 条件标志（CPSR 寄存器）：  </span><br><span class="line">      | 标志位 | 名称 | 含义 |</span><br><span class="line">      | :---: | :---: | :---: |</span><br><span class="line">      | N | Negative（负） | 指令结果为负（结果第 31 位为 1） |</span><br><span class="line">      | Z | Zero（零） | 指令结果为 0 |</span><br><span class="line">      | C | Carry（进位） | 指令执行产生进位 / 借位 |</span><br><span class="line">      | V | Overflow（溢出） | 指令执行产生溢出 |</span><br><span class="line">   2. 分支指令（流程跳转）：用于 “打破顺序执行”，分为条件分支（满足条件才跳）和无条件分支（强制跳），依赖 CPSR 寄存器的标志位（N/Z/C/V）判断条件，核心分支指令如下：</span><br><span class="line">      | 指令类型 | 指令 | 格式 | 功能 | 示例 |</span><br><span class="line">      | :---: | :---: | :---: | :---: | :---: |</span><br><span class="line">      | 条件分支	| beq | beq $s, $t, label | 若$s == $t，跳 label | beq $s0, $s1, target（s0==s1 跳 target） | </span><br><span class="line">      | | bne |	bne $s, $t, label | 若$s != $t，跳 label | bne $s0, $s1, target（s0!=s1 跳 target） |</span><br><span class="line">      | 无条件分支 | j | j label | 强制跳 label（直接使用地址） | j target（跳 target） |</span><br><span class="line">      | | jr | jr $s | 强制跳 $s 存储的地址（寄存器间接跳转） | jr $ra（跳 $ra 地址，函数返回） |</span><br><span class="line">      | | jal | jal label | 跳 label，并将返回地址存入 $ra | jal sum（调用 sum，保存返回地址） |</span><br><span class="line">   3. 循环与条件语句（if/while/for）</span><br><span class="line">      1. MIPS 通过 “分支指令 + 跳转指令” 实现高级语言的条件与循环逻辑，核心是 “判断条件→跳转到对应代码块”</span><br><span class="line">      2. if 语句示例    </span><br><span class="line">         C 代码：</span><br></pre></td></tr></table></figure>
+   if(i &#x3D;&#x3D; j) f &#x3D; g + h; f &#x3D; f - i;（s0&#x3D;f,s1&#x3D;g,s2&#x3D;h,s3&#x3D;i,$s4&#x3D;j）   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">汇编代码：</span><br></pre></td></tr></table></figure>
+   bne $s3, $s4, L1   # 若i!&#x3D;j，跳L1（跳过if体）<br>   add $s0, $s1, $s2  # if体：f &#x3D; g + h（i&#x3D;&#x3D;j时执行）<br>   L1:<br>   sub $s0, $s0, $s3  # 无论if是否执行，都执行f &#x3D; f -i&#96;&#96;&#96;<ol start="3">
 <li><p>if-else 语句示例<br>C 代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(i == j) f = g + h; else f = f - i;</span><br><span class="line">```  </span><br><span class="line">汇编代码：  </span><br></pre></td></tr></table></figure>
 <p>bne $s3, $s4, L1   # 若i!&#x3D;j，跳L1（执行else）<br>add $s0, $s1, $s2  # if体：f &#x3D; g + h<br>j done             # 跳done，跳过else<br>L1:<br>sub $s0, $s0, $s3  # else体：f &#x3D; f -i<br>done:</p>
@@ -286,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/11/2025-11-11/" data-id="cmhwywf8l0005w8vp9lsn6zpb" data-title="2025.11.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/11/2025-11-11/" data-id="cmhwz0hj000067cvpbvm627ag" data-title="2025.11.11" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -365,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/07/2025-11-7/" data-id="cmhwywf8o000gw8vpcnfxcily" data-title="2025.11.7" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/07/2025-11-7/" data-id="cmhwz0hj4000d7cvp92haffse" data-title="2025.11.7" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -408,7 +409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/06/2025-11-6/" data-id="cmhwywf8n000bw8vpffvha8by" data-title="2025.11.6" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/06/2025-11-6/" data-id="cmhwz0hj2000a7cvpgionc4x5" data-title="2025.11.6" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -903,7 +904,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/05/2025-11-5/" data-id="cmhwywf8n000cw8vp1b50dvew" data-title="2025.11.5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/05/2025-11-5/" data-id="cmhwz0hj3000c7cvpdzqg38r3" data-title="2025.11.5" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1068,7 +1069,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/03/2025-11-3/" data-id="cmhwywf8m0008w8vp8rsz2ult" data-title="2025.11.3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/03/2025-11-3/" data-id="cmhwz0hj7000m7cvpg950e0es" data-title="2025.11.3" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1201,7 +1202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhwywf8m0007w8vp9reb6pig" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/02/2025-11-2/" data-id="cmhwz0hj000087cvpcb38bhov" data-title="2025.11.2" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1343,7 +1344,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhwywf8n000aw8vp58ny51yp" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cmhwz0hj3000b7cvpcf3u415t" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1390,7 +1391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhwywf8o000fw8vpemb196l5" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cmhwz0hiy00037cvp6oorgcmx" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1874,7 +1875,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhwywf8m0009w8vp1sie50oy" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cmhwz0hiz00057cvpf8aeeg76" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
