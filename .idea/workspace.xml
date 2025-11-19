@@ -16,9 +16,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="32V3OSxvmyFeWVTK5RtaRfPCxR7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -124,6 +124,7 @@
       <workItem from="1763487639571" duration="1680000" />
       <workItem from="1763490531845" duration="652000" />
       <workItem from="1763491313810" duration="1358000" />
+      <workItem from="1763493654759" duration="755000" />
     </task>
     <servers />
   </component>

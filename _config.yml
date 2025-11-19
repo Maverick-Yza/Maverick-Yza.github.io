@@ -7,13 +7,13 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: Maverick-Yza
-language: zh-CN
+author: John Doe
+language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://maverick-yza.github.io/
+url: http://example.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,6 +101,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: https://github.com/Maverick-Yza/Maverick-Yza-github.io
-  branch: hexo-deploy
+  type: git  # 去掉单引号，Hexo配置不需要额外引号
+  repo: https://github.com/Maverick-Yza/Maverick-Yza.github.io.git  # 修正仓库地址（是.github.io，不是-github.io）
+  branch: hexo-deploy  # 改回部署分支，master分支用来存源文件，避免混淆
+  message: "更新博客：{{ now('YYYY-MM-DD HH:mm:ss') }}"  # 自动添加更新时间，方便查看历史
