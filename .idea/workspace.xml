@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4eabcb09-c251-454a-a7da-5232400ebec6" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../pynote1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/note.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/components/Counter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/test_vue/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/full_stack/front_end/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/python/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/python/log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/python/note.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/python/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pynote1/python/test01.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="32V3OSxvmyFeWVTK5RtaRfPCxR7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "hexo-deploy",
+    "last_opened_file_path": "E:/git/blog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\blog" />
+      <recent name="E:\blog\source\images" />
+      <recent name="E:\blog\source\_posts\2025-10-29" />
+      <recent name="E:\blog\source\_posts\2025-10-29-1" />
+      <recent name="E:\blog\source\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\blog\source\_posts" />
+      <recent name="E:\blog\themes" />
+      <recent name="E:\blog\source\_posts\images\2025-10-29.md" />
+      <recent name="E:\blog\source" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PY-252.25557.178" />
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="4eabcb09-c251-454a-a7da-5232400ebec6" name="更改" comment="" />
+      <created>1757491879619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757491879619</updated>
+      <workItem from="1757491880756" duration="4131000" />
+      <workItem from="1757499570774" duration="20000" />
+      <workItem from="1757499591796" duration="1061000" />
+      <workItem from="1757555651489" duration="815000" />
+      <workItem from="1757556482514" duration="264000" />
+      <workItem from="1757556757363" duration="8281000" />
+      <workItem from="1757575631784" duration="5952000" />
+      <workItem from="1757581970310" duration="1006000" />
+      <workItem from="1757895500803" duration="31000" />
+      <workItem from="1757908302395" duration="3651000" />
+      <workItem from="1757928026828" duration="1854000" />
+      <workItem from="1757930230855" duration="22000" />
+      <workItem from="1758009768292" duration="372000" />
+      <workItem from="1758028818676" duration="295000" />
+      <workItem from="1758095042201" duration="32000" />
+      <workItem from="1758513791994" duration="8468000" />
+      <workItem from="1758538470658" duration="1830000" />
+      <workItem from="1758540330557" duration="7000" />
+      <workItem from="1758623596687" duration="52000" />
+      <workItem from="1758700762795" duration="617000" />
+      <workItem from="1758706960076" duration="273000" />
+      <workItem from="1758772891668" duration="70000" />
+      <workItem from="1758775537409" duration="442000" />
+      <workItem from="1762073946216" duration="51000" />
+      <workItem from="1762303464626" duration="7790000" />
+      <workItem from="1762336627965" duration="8321000" />
+      <workItem from="1762394699042" duration="7927000" />
+      <workItem from="1762483422278" duration="1358000" />
+      <workItem from="1762488289799" duration="703000" />
+      <workItem from="1762497249740" duration="1000" />
+      <workItem from="1762497304137" duration="622000" />
+      <workItem from="1762497980481" duration="392000" />
+      <workItem from="1762498389930" duration="34000" />
+      <workItem from="1762498429899" duration="175000" />
+      <workItem from="1762498741100" duration="1093000" />
+      <workItem from="1762499959178" duration="565000" />
+      <workItem from="1762500977073" duration="37000" />
+      <workItem from="1762502329444" duration="7000" />
+      <workItem from="1762502836526" duration="714000" />
+      <workItem from="1762508798929" duration="11000" />
+      <workItem from="1762822924256" duration="135000" />
+      <workItem from="1762829584254" duration="3749000" />
+      <workItem from="1762855285162" duration="145000" />
+      <workItem from="1762927125287" duration="3012000" />
+      <workItem from="1762996099575" duration="47000" />
+      <workItem from="1763010499913" duration="1579000" />
+      <workItem from="1763081794019" duration="473000" />
+      <workItem from="1763458335280" duration="1903000" />
+      <workItem from="1763471942415" duration="711000" />
+      <workItem from="1763472844821" duration="7000" />
+      <workItem from="1763487639571" duration="1680000" />
+      <workItem from="1763490531845" duration="652000" />
+      <workItem from="1763491313810" duration="1358000" />
+      <workItem from="1763493654759" duration="755000" />
+      <workItem from="1763548370681" duration="850000" />
+      <workItem from="1763549269207" duration="3183000" />
+      <workItem from="1763580193315" duration="1282000" />
+      <workItem from="1763586336850" duration="2705000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
