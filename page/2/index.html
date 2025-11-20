@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2025-10-31" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/31/2025-10-31/" class="article-date">
+  <time class="dt-published" datetime="2025-10-31T00:58:15.000Z" itemprop="datePublished">2025-10-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/31/2025-10-31/">2025.10.31</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>博客升级</li>
+<li>今日总结</li>
+<li>摘录</li>
+</ol>
+<h2 id="博客升级"><a href="#博客升级" class="headerlink" title="博客升级"></a>博客升级</h2><h3 id="1-过程记录"><a href="#1-过程记录" class="headerlink" title="1. 过程记录"></a>1. 过程记录</h3><ol>
+<li>首先在阿里云注册了账号并购买了一个域名</li>
+<li>登录Vercel网站并登录GitHub账号，再导入之前的博客仓库</li>
+<li>在Vercel中添加购买的域名</li>
+<li>去阿里云里修改DNS设置<ol>
+<li>配置根域名（A 记录）<ol>
+<li>主机记录：@</li>
+<li>记录类型：A</li>
+<li>记录值：216.198.79.1</li>
+</ol>
+</li>
+<li>配置 www 子域名（CNAME 记录）<ol>
+<li>主机记录：www</li>
+<li>记录类型：CNAME</li>
+<li>记录值：a866d5a916b7fd31.vercel-dns-017.com</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-总结"><a href="#2-总结" class="headerlink" title="2. 总结"></a>2. 总结</h3><p>至今为止的博客搭建过程中我用到了以下工具：Node.js、Hexo、GitHub 库、Vercel、域名<br>若把博客比作开一家咖啡厅，则上面的工具可以类比为：  </p>
+<ol>
+<li>Node.js – 咖啡店的电力系统（提供动力）<ol>
+<li>Node.js 就是为所有工具提供“动力”的基础运行环境。Hexo 需要它的“电力”才能运转</li>
+</ol>
+</li>
+<li>Hexo – 全自动咖啡机和标准食谱（生成网站）<ol>
+<li>你提供原材料（Markdown 笔记和文章）</li>
+<li>Hexo（咖啡机）按照固定的食谱（主题和模板），自动、快速地把这些原材料“冲泡”成一整套风格统一、漂亮的网页文件（HTML&#x2F;CSS&#x2F;JS）</li>
+<li>不需要从零开始手写网页</li>
+</ol>
+</li>
+<li>GitHub 库 – 咖啡馆的总部仓库和设计图纸库（存储代码）<ol>
+<li>备份与版本管理：它安全地存储咖啡馆的所有“设计图纸”（博客的源代码）。如果后面改坏了配方，随时可以找回之前的版本</li>
+<li>协作与分发：它是代码的“大本营”，Vercel 可以从这里获取最新图纸来施工</li>
+</ol>
+</li>
+<li>Vercel – 全球顶级的店铺装修和运营团队（部署和加速）<ol>
+<li>自动装修：只需要把图纸（代码）存进 GitHub 仓库，Vercel 团队就会自动领取图纸，帮你把店铺（博客）装修好</li>
+<li>全球连锁：它在全世界都有分店（服务器），确保无论顾客在哪里，都能从最近的店铺拿到咖啡，速度极快</li>
+<li>免费服务：免费帮办好营业执照（SSL证书，即 HTTPS 安全锁），让店铺正规、安全</li>
+</ol>
+</li>
+<li>域名 – 咖啡馆的品牌名和招牌（品牌入口）<ol>
+<li>没有招牌，顾客只能通过一个非常难记的地址（比如 Vercel 给你的默认网址 xxx.vercel.app）找到你。而“域名”这个酷炫的招牌，让顾客很容易就能记住并找到你的店</li>
+</ol>
+</li>
+</ol>
+<p>工作流程：  </p>
+<ol>
+<li>你在“后厨”（你的电脑），用 Hexo（咖啡机）和 Node.js（电力）写好一篇新文章（制作一杯新咖啡）</li>
+<li>把这份新品的“配方”（代码）交给总部仓库（GitHub）存档</li>
+<li>全球运营团队（Vercel）自动从仓库拿到了新配方</li>
+<li>Vercel 立刻指挥它在全球的所有分店，按照新配方进行更新</li>
+<li>分钟后，全世界的顾客都可以通过你醒目的招牌（你的域名）享受到你的新品了</li>
+</ol>
+<p>知识点：</p>
+<ol>
+<li>IP地址：<ol>
+<li>IP 地址就像互联网世界里设备的 “身份证号码 + 门牌号”，是给电脑、手机等联网设备分配的唯一数字标识</li>
+<li>核心特点：<ol>
+<li>格式是一串点分隔的数字（比如 IPv4 常见的 192.168.1.1），每段数字有范围限制</li>
+<li>唯一性，同一时间同一网络里，没有两台设备的公开 IP 完全相同</li>
+<li>作用是让数据在网络中找准 “收发对象”，就像寄快递必须填清楚收件人地址</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>DNS（域名系统）：<ol>
+<li>DNS（域名系统）本质是互联网的 “地址簿”，DNS 负责将易记的域名（比如 <a target="_blank" rel="noopener" href="http://www.baidu.com)翻译成计算机能识别的/">www.baidu.com）翻译成计算机能识别的</a> IP 地址（比如 180.101.49.11），让设备能准确连接目标服务器</li>
+<li>关键作用：<ol>
+<li>简化访问流程，不用记复杂的数字 IP 地址</li>
+<li>实现负载均衡，让多个服务器分担访问压力</li>
+<li>保障网络弹性，某台服务器故障时可切换至备用 IP</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-后续规划"><a href="#3-后续规划" class="headerlink" title="3. 后续规划"></a>3. 后续规划</h3><ol>
+<li>通过借鉴别的博客来设计一个属于我自己的博客页面，并尝试手敲代码实现个性化</li>
+<li>日后尝试云服务器部署：<ol>
+<li>购买云服务器</li>
+<li>通过SSH连接到服务器</li>
+<li>在服务器上安装Node.js、Git等环境</li>
+<li>克隆你的博客代码到服务器</li>
+<li>配置Nginx作为Web服务器</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>终于在进入11月前的最后一天学完了Python的所有语法，接下来只剩下爬虫课了</li>
+<li>今天成功完成了对博客的初步升级</li>
+<li>网球活动</li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>对于盲目的船来说，所有的风向都是逆风</li>
+<li>知识是一个细化铺开的过程，而智慧是一个简化浓缩的过程</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/31/2025-10-31/" data-id="cuidVBoySO5EOzaUwsQvUR2a5" data-title="2025.10.31" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-30" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/30/2025-10-30/" class="article-date">
+  <time class="dt-published" datetime="2025-10-30T00:55:03.000Z" itemprop="datePublished">2025-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/30/2025-10-30/">2025.10.30</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
+<li>把昨天的笔记补全了</li>
+<li>学习了正则表达式</li>
+<li>每日英语</li>
+<li>定好了下周的骑行路线</li>
+<li>报名了寒假海外交流项目</li>
+<li>查询了如何办理日本签证</li>
+<li>规划了一下之后的学习路线（打算边实践边学习）</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/30/2025-10-30/" data-id="cuidqTpjBWK84_cb8SeDsJEmg" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-29" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/29/2025-10-29/" class="article-date">
+  <time class="dt-published" datetime="2025-10-29T08:25:23.000Z" itemprop="datePublished">2025-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/29/2025-10-29/">2025.10.30</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>学习笔记</li>
+<li>今日总结</li>
+<li>摘录</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<li>数据与数据表示<ol>
+<li>图表类型：<ol>
+<li>柱状图（Bar graph）</li>
+<li>饼图（Pie Chart）</li>
+<li>交叉表（Cross Table）：可以变成并排的簇状图（几个柱作为一个整体）或堆叠的分组条形图（一个柱上有几个不同的特性）</li>
+<li>直方图（Histogram）</li>
+<li>累积频率图（Ogive）：连接各区间上限累积百分比的线，展示累积频率分布</li>
+<li>茎叶图（Stem and Leaf Plot）：同时展示数据的分布和原始值（中间的主干数据加上两边的枝干数据）</li>
+<li>时间序列图（Time Series Plot）：横轴为时间，纵轴为序列值，展示数据随时间的变化趋势</li>
+<li>散点图（Scatterplot）：观测两个定量变量的关系，需关注关联方向（正 &#x2F; 负）、形式（线性 &#x2F; 非线性）、强度（紧密 &#x2F; 松散）</li>
+</ol>
+</li>
+<li>频率表<ol>
+<li>分类数据频率表：列出类别及对应数量（频率），相对频率表则列出百分比（比例）<ol>
+<li>频率表：  <table>
+<thead>
+<tr>
+<th>舱位</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>头等舱（First）</td>
+<td>324</td>
+</tr>
+<tr>
+<td>二等舱（Second）</td>
+<td>285</td>
+</tr>
+<tr>
+<td>三等舱（Third）</td>
+<td>710</td>
+</tr>
+<tr>
+<td>船员（Crew）</td>
+<td>889</td>
+</tr>
+</tbody></table>
+</li>
+<li>相对频率表  <table>
+<thead>
+<tr>
+<th>舱位</th>
+<th>百分比（%）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>头等舱（First）</td>
+<td>14.67</td>
+</tr>
+<tr>
+<td>二等舱（Second）</td>
+<td>12.91</td>
+</tr>
+<tr>
+<td>三等舱（Third）</td>
+<td>32.16</td>
+</tr>
+<tr>
+<td>船员（Crew）</td>
+<td>40.26</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li>数值数据频率表：<ol>
+<li>构建规则：根据样本量n选择，如下表：<table>
+<thead>
+<tr>
+<th>样本量（n）</th>
+<th>组数（k）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;50</td>
+<td>5-7</td>
+</tr>
+<tr>
+<td>50-100</td>
+<td>7-8</td>
+</tr>
+<tr>
+<td>101-500</td>
+<td>8-10</td>
+</tr>
+<tr>
+<td>501-1000</td>
+<td>10-11</td>
+</tr>
+<tr>
+<td>1001-5000</td>
+<td>11-14</td>
+</tr>
+<tr>
+<td>&gt;5000</td>
+<td>14-20</td>
+</tr>
+</tbody></table>
+</li>
+<li>选择组宽：class width &#x3D; (最大观测值 - 最小观测值) &#x2F; 组数k （注意：需向上取整（根据数据小数位数））</li>
+<li>组的要求：包含所有数据且不重叠，每个观测属于唯一一组</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>四种测量尺度<table>
+<thead>
+<tr>
+<th align="center">尺度类型</th>
+<th align="center">核心特征</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">名义尺度（Nominal）</td>
+<td align="center">仅用于命名 &#x2F; 标签，非定量值，无顺序和大小关系</td>
+<td align="center">欧洲国家、运动员 T 恤号码、性别、发色</td>
+</tr>
+<tr>
+<td align="center">顺序尺度（Ordinal）</td>
+<td align="center">有顺序，非定量值，无法精确衡量差值</td>
+<td align="center">幸福感等级、服务满意度</td>
+</tr>
+<tr>
+<td align="center">区间尺度（Interval）</td>
+<td align="center">定量，有顺序，可衡量差值，无 “真零”（零无实际意义），无法计算比率</td>
+<td align="center">摄氏温度（60℃与 50℃差值 &#x3D; 80℃与 70℃差值 &#x3D; 10℃，但 0℃不代表无温度）</td>
+</tr>
+<tr>
+<td align="center">比率尺度（Ratio）</td>
+<td align="center">定量，有顺序，可衡量差值，有 “真零”（零代表无），可计算比率</td>
+<td align="center">体重（20kg 是 10kg 的 2 倍）、身高</td>
+</tr>
+</tbody></table>
+</li>
+<li>分布描述<ol>
+<li>集中趋势测量（反映数据典型值）<ol>
+<li>均值（Mean，x̄）：算术平均，公式为 x̄ &#x3D; (∑(i&#x3D;1 到 n) xi) &#x2F; (n - 1)</li>
+<li>中位数（Median，m）：有序数据的中点，即第 50 百分位数</li>
+<li>众数（Mode）：数据中出现频率最高的数值，可能有多个（如双峰、多峰分布）</li>
+</ol>
+</li>
+<li>离散程度测量（反映数据变异性）<ol>
+<li>范围（Range）：最大值与最小值的差值，公式为 Range &#x3D; 最大观测值 - 最小观测值</li>
+<li>四分位距（Interquartile Range，IQR）：上四分位数（Q3）与下四分位数（Q1）的差值，公式为 IQR &#x3D; Q3 - Q1<ol>
+<li>计算Q1和Q3的规则：<ol>
+<li>若n为奇数：Q1是<strong>前</strong>(n+1&#x2F;2)-1个数据的中位数，Q3是<strong>后</strong>(n+1&#x2F;2)-1个数据的中位数</li>
+<li>若n为偶数：Q1是<strong>前</strong>n&#x2F;2个数据的中位数，Q1是<strong>后</strong>n&#x2F;2个数据的中位数</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>方差（Variance，s^2）与标准差（Standard Deviation，s）：<ol>
+<li>方差：衡量数据与均值的偏离程度，样本方差公式为 s^2 &#x3D; ∑(i&#x3D;1 到 n) (xi - x̄)^2 &#x2F; n-1 （<strong>分母用n-1是因为∑(xi - x̄) &#x3D; 0，即仅n−1个偏差可自由变化</strong>）</li>
+<li>标准差：方差的平方根，单位与原始数据一致，<code>值越大说明数据越分散，越小则越集中</code></li>
+</ol>
+</li>
+<li>形状（反映数据分布形态）：<ol>
+<li>偏度（Skewness）：衡量分布的不对称性<ol>
+<li>负偏（Negatively skewed）：均值 &lt; 中位数 &lt; 众数，分布左侧长尾</li>
+<li>正态（Normal，无偏）：均值 &#x3D; 中位数 &#x3D; 众数，分布对称</li>
+<li>正偏（Positively skewed）：众数 &lt; 中位数 &lt; 均值，分布右侧长尾</li>
+</ol>
+</li>
+<li>众数数量：<ol>
+<li>单峰（Unimodal）：只有一个众数</li>
+<li>双峰（Bimodal）：有两个众数</li>
+<li>多峰（Multimodal）：有三个及以上众数</li>
+</ol>
+</li>
+<li>异常值（Outliers）：<ol>
+<li>定义：远离数据主体的观测值，可能由实验误差导致，有时需从数据集中剔除</li>
+<li>判断标准：若观测值落在<code>Q1 - 1.5IQR以下</code>或<code>Q3 + 1.5IQR以上</code>，则可能为异常值</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>箱线图（Box-and-whisker plot）<ol>
+<li>定义：一种图形化展示数据分布的工具，呈现中位数、Q1、Q3及潜在异常值</li>
+<li>组成部分：<ol>
+<li>箱体：从Q1延伸至Q3，箱内横线代表中位数</li>
+<li>须（Whiskers）：从箱体两端延伸至 Q1 - 1.5IQR 和 Q3 + 1.5IQR 范围内的最小和最大数据点</li>
+<li>异常值：超出须范围的数据点，单独标记</li>
+</ol>
+</li>
+<li>用途：作为诊断工具，直观观察数据分布的集中趋势、离散程度和异常值，非用于正式的异常值检验<br><img src="/images/%E7%AE%B1%E7%BA%BF%E5%9B%BE.png" alt="箱线图"></li>
+</ol>
+</li>
+<li>随机变量及其性质<ol>
+<li>随机变量定义：设随机实验的样本空间为S，若对每个样本点 s∈S，都有唯一的实数X(s)与之对应，则称X&#x3D;X(s)为随机变量<ol>
+<li>示例：抛 10 次硬币实验，样本空间S &#x3D; {s|s是十次正反面的序列}，定义随机变量X(s)为序列中正面出现的次数，则X(s)的取值范围为Rx &#x3D; {1，2，···，10}</li>
+</ol>
+</li>
+<li>随机变量类型<ol>
+<li>离散随机变量（Discrete Random Variable）：取值为有限个或可列无限个</li>
+<li>连续随机变量（Continuous Random Variable）：取值充满某个区间</li>
+</ol>
+</li>
+<li>随机变量的特征<ol>
+<li>均值（期望，Mean&#x2F;Expectation，μ）：<ol>
+<li>离散随机变量：μ &#x3D; E[X] &#x3D; ∑x xp(x)，其中p(x) &#x3D; P(X &#x3D; x)为概率质量函数</li>
+<li>连续随机变量：μ &#x3D; E[X] &#x3D; ∫(负无穷 到 正无穷) xf(x)dx，其中f(x)为概率密度函数，且∫(负无穷 到 正无穷) f(x)dx &#x3D; 1</li>
+</ol>
+</li>
+<li>中位数（Median，m）：<ol>
+<li>离散随机变量：满足 P(X ≤ m) ≥ 1&#x2F;2 且 P(X ≥ m) ≥ 1&#x2F;2 的数值</li>
+<li>连续随机变量：概率密度函数下面积被x&#x3D;m分为两部分，每部分面积为1&#x2F;2，即 ∫(负无穷 到 m) f(x)dx &#x3D; 1&#x2F;2</li>
+</ol>
+</li>
+<li>众数（Mode）：概率密度函数（或概率质量函数）的局部最大值点，可能有多个</li>
+<li>方差（Variance，σ^2）：衡量随机变量取值与均值的偏离程度，公式为σ^2 &#x3D; E[(X−μ)^2]，其中：<ol>
+<li>离散随机变量：σ^2 &#x3D; ∑x (x-μ)^2p(x)</li>
+<li>连续随机变量：σ^2 &#x3D; ∫(负无穷 到 正无穷) (x-μ)^f(x)dx</li>
+</ol>
+</li>
+<li><code>累积分布函数（Cumulative Distribution Function，CDF，F(x)）：F(x) = P(X≤x)，其中：</code><ol>
+<li>离散随机变量：F(x) &#x3D; ∑(t≤x) p(t)</li>
+<li>离散随机变量：F(x) &#x3D; ∫(负无穷 到 x) f(t)dt</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>抽样分布<ol>
+<li>随机样本：设X1，X2，···， Xn是相互独立的随机变量，且每个Xi都与总体X具有相同的概率密度函数f(x)，则称X1，X2，···， Xn为来自总体X的容量为n的随机样本。随机样本的联合概率密度函数为 f(x1，x2，···，xn) &#x3D; f(x1)f(x2)···f(xn)</li>
+<li>统计量：<ol>
+<li>定义：设X1，X2，···， Xn是来自总体的随机样本，若样本的函数T &#x3D; T(X1，X2，···， Xn)不含任何未知参数，则称T为统计量</li>
+<li>常见统计量：<ol>
+<li>样本均值：ˉX&#x3D; 1&#x2F;n ∑(i&#x3D;1 到 n) Xi（对应观测样本的 x̄ &#x3D; 1&#x2F;n ∑(i&#x3D;1 到 n) xi是具体数值，而ˉX是随机变量）</li>
+<li>样本方差：S^2 &#x3D; 1&#x2F;(n-1) ∑(i&#x3D;1 到 n) (Xi - ˉX)^2（对应观测样本的 s^2 &#x3D; 1&#x2F;(n-1) ∑(i&#x3D;1 到 n) (xi - x̄)^2是具体数值，而S^2是随机变量）</li>
+</ol>
+</li>
+<li>抽样分布定义：统计量的概率分布称为抽样分布，它描述了统计量的取值规律，是进行统计推断（如估计总体参数、检验假设）的重要依据，通过抽样分布可将样本信息与总体参数关联起来</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>样本均值的抽样分布<ol>
+<li>核心结论：<ol>
+<li>期望：样本均值的期望等于总体均值，即 E[X] &#x3D; μ</li>
+<li>方差：样本均值的方差等于总体方差除以样本量，即 Var(ˉX) &#x3D; σ^2&#x2F;n（若总体方差为σ^2)</li>
+</ol>
+</li>
+<li>两种情况的抽样分布形态：<table>
+<thead>
+<tr>
+<th align="center">总体分布情况</th>
+<th align="center">样本均值ˉX的抽样分布</th>
+<th align="center">适用条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">总体服从正态分布 (X ∼ N(μ，σ^2))</td>
+<td align="center">X ∼ N(μ，σ^2&#x2F;n)</td>
+<td align="center">无论样本量n大小，均成立</td>
+</tr>
+<tr>
+<td align="center">总体分布未知（但总体均值μ、方差σ^2有限）</td>
+<td align="center">当n足够大时，近似 X ∼ N(μ，σ^2&#x2F;n)</td>
+<td align="center">中心极限定理（CLT），通常 n≥30 时近似效果好；若n&lt;30，需总体分布接近正态</td>
+</tr>
+</tbody></table>
+</li>
+<li>示例：<ol>
+<li>已知：某大学学生平均年龄μ&#x3D;22.3岁，标准差σ&#x3D;4岁（方差σ^2&#x3D;16），随机抽取n&#x3D;64名学生</li>
+<li>求：样本平均年龄大于23岁的概率 P(ˉX &gt; 23)</li>
+<li>解：因 n&#x3D;64 ≥ 30，由CLT，X ∼ N(μ &#x3D; 22.3，σ^2&#x2F;n &#x3D; 16&#x2F;64) &#x3D; N(22.3，0.25)标准化得 Z &#x3D; (ˉX - μ) &#x2F; √σ ∼ N(0，1)，则 P(ˉX &gt; 23) &#x3D; P(Z &gt; (23-22.3)&#x2F;√0.25) &#x3D; P(Z &gt; 1.40)。查标准正态分布表，P(Z ≤ 1.40) &#x3D; 0.9192，所以P(Z &gt; 1.40) &#x3D; 1 - 0.9192 &#x3D; 0.0808</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>中心极限定理（CLT）的用途<ol>
+<li>获取样本均值的抽样分布：基于总体参数 (μ，σ^2)和样本量n，确定ˉX的分布形态（近似正态分布），为后续统计计算奠定基础</li>
+<li>推断未知总体均值μ：<ol>
+<li>假设检验：判断样本均值x̄是否支持对μ的某个假设（如“μ &#x3D; μ0”）</li>
+<li>估计：通过样本均值及抽样分布，给出μ的估计区间（如置信区间）</li>
+<li>质量控制：监测生产过程中产品指标的均值是否在合理范围内，判断过程是否稳定</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>两均值差的抽样分布（ˉX1 - ˉX2）<ol>
+<li>定理：设从两个总体中分别抽取独立样本：<br>  样本1：容量n1，来自均值μ1，方差σ^2(1)的总体<br>  样本2：容量n2，来自均值μ2，方差σ^2(2)的总体<br>  则当n1和n2足够大时（通常≥30），或两个总体均服从正态分布时，两样本均值差 ˉX1 - ˉX2 近似服从正态分布：ˉX1 - ˉX2 ∼ N(μ1-μ2，σ^2(1)&#x2F;n1 + σ^2(2)&#x2F;n2) （注意加减号）</li>
+</ol>
+</li>
+<li>X^2分布<ol>
+<li>定义：设X1，X2，···，Xn是来自正态总体N(μ，σ^2)的随机样本，S^2为样本方差，则统计量 X^2 &#x3D; (n-1)S^2 &#x2F; σ^2，服从自由度为 v &#x3D; n-1 的X^2分布，记为 X^2 ∼ X^2(v)</li>
+<li>形态：<ol>
+<li>取值范围：X^2 ≥ 0（非负）</li>
+<li>自由度影响：自由度v越小，分布越偏右；v越大，分布越接近正态分布</li>
+<li>分位数：用 X^2(a)(v) 表示自由度为v的X^2分布中，右侧面积为a的分位数（如v&#x3D;7时，X^2(0.05)(7) &#x3D; 14.067，X^2(0.95)(7) &#x3D; 2.167）</li>
+<li>区间概率：如 95% 的X^2值落在X^2(0.975)(v)与X^2(0.025)(v)之间，若X^2值超出此范围，可能表明假设的总体方差σ^2不合理</li>
+</ol>
+</li>
+<li>用途：主要用于<strong>统计推断</strong>，核心是检验 “观测数据与预期数据的差异是否由随机因素导致”，具体应用包括：<ol>
+<li>总体方差的区间估计和假设检验（如判断总体方差是否等于某个假设值）</li>
+<li>拟合优度检验（检验观测数据是否符合某一理论分布，如正态分布、二项分布）</li>
+<li>独立性检验（检验两个分类变量是否独立）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>t分布（Student t -Distribution）<ol>
+<li>定义：<ol>
+<li>基础定义：设 Z ∼ N(0，1)（标准正态分布），V ∼ X^2(v)（自由度v的X^2分布），且Z与V独立，则随机变量 T &#x3D; Z &#x2F; √(V&#x2F;v) 服从自由度为v的t分布，记作 T ∼ t(v)</li>
+<li>推论（样本均值相关）：设 X1，X2，···，Xn 是来自正态总体N(μ，σ^2)的随机样本，ˉX为样本均值，S^2为样本方差，则统计量 T &#x3D; (ˉX - μ) &#x2F; (S&#x2F;√n)，服从自由度为 v &#x3D; n-1 的t分布</li>
+</ol>
+</li>
+<li>形态：<ol>
+<li>对称性：钟形，关于t&#x3D;0对称（与标准正态分布类似）</li>
+<li>方差特性：方差 &#x3D; v &#x2F; v-2 (v&gt;2)，大于1，故比标准正态分布更分散（尾部更粗）</li>
+<li>自由度影响：自由度v越大，t分布越接近标准正态分布（v趋近于无穷时，t分布趋近于N(0,1)）</li>
+<li>分位数：用ta(v)表示自由度为v的t分布中，右侧面积为a的分位数，由对称性得t1-a(v) &#x3D; -ta(v)</li>
+</ol>
+</li>
+<li>用途：<ol>
+<li>核心场景：总体方差σ^2未知时的统计推断，具体包括：<ol>
+<li>总体均值μ的区间估计和假设检验（如样本量较小时，用S替代σ，用 t 分布而非正态分布）</li>
+<li>两独立样本均值差的检验（当两总体方差未知且可能相等或不等时，用t分布或近似t分布）</li>
+<li>配对样本均值差的检验（如同一组对象前后两次测量的均值差检验）</li>
+</ol>
+</li>
+<li>注意事项：<ol>
+<li>使用 t 分布的前提是总体服从正态分布（或样本量较大时，由CLT近似正态，但t分布的使用与CLT无直接关联）</li>
+<li>若总体不服从正态且样本量小（n&lt;30），则t分布的近似效果差，不宜使用</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>F分布<ol>
+<li>定义<ol>
+<li>基础定义：设 U ∼ X^2(v1)（自由度v1的X^2分布），V ∼ X^2(v2)（自由度v2的X^2分布），且U与V独立，则随机变量 F &#x3D; (U&#x2F;v1)&#x2F;(V&#x2F;v2) 服从自由度为(v1，v2)的F分布，记为 F ∼ F(v1，v2)，其中v1为分子自由度，v2为分母自由度</li>
+<li>推论（样本方差相关）：设 S^2(1) 是来自正态总体 N(μ1，σ^2(1)) 的样本（容量n1）的方差，S^2(2) 是来自正态总体 N(μ2，σ^2(2)) 的样本（容量n2）的方差，且两样本独立，则统计量 F &#x3D; (S^2(1)&#x2F;σ^2(1)) &#x2F; (S^2(2)&#x2F;σ^2(2)) &#x3D; σ^2(2)S^2(1) &#x2F; σ^2(1)S^2(2) 服从自由度为(v1 &#x3D; n1 - 1，v2 &#x3D; n2 - 1)的F分布，</li>
+</ol>
+</li>
+<li>形态<ol>
+<li>取值范围：F≥0（非负）</li>
+<li>自由度影响：分布形态由分子自由度v1和分母自由度v2共同决定，通常为右偏分布，v1和v2越大，分布越接近正态分布</li>
+<li>分位数：用fa(v1，v2)表示自由度为(v1，v2)的F分布中，右侧面积为a的分位数</li>
+<li>分位数关系：fa(v1，v2) &#x3D; 1 &#x2F; (f1-a(v2，v1))，用于计算低尾分位数</li>
+</ol>
+</li>
+<li>用途：<ol>
+<li>核心场景：方差分析（Analysis of Variance，ANOVA），用于检验多个总体均值是否相等，具体包括：<ol>
+<li>单因素方差分析（如检验三种油漆的平均干燥时间是否相等）：通过比较 “组间方差”（样本均值间的变异）与 “组内方差”（样本内部的变异）的比值（F统计量），判断均值是否存在显著差异</li>
+<li>两总体方差的比较：检验两个正态总体的方差是否相等（如判断两样本的方差是否齐性，为两样本均值检验选择方法）</li>
+<li>多因素方差分析：分析多个因素对因变量的影响及因素间的交互作用</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>本章关键问题：<ol>
+<li>在数据分布描述中，异常值的判断标准是什么？为什么在计算样本方差时，分母使用n−1而非n？<ol>
+<li>异常值判断标准：若某个观测值落在 <strong>Q1−1.5IQR以下或Q3+1.5IQR以上</strong>，则该观测值可能为异常值</li>
+<li>样本方差分母用n−1的原因：为了实现<strong>无偏估计</strong>，由于样本均值x̄是通过样本数据计算得出的，存在 “自由度损失” —— ∑(i&#x3D;1 到 n) (xi - x̄) &#x3D; 0，即n个偏差中只有n−1个是独立的若用</li>
+</ol>
+</li>
+<li>心极限定理（CLT）的核心内容是什么？其在样本均值抽样分布和两均值差抽样分布中有哪些具体应用？<ol>
+<li>中心极限定理（CLT）核心内容：设总体的均值为μ、方差为σ^2（有限），从该总体中抽取容量为n的随机样本，当n足够大时（通常n≥30），样本均值ˉX的抽样分布近似服从均值为μ，方差为σ^2&#x2F;n的正态分布（即近似 ˉX ∼ N(μ，σ^2&#x2F;n)）且该近似效果与总体原始分布无关（即使总体非正态，只要n足够大，样本均值仍近似正态）</li>
+<li>在样本均值抽样分布中的应用：<ol>
+<li>当总体分布未知时，若n≥30，可通过CLT认为ˉX近似正态，进而计算与样本均值相关的概率</li>
+<li>当n&lt;30时，若总体分布接近正态CLT的近似效果仍可接受；若总体严重非正态，则需增大样本量以满足CLT条件</li>
+</ol>
+</li>
+<li>CLT 可推广到两独立样本场景</li>
+</ol>
+</li>
+<li><code>X^2分布、T分布、F分布的核心用途有何差异？分别适用于哪些统计推断场景？</code><ol>
+<li>X^2分布、T分布、F分布的核心用途及适用场景存在显著差异，具体如下表所示：<table>
+<thead>
+<tr>
+<th align="center">分布类型</th>
+<th align="center">核心用途</th>
+<th align="center">适用场景示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">X^2分布</td>
+<td align="center">围绕方差与数据拟合程度展开，用于检验 “观测数据与预期数据的差异是否由随机因素导致”</td>
+<td align="center">1. <strong>总体方差推断</strong>：总体方差σ^2的区间估计和假设检验（如判断汽车电池寿命的标准差是否为 1 年）<br>2. <strong>拟合优度检验</strong>：检验观测数据是否符合某一理论分布（如检验学生成绩是否服从正态分布）<br>3. <strong>独立性检验</strong>：检验两个分类变量是否独立（如检验 “性别” 与 “是否购买某产品” 是否独立）</td>
+</tr>
+<tr>
+<td align="center">T分布</td>
+<td align="center">围绕总体方差未知时的均值推断展开，解决 “总体方差σ^2未知，无法使用正态分布” 的问题</td>
+<td align="center">1. <strong>单总体均值推断</strong>：总体方差未知时，总体均值μ的区间估计和假设检验（如样本量较小时，检验化工过程的产量均值是否为 500g&#x2F;ml）<br>2. <strong>两样本均值差推断</strong>：两总体方差未知时，检验两总体均值是否相等（如检验两种药物的疗效均值是否有差异）<br>3. <strong>配对样本推断</strong>：检验配对数据的均值差（如检验同一组患者用药前后的血压均值差）</td>
+</tr>
+<tr>
+<td align="center">F分布</td>
+<td align="center">围绕方差比值与多总体均值比较展开，核心是 “通过方差比值判断差异是否显著”</td>
+<td align="center">1. <strong>两总体方差比较</strong>：检验两个正态总体的方差是否相等（如判断两批产品的质量波动是否一致，即方差齐性检验）<br>2. <strong>方差分析（ANOVA）</strong>：检验多个总体的均值是否相等（如检验三种不同品牌油漆的平均干燥时间是否有差异）<br>3. <strong>多因素方差分析</strong>：分析多个因素对因变量的影响及因素间的交互作用（如分析 “温度”“压力” 对产品产量的影响）</td>
+</tr>
+</tbody></table>
+</li>
+<li>三者的核心差异在于：X^2分布聚焦 “方差与拟合度”，T分布聚焦 “方差未知时的均值”，F分布聚焦 “方差比值与多均值比较”，分别对应统计推断中不同维度的问题</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天在记笔记时要加入表格，发现：<ol>
+<li><code>为了避免序号被打乱，要通过缩进确保表格属于上一级列表项</code></li>
+<li><code>若需要在表格中加入序列需要使用&lt;br&gt;标签进行换行</code></li>
+</ol>
+</li>
+<li>今天在记笔记时要插入图片，步骤如下：<ol>
+<li><code>在source文件夹里创建一个images文件夹用于存放图片</code></li>
+<li><code>在Markdown文件中用语法：！\[图片描述]\[/images/图片名]</code></li>
+<li><code>注意：此方法只能在发布出来的博客中看见图片</code></li>
+<li>过程中在终端中下载了安装 hexo-asset-img 插件</li>
+</ol>
+</li>
+<li>今天看见Stela在跑步，和她约了下次一起跑步</li>
+<li>英语口语学习</li>
+<li>今天的网球活动感觉打的越来越好了</li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>管理情绪主要包括三个方面的内容：一是认识自己的情绪；二是疏解自己的情绪；三是适当表达自己的情绪。</li>
+<li>脱困四问：<ol>
+<li>Emotion：我正处于何种情绪里？这种情绪的程度如何？</li>
+<li>Event：我为什么产生这样的情绪？（注意：需要客观真实看待所发生的事情，不能带有主观倾向）</li>
+<li>Target：我的初衷是什么？</li>
+<li>Action：接下来我该怎么做？我可以做些什么？</li>
+</ol>
+</li>
+<li>生活的本质在于追求快乐，而让自己的人生变得快乐的途径有两种：不断地发现有限生命中的快乐时光，并增加它；发现那些令自己不快乐的时光，并尽可能减少它。 —— 亚里士多德</li>
+<li>两弊相衡取其轻，两利相权取其重</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/29/2025-10-29/" data-id="cuidwuCLaN9OrZ9-mGm0aem0c" data-title="2025.10.30" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-28" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/28/2025-10-28/" class="article-date">
+  <time class="dt-published" datetime="2025-10-28T06:20:01.000Z" itemprop="datePublished">2025-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/28/2025-10-28/">2025.10.28</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>前段时间的总结</li>
+<li>学习笔记</li>
+<li>今日收获</li>
+</ol>
+<h2 id="前段时间的总结"><a href="#前段时间的总结" class="headerlink" title="前段时间的总结"></a>前段时间的总结</h2><p>从上次博客之后以及一周多了，这期间每天都被牙疼所困扰，从而导致作息被打乱了，且状态明显有所下降。但是不能再继续下去了，从今天开始吃两天药看能不能缓解，实在不行就去医院看看。<br>在这段时间内虽然生活被有点打乱，但是还是完成了不少有意义的事情的：上周的两次飞盘活动明显参与感更好了，虽然第一次的活动由于失误误伤了一个同学，但幸好问题不是特别严重，周末的第二次活动上更是难得和一名同学在练习时交流的非常开心，希望之后能够继续照这样发展。其次上周末按惯例去参加了志愿者活动，虽然因为我的固执导致被咬了一下，但没什么大碍，就是我发现我买的防水服洗过之后还是有很大的味道，没办法只能再多洗几次看看行不行吧。昨天进行了第一次的城市之旅活动，这次的主题是“食”，由于我的两个行程都被婉拒了所以最后就在学校里的一个饭店吃了个晚饭，顺便把之后几期的活动都交给对应的人来安排，虽然活动的人有点少，但是我感觉还是很不错的，尤其和老师交流的挺开心，完全像是和朋友一样特别轻松自在。</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><ol>
+<li>监督学习（Supervised Learning）基础框架<ol>
+<li>核心流程：数据准备→选择算法→拟合模型→评估模型→更新模型→进行预测 （损失（Loss）：预测结果与真实结果的差异）</li>
+<li>任务分类：<ol>
+<li>回归：预测与特征向量关联的实数，例如用线性回归对数据拟合曲线</li>
+<li>分类：预测与特征向量关联的离散标签</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>KNN（K 近邻）分类算法<ol>
+<li>原理：基于距离矩阵计算样本间相似度，最简单的实现是 “最近邻”—— 预测新样本时，找到训练集中距离最近的样本，直接沿用其标签；扩展为 “K 近邻” 时，取前 K 个最近样本的标签进行投票</li>
+<li>优点：<ol>
+<li>学习速度快，无显式训练过程</li>
+<li>无需复杂理论支撑</li>
+<li>方法与结果易解释</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>内存密集，预测耗时较长</li>
+<li>暴力搜索并非最优算法</li>
+<li>无模型可解释数据生成过程</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>分类模型的评估体系<ol>
+<li>仅用 “准确率” 评估存在局限性，需补充以下指标：<ol>
+<li>灵敏度（召回率）：sensitivity &#x3D; truepositive &#x2F; truepositive + falsenegative </li>
+<li>特异性：specificity &#x3D; truenegative &#x2F; truenegative + falsepositive</li>
+<li>阳性预测值：positivepredictivevalue &#x3D; truepositive &#x2F; truepositive + falsepositive</li>
+</ol>
+</li>
+<li>测试方法：<ol>
+<li>留一法（Leave-one-out）：遍历每个样本，以该样本为测试集、其余为训练集，循环计算指标</li>
+<li>重复随机抽样：如 80&#x2F;20 分割数据（20% 为测试集，80% 为训练集），多次重复抽样以降低随机性影响</li>
+<li>K 折交叉验证：首先将数据集均匀划分为 K 个规模相近的子集（即 “K 折”）；随后，循环进行 K 次模型训练与测试 —— 每次训练时，用其中 K-1 个子集作为训练数据拟合模型，剩余 1 个子集作为测试数据评估模型性能；最后，综合 K 次测试的结果（如灵敏度、特异性等），取平均值作为模型的最终性能评估，以此在计算量与损失估计准确率之间达到平衡</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>逻辑回归算法详解<ol>
+<li>核心特点：<ol>
+<li>用途：专门预测事件发生的概率，因变量仅取有限值（通常为 0 或 1）</li>
+<li>特征权重：每个特征对应一个权重，正权重表示特征与结果正相关，负权重表示负相关，权重绝对值反映相关性强度</li>
+<li>核心函数：逻辑函数（sigmoid 函数），将线性输出映射到 0-1 区间（概率）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日收获"><a href="#今日收获" class="headerlink" title="今日收获"></a>今日收获</h2><p>今天打算开始认真攻克英语口语，我创建了一个word文档用来记录所学的口语知识（固定搭配、语法、连读习惯···）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/28/2025-10-28/" data-id="cuidtOPnpnulcd-Rg-L3KsVst" data-title="2025.10.28" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-20" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/20/2025-10-20/" class="article-date">
+  <time class="dt-published" datetime="2025-10-20T00:41:01.000Z" itemprop="datePublished">2025-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/20/2025-10-20/">2025.10.20</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>周末总结</li>
+<li>今日学习笔记</li>
+<li>今日总结</li>
+</ol>
+<h2 id="周末总结"><a href="#周末总结" class="headerlink" title="周末总结"></a>周末总结</h2><p>这周末暂时放松了一下，不过还是弹了琴，新曲子虽然有点难以掌握节奏，但以及整体过了一遍了，感觉再练几次就能弹下来了；原本打算带摩羯出去逛逛，结果起床完了，不过还是决定周末下午出去，结果刚骑到公园走了几步就开始下雨了，无奈之下只能提前回家了，没事以后有的是机会</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><ol>
+<li>机器学习核心范式<ol>
+<li>机器学习的核心逻辑： “观察训练数据→推断数据生成过程→预测测试数据”</li>
+<li>监督学习：给定特征 &#x2F; 标签对，学习预测未知输入标签的规则</li>
+<li>无监督学习：仅给定特征向量（无标签），将样本分组为 “自然聚类”，聚类是无监督学习的核心任务之一</li>
+</ol>
+</li>
+<li>聚类（Clustering）的本质：优化问题，目标是找到聚类划分 C 以最小化聚类内差异（dissimilarity (C)），但需满足约束条件：<ol>
+<li>若不设约束，会导致每个样本单独成簇（无意义），因此需添加约束，如 “聚类间最小距离” 或 “指定聚类数量（k）”</li>
+<li>核心逻辑：“大而差” 的聚类比 “小而差” 的聚类更差，需平衡聚类大小与内部一致性</li>
+</ol>
+</li>
+<li>层次聚类（Hierarchical Clustering）<ol>
+<li>核心步骤：<ol>
+<li>初始状态：每个样本单独成簇，N 个样本对应 N 个簇</li>
+<li>迭代合并：找到最相似（距离最近）的一对簇，合并为 1 个簇，簇数减少 1</li>
+<li>终止条件：所有样本合并为 1 个簇（大小为 N）</li>
+</ol>
+</li>
+<li>簇间距离（链接度量）（Linkage Metrics）<ol>
+<li>单链接（Single-linkage）：簇间距离 &#x3D; 两簇中任意样本的最短距离</li>
+<li>全链接（Complete-linkage）：簇间距离 &#x3D; 两簇中任意样本的最长距离  （<code>注意：比较的是谁的最长距离最小，而不是最大</code>）</li>
+<li>平均链接（Average-linkage）：簇间距离 &#x3D; 两簇中所有样本的平均距离</li>
+</ol>
+</li>
+<li>方法特点：<ol>
+<li>优势：可通过树状图选择聚类数量；结果具有确定性；链接准则灵活</li>
+<li>劣势：速度慢，朴素算法时间复杂度为n^3，仅部分链接准则存在n^2优化算法</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>K-means 聚类<ol>
+<li>算法流程：<ol>
+<li>随机选k个样本作为初始值</li>
+<li>将每个样本分配至最近的质心，形成k个簇</li>
+<li>计算每个簇的新质心（簇内所有样本特征的平均值）</li>
+<li>质心是否变化？</li>
+<li>质心变化则返回第二步；质心不变则输出聚类结果</li>
+</ol>
+</li>
+<li>时间复杂度：knd （n：样本总数；d：计算单个样本与质心距离的耗时）</li>
+<li>关键问题与解决办法：<ol>
+<li>问题1：k 值选择不当    </li>
+<li>解决办法：<ol>
+<li>利用领域先验知识（如已知 5 种细菌，设 k&#x3D;5）；</li>
+<li>测试不同 k 值，评估聚类质量；</li>
+<li>对部分数据运行层次聚类辅助选 k</li>
+</ol>
+</li>
+<li>问题2：依赖初始质心</li>
+<li>解决办法：尝试多组随机初始质心，计算每组结果的差异，选择差异最小的结果作为最终聚类</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>聚类评估方法<ol>
+<li>核心评估指标：总差异（dissimilarity）<ol>
+<li>聚类质量通过 “总差异” 衡量，计算公式为：dissimilarity(clusters) &#x3D; ∑ c∈clusters variability(c)</li>
+<li>其中variability(c)（簇内差异）&#x3D; 簇内所有样本到该簇质心的距离平方和。总差异越小，聚类质量越好（簇内样本越集中）</li>
+</ol>
+</li>
+<li>代码实现核心函数<ol>
+<li>dissimilarity(clusters)：计算所有簇的总差异</li>
+<li>trykmeans(examples, numClusters, numTrials)：运行 numTrials 次 K-means，返回总差异最小的结果</li>
+<li>printClustering(clustering)：输出各簇样本数与阳性率，辅助业务评估</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>关键问题<ol>
+<li>层次聚类与 K-means 聚类在适用场景和性能上有何核心差异？如何根据数据特点选择这两种方法？<ol>
+<li>适用场景：<ol>
+<li>层次聚类适用于<strong>无需提前确定聚类数量的场景</strong>（可通过树状图灵活选 k），或对聚类结果确定性要求高的场景（如小样本数据的精细分组）</li>
+<li>K-means 适用于<strong>已知聚类数量范围</strong>（如通过领域知识确定 k）、追求高效聚类的场景（如大样本数据）</li>
+</ol>
+</li>
+<li>性能：<ol>
+<li>层次聚类速度慢（朴素算法n^3），仅小样本适用</li>
+<li>K-means 速度快（单次迭代 knd），可处理大样本，但结果依赖初始质心（需多组测试）</li>
+</ol>
+</li>
+<li><strong>选择依据：</strong><ol>
+<li>选择层次聚类：若数据量小、需灵活选 k；；若需确定簇间关系（如层级结构）</li>
+<li>选择K-means：若数据量大、已知 k 范围或可通过测试选 k；若需避免局部最优</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>在 K-means 聚类中，特征归一化（如 Z-Scaling）为何对聚类结果影响显著？<ol>
+<li>特征归一化的核心作用是消除特征量纲差异导致的权重失衡，避免数值范围大的特征主导距离计算（K-means 依赖样本与质心的距离）</li>
+<li>未归一化的问题：患者数据中，“年龄”（如 20-80 岁）与 “ST 段抬高”（0&#x2F;1 二元变量）数值范围差异极大，未归一化时，“年龄” 对距离的贡献远大于 “ST 段抬高”，导致聚类仅依赖年龄，无法捕捉 ST 段抬高（与心脏病风险直接相关）的特征，因此 k&#x3D;2 时两簇阳性率接近（33.05% vs 33.33%），无实际意义</li>
+<li>归一化的作用：Z-Scaling 后，所有特征均值为 0、标准差为 1，各特征对距离的贡献权重一致，聚类可同时考虑心率、既往病史、年龄、ST 段抬高的综合影响，k&#x3D;2 时出现高风险簇（26 人，阳性率 69.23%）与低风险簇（224 人，阳性率 29.02%），聚类结果符合业务逻辑（高风险患者被有效区分），证明归一化能让 K-means 捕捉关键特征关联，提升聚类实用性</li>
+</ol>
+</li>
+<li>在聚类分析中，如何科学选择 K 值（聚类数量）？<ol>
+<li>k 值选择方法：<ol>
+<li>利用领域先验知识（如已知 5 种细菌类型，直接设 k&#x3D;5）</li>
+<li>测试多组 k 值，通过 “总差异（dissimilarity）” 评估（总差异越小，聚类内一致性越高），同时结合业务指标（如患者聚类的阳性率）</li>
+<li>对部分数据运行层次聚类，通过树状图的 “距离断点” 辅助确定 k 值范围</li>
+</ol>
+</li>
+<li>k 值选择与业务目标的关系（以患者数据为例）：<ol>
+<li>若业务目标是<code>快速区分高 / 低风险患者</code>：选 k&#x3D;2，此时高风险簇（26 人，69.23% 阳性率）与低风险簇（224 人，29.02% 阳性率）界限清晰，可快速筛选高风险人群</li>
+<li>若业务目标是<code>细分高风险患者（如制定个性化干预方案）</code>：选 k&#x3D;4 或 k&#x3D;6，k&#x3D;4 时出现两个高风险簇（69.23%、71.05%），k&#x3D;6 时高风险簇进一步细分（最高 77.78% 阳性率），可针对不同高风险 subgroup 分析特征（如是否有多次既往心脏病发作），制定精准方案</li>
+<li>若 k 值过大（如 k&#x3D;10）：可能导致簇样本量过小（如部分簇仅 5-10 人），阳性率波动大（无统计意义），不符合 “稳定分组” 的业务需求，因此 k 值需在 “细分程度” 与 “簇稳定性” 间平衡</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>编程学习（进程）</li>
+<li>看书一章</li>
+<li>参加每周城市之旅活动，今天主要认识了一下小组成员以及了解了之后的安排，加了一个成员的微信，感觉通过介绍会是个不错的伙伴</li>
+<li>把之前没学完的ppt学完了</li>
+<li>英语学习</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/20/2025-10-20/" data-id="cuidJENlyTcwlk3ikiWu58CTT" data-title="2025.10.20" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-17" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/17/2025-10-17/" class="article-date">
+  <time class="dt-published" datetime="2025-10-17T00:47:31.000Z" itemprop="datePublished">2025-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/17/2025-10-17/">2025.10.17</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>今日学习笔记</li>
+<li>句子摘录</li>
+<li>昨天和今天的总结</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><ol>
+<li>随机变量（Random Variables）<ol>
+<li>Definition：设样本空间为 Ω，随机变量 X 是定义在 Ω 上、取值于实数集ℝ的函数，即X: Ω→R，X(ω) 表示对样本点 ω 的赋值</li>
+<li>Example：掷骰子（Ω&#x3D;{1,2,3,4,5,6}），X(1-3)&#x3D;1（赢1元），X(4-6)&#x3D;-1（输1元），刻画玩家收益</li>
+<li>概率表示：事件 “X 取 x 值” 即 {ω∈Ω | X(ω)&#x3D;x}，概率简化记为P(X&#x3D;x)，且所有可能取值概率和为 1（∑P (X&#x3D;x)&#x3D;1）</li>
+</ol>
+</li>
+<li>离散型随机变量及其分布（Discrete Random Variables and Distributions）<ol>
+<li>Definition：取值为有限个或可列个，且每个取值有其概率，不可能的取值的概率为0.</li>
+<li>概率质量函数（probability mass function (pmf)）：f(x)满足：<ol>
+<li>f(x)≥0</li>
+<li>∑f (x)&#x3D;1（所有可能 x 求和）</li>
+</ol>
+</li>
+<li>分布函数（distribution function）：F(x)&#x3D;P(X≤x)&#x3D;∑(x_j≤x) f(x_j)，其具有性质：<ol>
+<li>lim(x→-∞)F(x)&#x3D;0</li>
+<li>lim(x→+∞)F(x)&#x3D;1</li>
+<li>非递减</li>
+<li>0≤F(x)≤1</li>
+</ol>
+</li>
+<li>离散型随机变量的平均数或期望（mean or expectation or expected value）：μ &#x3D; E[X] &#x3D; ∑_j x_j f(x_j), j &#x3D; 1,2,…,n（f是X的pmf，x_j是X的可能取值）<ol>
+<li>进一步推导出：E[g(X)] &#x3D; ∑_j g(x_j) f(x_j), j &#x3D; 1,2,…,n</li>
+</ol>
+</li>
+<li>离散型随机变量的方差（variance）：σ^2 &#x3D; Var(X) &#x3D; E[(X - E(X))^2] &#x3D; ∑_j (x_j - E(X))^2 f(j_x)<ol>
+<li>方差提供𝑋围绕其均值E𝑋的离散程度的度量，其总是非负的</li>
+<li>标准差（standard deviation）：σ &#x3D; √Var(X)</li>
+</ol>
+</li>
+<li>均值和方差的性质：<ol>
+<li>设𝑋为随机变量，我们考虑𝑋的线性函数：𝑌 &#x3D; 𝑎𝑋 + b，a,b ∈ R 其具有性质：<ol>
+<li>E(Y) &#x3D; aE(X) + b</li>
+<li>Var(Y) &#x3D; a^2Var(X)</li>
+</ol>
+</li>
+<li>可以用以下公式表示随机变量𝑋的方差:<code> Var(X) = E(X^2) - E(X)^2</code></li>
+</ol>
+</li>
+<li>伯努利分布（Bernoulli Distribution）：<ol>
+<li>Definition：随机变量X只能取值1或0，其概率分别为 p ∈ (0,1)，q(:&#x3D; 1-p)</li>
+<li>可能取值：1,2</li>
+<li>pmf：P(X&#x3D;1) &#x3D; p，P(X&#x3D;0) &#x3D; 1-p</li>
+<li>E (X)：p</li>
+<li>Var (X)：p(1-p)</li>
+</ol>
+</li>
+<li>二项分布（Binomial Distribution）：𝑋 ∼ Bin(n,p)，n∈ℕ, p∈(0,1))<ol>
+<li>Definition：n次独立试验中成功次数的离散概率分布，每个试验的成功概率为𝑝</li>
+<li>可能取值：0,1,…,n</li>
+<li>pmf：P(X&#x3D;k) &#x3D; C(n,k) p^k (1-p)^(n-k)     （<code>C(n,k) = n! / k! (n-k)!</code>）</li>
+<li>E (X)：np</li>
+<li>Var (X)：np(1-p)</li>
+</ol>
+</li>
+<li>泊松分布（Poisson Distribution）：𝑋 ∼ Poi(λ)，λ&gt;0<ol>
+<li>Definition：泊松分布是一种离散概率分布，用于计算在固定时间或空间间隔内，以<strong>已知平均发生率</strong>且独立于上次事件发生时间的事件发生次数的概率。</li>
+<li>可能取值：0,1,2,…</li>
+<li>pmf：P(X&#x3D;k) &#x3D; e^(-λ) λ^k &#x2F; k!</li>
+<li>E (X)：λ</li>
+<li>Var (X)：λ</li>
+<li>注意：问题中给出的速率可能不是所需区间内的𝜆值！我们需要对其进行放大或缩小，以获得正确的𝜆值。（如给了一周的速率为𝜆，要计算两周的间隔则速率为2𝜆）</li>
+</ol>
+</li>
+<li>几何分布（Geometric Distribution）：𝑋 ∼ Geo(p)，p∈(0,1)<ol>
+<li>Definition：经过X次试验才得到成功的结果</li>
+<li>可能取值：1,2,3,…（不能为0）</li>
+<li>pmf：P(X&#x3D;k) &#x3D; p (1-p)^(k-1)</li>
+<li>E (X)：1&#x2F;p</li>
+<li>Var (X)：(1-p)&#x2F;p²</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>连续型随机变量及其分布（Continuous Random Variables and Distributions）<ol>
+<li>Definition：取值能充满某个区间（或多个区间），且其取任何单个特定值的概率均为 0 的随机变量</li>
+<li>概率密度函数（probability density function（pdf））：f(x)满足：<ol>
+<li>f(x)≥0</li>
+<li>∫(-∞到+∞) f(x) dx &#x3D; 1</li>
+</ol>
+</li>
+<li>分布函数（Distribution Function）：F(x) &#x3D; P(X≤x) &#x3D; ∫(-∞到 x) f(t) dt，具有性质：<ol>
+<li>lim(x→-∞)F(x)&#x3D;0</li>
+<li>lim(x→+∞)F(x)&#x3D;1</li>
+<li>𝐹可微（因此连续），是非递减函数</li>
+<li>0 ≤ 𝐹(x)≤ 1</li>
+<li>f(x) &#x3D; F’(x)</li>
+</ol>
+</li>
+<li>连续随机变量的均值(Mean of Continuous Random Variable)：μ &#x3D; E[x] &#x3D; ∫(-∞到+∞) xf(x) dx ，（f(x)是pdf）<ol>
+<li>进一步推导出：E[g(X)] &#x3D; ∫(-∞到+∞) g(x)f(x) dx</li>
+</ol>
+</li>
+<li>连续随机变量的方差(Variance of Continuous Random Variable)：σ^2 &#x3D; Var(X) &#x3D; E[(X - E(X))^2] &#x3D; ∫(-∞到+∞) (x - E(X))^2 f(x) dx</li>
+<li>均值和方差的性质：<ol>
+<li>设𝑋为随机变量，我们考虑𝑋的线性函数：𝑌 &#x3D; 𝑎𝑋 + b，a,b ∈ R 其具有性质：<ol>
+<li>E(Y) &#x3D; aE(X) + b</li>
+<li>Var(Y) &#x3D; a^2Var(X)</li>
+</ol>
+</li>
+<li>我们可以用以下公式表示随机变量𝑋的方差：<code> Var(X) = E(X^2) - E(X)^2</code></li>
+</ol>
+</li>
+<li>均匀分布(Uniform Distribution)：X ~ U(a,b)， a&lt;b<ol>
+<li>pdf：f(x) &#x3D; 1&#x2F;(b-a)（a&lt;x&lt;b），否则 0</li>
+<li>E(X)：(a+b)&#x2F;2</li>
+<li>Var(X)：(b-a)²&#x2F;12</li>
+</ol>
+</li>
+<li>指数分布(Exponential Distribution)：X ~ Exp(λ)，λ&gt;0<ol>
+<li>pdf：f(x) &#x3D; λe^(-λx)（x≥0），否则 0</li>
+<li>E(X)：1&#x2F;λ</li>
+<li>Var(X)：1&#x2F;λ²</li>
+<li>注意：指数分布常被用作描述特定事件发生前时间长度的分布（eg：从现在开始到发生地震的时间长度）</li>
+</ol>
+</li>
+<li>正态分布(Normal Distribution)：X ~ N(μ,σ²)，μ∈R， σ&gt;0<ol>
+<li>pdf：f(x)&#x3D;1&#x2F;(√(2π)σ)e^(-(x-μ)²&#x2F;(2σ²))</li>
+<li>E(X)：μ</li>
+<li>Var(X)：σ²</li>
+<li><strong>正态分布关键特性：</strong><ol>
+<li>标准化：若 X<del>N (μ,σ²)，则Z&#x3D;(X-μ)&#x2F;σ</del>N(0,1)（标准正态分布），通过标准正态表查概率</li>
+<li>3σ 原则：P(μ-σ&lt;X&lt;μ+σ)≈68.27%，P(μ-2σ&lt;X&lt;μ+2σ)≈95.45%，P(μ-3σ&lt;X&lt;μ+3σ)≈99.73%</li>
+</ol>
+</li>
+<li>解题步骤：<ol>
+<li><code>将X转换成Z的范围</code></li>
+<li>用上限减去下限</li>
+<li>查找对应值带入计算</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/Z_table.png" alt="Z table"></p>
+<ol start="4">
+<li>二维分布（2D Distributions）<ol>
+<li>二维离散分布（Discrete 2D Distributions）<ol>
+<li>联合 pmf：f (x_i,y_j)&#x3D;P (X&#x3D;x_i,Y&#x3D;y_j)，满足∑∑f (x_i,y_j)&#x3D;1</li>
+<li>边际 pmf：f_X (x_i)&#x3D;∑(j) f (x_i,y_j)（对 Y 求和），f_Y (y_j)&#x3D;∑(i) f (x_i,y_j)（对 X 求和）</li>
+<li>分布函数：F(x,y) &#x3D; ∑(x_i&lt;&#x3D;x)∑(y_i&lt;&#x3D;y) f(x_i,y_j)</li>
+<li>∑i∑j f(x_i,y_j) &#x3D; 1</li>
+<li>X的边际分布：f(x) &#x3D; ∑j f(x,y_j)</li>
+<li>Y的边际分布：f(y) &#x3D; ∑i f(x_i,y)</li>
+<li>如果X和Y相互独立：f(x_i|y_j) &#x3D; f(x_i) or f(x_i,y_j) &#x3D; f(x_i)f(y_j)</li>
+<li>期望值：E(g(X,Y)) &#x3D; ∑i∑j g(x_i,y_j) f(x_i,y_j)</li>
+</ol>
+</li>
+<li>二维连续分布（Continuous 2D Distributions）<ol>
+<li>联合 pdf：f (x,y)≥0，∫(-∞到 +∞)∫(-∞到 +∞) f (x,y)dxdy &#x3D; 1</li>
+<li>边际 pdf：f_X (x)&#x3D;∫(-∞到 +∞) f (x,y) dy，f_Y (y)&#x3D;∫(-∞到 +∞) f (x,y) dx</li>
+<li>分布函数：F(x,y) &#x3D; ∫(Y&lt;&#x3D;y)∫(X&lt;&#x3D;x) f(X,Y)dXdY</li>
+<li>X的边际分布：f(x) &#x3D; ∫(-∞到 +∞) f(x,y)dy</li>
+<li>Y的边际分布：f(y) &#x3D; ∫(-∞到 +∞) f(x,y)dx</li>
+<li>如果X和Y相互独立：f(x|y) &#x3D; f(x) or f(x,y) &#x3D; f(x)f(y)</li>
+<li>期望值：E(g(X,Y)) &#x3D; ∫(-∞到 +∞)∫(-∞到 +∞) g(x,y)f(x,y)dxdy</li>
+<li>P(a&lt;&#x3D;X&lt;&#x3D;b,c&lt;&#x3D;Y&lt;&#x3D;d) &#x3D; ∫(c到d)∫(a到b) f(x,y)dxdy</li>
+<li>条件概率描述 “在Y满足某条件时，X发生的概率”，分三类情况：<ol>
+<li>P(X&lt;&#x3D;x|Y&lt;&#x3D;y) &#x3D; P(X&lt;&#x3D;x|Y&lt;&#x3D;y) &#x2F; P(Y&lt;&#x3D;y) &#x3D; F(x,y) &#x2F; F(y)</li>
+<li>P(X&lt;&#x3D;x|Y&#x3D;y) &#x3D; ∫(X&lt;&#x3D;x) f(x|y)dx &#x3D; ∫(X&lt;&#x3D;x) f(x,y)&#x2F;f(y) dx</li>
+<li>P(X&lt;&#x3D;x|Y&gt;&#x3D;y) &#x3D; P(X&lt;&#x3D;x|Y&gt;&#x3D;y) &#x2F; P(Y&gt;&#x3D;y) &#x3D; ∫(Y&gt;&#x3D;y)∫(X&lt;&#x3D;x) f(x,y) dxdy &#x2F; ∫(Y&gt;&#x3D;y) f(y) dy</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数字特征与相关性<ol>
+<li>均值的运算性质<ol>
+<li>求和定理(Sum of Means)：对任意随机变量 X₁,X₂,…,Xₙ（离散&#x2F;连续、独立&#x2F;依赖），E(X₁+X₂+…+Xₙ) &#x3D; E(X₁)+E(X₂)+…+E(Xₙ)</li>
+<li>乘积定理(Product of Means)：<strong>仅当X₁,X₂,…,Xₙ独立时（每个随机变量的取值都不会对其他随机变量的取值概率产生影响）（离散、连续都适用）</strong>，E(X₁X₂…Xₙ)&#x3D;E(X₁)E(X₂)…E(Xₙ)</li>
+</ol>
+</li>
+<li>独立性与不相关性<ol>
+<li>独立性(independent)：X与Y独立 -&gt; f(x,y) &#x3D; f(x)f(y)（离散pmf &#x2F; 连续pdf）</li>
+<li>不相关性(uncorrelated)：X与Y不相关 -&gt; E(XY) &#x3D; E(X)E(Y) -&gt; Cov(X,Y) &#x3D; 0 -&gt; ρ(X,Y) &#x3D; 0</li>
+<li>关系：独立→不相关，但不相关≠独立</li>
+</ol>
+</li>
+<li>协方差与相关系数<ol>
+<li>协方差(Covariance)：Cov(X,Y) &#x3D; E[(X-μ_X)(Y-μ_Y)] &#x3D; E(XY) - E(X)E(Y)，反映X与Y“同增同减” 趋势（Cov&gt;0：正相关，Cov&lt;0：负相关）</li>
+<li>相关系数(Correlation)：ρ(X,Y)&#x3D;Cov (X,Y)&#x2F;(σ_Xσ_Y)，ρ∈[-1,1]，是无量纲的线性关联度量<ol>
+<li>ρ&#x3D;1：完全正线性相关</li>
+<li>ρ&#x3D;-1：完全负线性相关</li>
+<li>ρ&#x3D;0：无线性相关</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>双变量正态分布<ol>
+<li>定义：X与Y联合正态 -&gt; 对任意 a,b∈R，aX+bY 正态分布</li>
+<li>关键性质：若 X 与 Y 联合正态且不相关（ρ&#x3D;0），则X与Y独立（区别于一般随机变量）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><ol>
+<li>我们一步一步走下去，踏踏实实地去走，永不抗拒生命交给我们的重负，才是一个勇者。到了蓦然回首的那一瞬间，生命必然给我们公平的答案和又一次乍喜的心情，那时的山和水，又恢复成最初单纯的样子，而人生走过的是多么美好的一个秋天。 – 三毛</li>
+</ol>
+<h2 id="昨日总结"><a href="#昨日总结" class="headerlink" title="昨日总结"></a>昨日总结</h2><p>昨天参加了本学期第一次飞盘活动，感觉是开学以来参与感最强的一次活动了，既能够充分运动，也可以认识很多朋友（争取吧）</p>
+<h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><ol>
+<li>今天完成了概率课程的提交作业，整体写下来还是比较容易的，就是中途发现还是有些地方想得过于复杂了</li>
+<li>读书一章</li>
+<li>复习完全部单词</li>
+<li>本周第二次网球活动</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/17/2025-10-17/" data-id="cuidnAwl9TjrhnOk5qdmtlYEb" data-title="2025.10.17" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-15" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/15/2025-10-15/" class="article-date">
+  <time class="dt-published" datetime="2025-10-15T10:04:54.000Z" itemprop="datePublished">2025-10-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/15/2025-10-15/">2025.10.15</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
+<li>今天受到之前表演时的一个外国朋友的邀请去到了专业的录音棚里面弹琴，以帮助他们学习如何调试录音设备，预计之后会有更多机会既能帮助他们完成毕设也能够让我体验梦寐以求的专业录音，所以接下来要好好练琴了</li>
+<li>今天和老师汇报了一下近期的情况，还是比较满意吧</li>
+<li>第二次参加本学期的网球社团活动，明显开始适应社团活动的流程了，今天从头到尾一直在打球，比起上一次体验感强多了</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/15/2025-10-15/" data-id="cuidrFe1ywGWredtnq1Q_KN9d" data-title="2025.10.15" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-10-13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/13/2025-10-13/" class="article-date">
+  <time class="dt-published" datetime="2025-10-13T02:25:54.000Z" itemprop="datePublished">2025-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/13/2025-10-13/">2025.10.13</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ol>
+<li>十一回顾</li>
+<li>思考与摘录</li>
+<li>今日学习笔记</li>
+<li>迎新晚会感受</li>
+</ol>
+<h2 id="十一回顾"><a href="#十一回顾" class="headerlink" title="十一回顾"></a>十一回顾</h2><ol>
+<li>Day1：<ol>
+<li>上午到达杭州，在办理入住前在大厅里学习了一会儿</li>
+<li>在办理完入住放好东西后去逛了杭州图书馆</li>
+<li>之后去了天目里逛了一圈并在茑屋书店呆了一会儿</li>
+<li>逛了五柳巷历史街区</li>
+<li>前往胜利河美食街吃完饭并买了防晒防虫喷雾</li>
+</ol>
+</li>
+<li>Day2：<ol>
+<li>早起坐车前往九溪烟树，走了九溪十八涧</li>
+<li>中午前到达龙井村，被一家热情人家拉进去喝了一会儿龙井茶，聊天的过程中了解了龙井茶主要是采摘的春茶，且根据采摘的时间不同品质也有所区分，可分为明前茶、雨前茶和雨后茶，且采摘完的茶还要炒三遍需要花费一个多小时</li>
+<li>在吃过午饭和买了点龙井茶后开始顺着十里锒铛开始爬茶山，一路直至云栖竹径出山</li>
+<li>晚上前往参加Anson Seabra的live house</li>
+</ol>
+</li>
+<li>Day3：<ol>
+<li>凌晨4点起床骑车前往西湖，到了后沿着北山街一路骑行欣赏夜景</li>
+<li>于5点在神舟基地景点坐等日出</li>
+<li>看完日出后骑行到西湖东南角开始环湖步行</li>
+<li>用了不到3小时换西湖一圈</li>
+<li>晚上前往城市阳台观看灯光秀</li>
+</ol>
+</li>
+<li>Day4：<ol>
+<li>早起前往灵隐寺，并把整个景区逛完</li>
+<li>骑车前往茅家埠，并徒步沿着湖边的小道把西湖西面逛完</li>
+<li>乘坐了水上公交7号线</li>
+<li>去了钟书阁</li>
+</ol>
+</li>
+<li>Day5：<ol>
+<li>参加了西湖边的国庆音乐喷泉</li>
+<li>买了伴手礼</li>
+</ol>
+</li>
+<li>Day6：<ol>
+<li>去到了拱宸桥，逛了博物馆，并沿着河道一路观赏</li>
+<li>乘坐了水上公交1号线</li>
+<li>去了顾雪岩旧居，并一路穿过街巷直至西湖边</li>
+</ol>
+</li>
+<li>Day7:<ol>
+<li>一整天在杭州宋城景区游玩</li>
+</ol>
+</li>
+<li>Day8:<ol>
+<li>逛了良渚古城遗址公园</li>
+<li>去了玉鸟集文艺街区</li>
+</ol>
+</li>
+<li>Day9：<ol>
+<li>逛了西溪湿地</li>
+</ol>
+</li>
+<li>Day10：<ol>
+<li>去了临安的青山湖，绕湖骑行一圈并参观了水上森林</li>
+<li>下午再次去到茑屋书店用一下午的时间看完了《通往夏天的隧道，再见的出口》一书</li>
+</ol>
+</li>
+</ol>
+<p>由于最后一天晚上吃了一家过辣的饭导致接下来几天只能躺在宿舍</p>
+<h2 id="思考与摘录"><a href="#思考与摘录" class="headerlink" title="思考与摘录"></a>思考与摘录</h2><p>思考：在旅行最后一下午我决心一直待在书店里看完一本书，最终总算在关店前看完了我此生最快速看完的一本书，我其实原本对看书就不是特别上心，虽然时常在脑海里闪过要多看书的念头，也常常去书店寻找自己感兴趣的书，但读着读着最后总会不了了之，所以这次我下定决心当天不看完不走，第一次快速完整的看完一本书真的很开心，而且其实之前就看过了这本书翻拍的电影，但这次读过原著后我深深体会到电影还是没办法很好展现书中的细节和打动人的地方的，所以经此转折我将对读书更进一步，我发现最近我读书的速度和耐心明显提升了，我终会将看书变成由衷热爱的事情<br>其次在旅行的其中一天我看到了一个让我收获很多的视频，视频采访了某个行业大佬，使我决定要将生活中的自己记录下来，我打算尝试拍点视频，而且也会在此后的博客文章中加入更多平日里的所思所想，这既是对自己的激励，也希望对日后读到这些内容的人们有所帮助</p>
+<p>文案摘录：</p>
+<ol>
+<li>心灯不借他人火，自照乾坤步步明，人生如逆旅，你我皆行人，唯有不断悦己、阅己、越己，才能活出生命的真正意义</li>
+<li>所有不尊重你的人，赌的都是你没有前途，他们赌你会忍，赌你会忘，赌你就算记得也没有本事反抗。所以你一定要记住你来时路的苦楚，待到来年春暖花开时，愿你安睡时山河入梦，醒来时满目春风，愿你快乐事有始有终，愿你未来路坦荡从容</li>
+<li>大仁不仁</li>
+</ol>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="数据科学（统计）"><a href="#数据科学（统计）" class="headerlink" title="数据科学（统计）"></a>数据科学（统计）</h3><p>机器学习 – 让计算机无需显式编程即可获得学习能力的研究领域  </p>
+<ol>
+<li>与传统编程的区别：<ol>
+<li>传统编程：数据 + 预设程序（函数） –通过程序中的函数进行计算–&gt; 基于计算得到结果  </li>
+<li>机器学习：数据 + 期望输出  –通过曲线拟合（如线性回归）等方式推导程序–&gt; 能预测新数据的程序（模型）</li>
+</ol>
+</li>
+<li>机器学习的两种学习方式：<ol>
+<li>记忆（memorization）：仅积累个体事实，限制于“观察事实的时间”和“储存事实的记忆空间”，无法应对未见过的情况</li>
+<li>泛化（generalization）：从已有的事实推导新事实，本质是一种预测活动，核心假设是“过去可以预测未来”，限制于“推导过程的准确性”，<strong>是机器学习的核心</strong></li>
+</ol>
+</li>
+<li>机器学习的基本步骤：<ol>
+<li>观察训练数据：获取用于学习的样本集合</li>
+<li>推断数据生成过程：通过算法（如线性回归拟合多项式曲线）分析训练数据，提炼数据背后的规律</li>
+<li>预测测试数据：利用推断出的规律，对未见过的样本（测试数据）进行预测</li>
+</ol>
+</li>
+<li>机器学习的核心范式：监督学习与无监督学习<ol>
+<li>监督学习（supervised）：<ol>
+<li>核心输入：包含 “特征 &#x2F; 标签对” 的数据集，标签明确指示样本的类别</li>
+<li>核心目标：找到能预测标签的规则，为未见过的输入（仅特征）分配正确标签。</li>
+<li>关键任务：分类（classification）<ol>
+<li>目标：在特征空间中找到分隔不同标签组的 “分类面”（如 2D 空间中的直线、高维空间中的平面）</li>
+<li>约束：需控制分类面复杂度，避免过拟合（若分类面过于复杂，会精准匹配训练数据但无法适应测试数据）</li>
+<li>权衡：当标签组存在重叠时，需平衡 “假阳性”（将负类误判为正类）与 “假阴性”（将正类误判为负类）</li>
+</ol>
+</li>
+<li>案例：足球队员位置分类</li>
+</ol>
+</li>
+<li>无监督学习（unsupervised）<ol>
+<li>核心输入：仅包含特征向量的数据集，无任何标签信息</li>
+<li>核心目标：将数据自动分组为 “自然簇”（具有相似特征的样本集合），或为不同簇创建标签</li>
+<li>关键任务：聚类（clustering）<ol>
+<li>聚类步骤：<ol>
+<li>随机选择 k 个样本作为 “原型”（初始簇中心）</li>
+<li>计算剩余样本与各原型的距离，将样本归入距离最近的簇（最小化簇内样本距离，即优化目标函数）</li>
+<li>计算每个簇的中值样本，将其作为新原型</li>
+<li>重复步骤 2-3，直至原型不再变化</li>
+</ol>
+</li>
+<li>关键指标：相似度（通过距离度量衡量，距离越小相似度越高）</li>
+</ol>
+</li>
+<li>案例：足球队员身高体重聚类</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>机器学习方法的关键要素<ol>
+<li>训练数据与评估方法<ol>
+<li>数据划分：需将数据集随机分为 “训练集”（用于学习模型）与 “测试集”（用于评估模型泛化能力），避免用训练数据直接评估（易高估性能）</li>
+<li>评估逻辑：通过模型在测试集上的预测结果，判断模型是否能适应未见过的数据</li>
+</ol>
+</li>
+<li>特征表示与特征工程<ol>
+<li>核心观点：“所有模型都是错的，但有些是有用的”，特征的质量决定模型的有用性</li>
+<li>特征工程目标：构建 “高信噪比（SNR）” 的特征向量 —— 最大化 “有用输入”占比，最小化 “无关输入”占比，避免过拟合</li>
+<li>案例：爬行动物分类特征优化</li>
+</ol>
+</li>
+<li>距离度量（Distance Metric）<ol>
+<li>常用度量：闵可夫斯基度量<ol>
+<li>当 p&#x3D;1 时：曼哈顿距离，计算各维度差值的绝对值之和，适用于维度不可比的场景</li>
+<li>当 p&#x3D;2 时：欧氏距离，计算各维度差值的平方和的平方根，是最常用的度量方式。</li>
+</ol>
+</li>
+<li>案例：动物距离计算对比</li>
+<li>关键注意事项：需统一特征维度的权重，避免某一维度（如整数型腿数）对距离计算产生过度影响</li>
+</ol>
+</li>
+<li>目标函数与约束<ol>
+<li>目标函数：定义模型的优化方向（如聚类中 “最小化簇内样本距离”，分类中 “最大化分类面与样本的距离”）</li>
+<li>约束条件：限制模型复杂度（如聚类中指定簇数 k，分类中限制分类面为直线而非复杂曲线），避免过拟合</li>
+</ol>
+</li>
+<li>优化方法：用于求解目标函数的算法，如聚类中 “更新簇中值为新原型”、分类中 “寻找最优分类面” 的梯度下降算法等</li>
+</ol>
+</li>
+<li><strong>本节知识的重点问题</strong><ol>
+<li>监督学习与无监督学习的核心差异是什么？在实际应用中如何选择这两种范式？<ol>
+<li>二者的核心差异体现在数据要求与核心目标上：<ol>
+<li>数据要求：监督学习需 “特征 &#x2F; 标签对”，无监督学习仅需无标签特征向量</li>
+<li>核心目标：监督学习目标是构建分类器，为新输入预测标签；无监督学习目标是将数据聚类为自然簇，挖掘隐含分组</li>
+</ol>
+</li>
+<li>实际应用选择依据：<ol>
+<li>若有明确的标签数据，且需预测新样本标签，选择监督学习</li>
+<li>若无标签数据，仅需探索数据内在结构，或为后续监督学习生成初始标签，选择无监督学习</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>特征工程在机器学习中扮演什么角色？如何通过特征工程提升模型性能？<ol>
+<li>特征工程的核心角色是构建高信噪比（SNR）的特征向量，即筛选 “有用输入”、剔除 “无关输入”，直接决定模型能否从数据中学习到有效规律</li>
+<li>提升模型性能的方式：<ol>
+<li>保留有用特征：选择与目标强相关的特征</li>
+<li>剔除无关特征：移除与目标无关的特征</li>
+<li>优化特征格式：统一特征维度权重（如将整数型 “腿数” 转为二进制，避免距离计算偏差）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>什么是过拟合？为什么会出现过拟合？如何通过模型设计或评估方式避免过拟合？<ol>
+<li>过拟合定义：模型在训练数据上表现极佳，但在测试数据上表现差，即模型过度学习训练数据的噪声，而非普遍规律，无法泛化到新数据</li>
+<li>过拟合原因：<ol>
+<li>模型复杂度过高</li>
+<li>特征质量差</li>
+<li>仅用训练数据评估模型</li>
+</ol>
+</li>
+<li>避免方式：<ol>
+<li>控制模型复杂度：如分类时选择简单分类面（直线 &#x2F; 平面），聚类时限制簇数 k（而非 k 等于样本数）</li>
+<li>优化特征工程：剔除无关特征，提升信噪比</li>
+<li>合理划分数据与评估：将数据分为训练集与测试集，仅通过测试集性能判断模型好坏（如复杂模型训练准确率高但测试准确率低，需放弃）</li>
+<li>权衡假阳性与假阴性：避免为追求训练准确率而构建过度复杂的模型</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="迎新晚会总结"><a href="#迎新晚会总结" class="headerlink" title="迎新晚会总结"></a>迎新晚会总结</h2><p>今天的表演还算是成功吧，和上一次相比明显放松多了，而且这次的听众也挺多，再接再厉吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/13/2025-10-13/" data-id="cuidjIW8HC3fWoSJxOyLX5g_d" data-title="2025.10.13" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-9-24" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/09/24/2025-9-24/" class="article-date">
+  <time class="dt-published" datetime="2025-09-24T08:00:56.000Z" itemprop="datePublished">2025-09-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/09/24/2025-9-24/">2025.9.24</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
+<li>Python学习（文件）</li>
+<li>第一次网球社团活动</li>
+<li>每日英语</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/09/24/2025-9-24/" data-id="cuidRJ9BkJlYWYUyjyaJ4M3VY" data-title="2025.9.24" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-9-23" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/09/23/2025-9-23/" class="article-date">
+  <time class="dt-published" datetime="2025-09-23T10:33:06.000Z" itemprop="datePublished">2025-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/09/23/2025-9-23/">2025.9.23</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ol>
+<li>Python学习（封装、继承、多态、单例模式、魔法方法&amp;属性）</li>
+<li>**之后的学习计划：算法与数据结构 –&gt; 计算机基础知识（数据库、计算机组成原理、操作系统、计算机网络）</li>
+<li>沟通完节目灯光安排</li>
+<li>每日英语</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/09/23/2025-9-23/" data-id="cuidSLnkIE3_M5QAtwbFhEpis" data-title="2025.9.23" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/11/">November 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">September 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/11/20/2025-11-20-1/">2025.11.20</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/20/2025-11-20/">2025.11.20</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/18/2025-11-18/">2025.11.18</a>
+          </li>
+        
+          <li>
+            <a href="/2025/11/11/2025-11-11/">2025.11.11</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
